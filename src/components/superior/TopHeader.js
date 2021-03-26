@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TopHeader() {
     return (
-        <header>
+        <header className="top-header">
             <div className="container top-bar d-flex justify-content-between text-white">
                 <div className="bar-section my-2">
                     <span className="divisor position-relative fs-13 pe-4">Email: contato@brcadv.com</span>

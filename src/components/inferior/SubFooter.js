@@ -1,7 +1,7 @@
 import React from 'react';
-import Qualidades from "./Qualidades";
-import ListaAreas from "./ListaAreas";
-import NewsLetter from "./NewsLetter";
+import Qualidades from "./components/Qualidades";
+import ListaAreas from "./components/ListaAreas";
+import NewsLetter from "./components/NewsLetter";
 
 export default function SubFooter() {
     return (

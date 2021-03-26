@@ -257,7 +257,7 @@ a:hover {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-header {
+.top-header {
     position: absolute;
     width: 100%;
     top: 0;
@@ -269,6 +269,7 @@ header {
 
 .fixed-header {
     position: sticky;
+    top: 0;
     z-index: 4;
     background-image: none;
     background-color: white;
@@ -311,7 +312,7 @@ header {
 }
 
 @media (min-width: 1920px) {
-    header {
+    .top-header {
         background-size: cover;
     }
 }
