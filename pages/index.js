@@ -3,6 +3,7 @@ import FixedHeader from "../src/components/FixedHeader";
 import Banner from "../src/components/Banner";
 import TopHeader from "../src/components/TopHeader";
 import React from "react";
+import SolicitarConsulta from "../src/components/SolicitarConsulta";
 
 
 export default function Home() {
@@ -17,9 +18,11 @@ export default function Home() {
                 <script src="https://kit.fontawesome.com/862ff8d067.js" />
             </Head>
 
-            <TopHeader />
-            <FixedHeader />
-            <Banner />
+            <div className="row">
+                <div className="col-5">
+                    <SolicitarConsulta />
+                </div>
+            </div>
         </div>
     )
 }

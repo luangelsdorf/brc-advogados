@@ -2,9 +2,9 @@ html {
     --proxima: "Proxima Nova", sans-serif;
     --playfair: "Playfair Display", serif;
 
-    --azul-escuro: #003057;
-    --azul-claro: #004680;
-    --dourado: #D6A461;
+    --azul-escuro: rgba(0, 48, 87, 1);
+    --azul-claro: rgba(0, 70, 128, 1);
+    --dourado: rgba(214, 164, 97, 1);
     --text: #9B9B9B;
 }
 
@@ -82,6 +82,10 @@ body {
     background-color: var(--azul-claro) !important;
 }
 
+.bg-dourado {
+    background-color: var(--dourado) !important;
+}
+
 .border-escuro {
     border-color: var(--azul-escuro) !important;
 }
@@ -100,6 +104,10 @@ body {
 
 .top-0 {
     top: 0 !important;
+}
+
+.border-radius-0 {
+    border-radius: 0 !important;
 }
 
 
@@ -158,6 +166,26 @@ a:hover {
 .nav-link {
     padding-left: 12.5px !important;
     padding-right: 12.5px !important;
+}
+
+.form-control {
+    background-color: #f9f9f9 !important;
+    border-color: #eee !important;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(214, 164, 97, 0.7);
+}
+
+.form-select {
+    background-color: #f9f9f9 !important;
+    border-color: #eee !important;
+    color: inherit !important;
+    height: 58px;
+}
+
+.form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(214, 164, 97, 0.7);
 }
 
 
@@ -259,4 +287,40 @@ header {
     header {
         background-size: cover;
     }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Inferior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.consulta-header {
+    padding: 30px 45px;
+}
+
+.consulta-body {
+    padding: 45px;
+}
+
+#msg {
+    height: 90px;
+}
+
+.form-floating:first-child {
+    margin-bottom: 20px;
+}
+
+.form-floating:not(:first-child) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.form-floating:nth-child(4) {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+.msg-btn {
+    height: 45px;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    padding-right: 24px;
 }
