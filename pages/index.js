@@ -5,6 +5,7 @@ import TopHeader from "../src/components/TopHeader";
 import React from "react";
 import Form from "../src/components/Form";
 import FaleConosco from "../src/components/FaleConosco";
+import NewsLetter from "../src/components/NewsLetter";
 
 
 export default function Home() {
@@ -21,15 +22,9 @@ export default function Home() {
 
             <div className="container d-fle justify-content-center align-items-center bg-escuro">
                 <div className="row">
-                    <div className="col-1" />
-                    <div className="col-4" >
-                        <FaleConosco />
+                    <div className="col-4">
+                        <NewsLetter />
                     </div>
-                    <div className="col-1" />
-                    <div className="col-5" >
-                        <Form />
-                    </div>
-                    <div className="col-1" />
                 </div>
             </div>
         </div>

@@ -2,7 +2,7 @@ html {
     --proxima: "Proxima Nova", sans-serif;
     --playfair: "Playfair Display", serif;
 
-    --azul-escuro: rgba(0, 48, 87, 1);
+    --azul-escuro: rgb(0, 48, 87);
     --azul-claro: rgba(0, 70, 128, 1);
     --dourado: rgba(214, 164, 97, 1);
     --text: #9B9B9B;
@@ -31,6 +31,10 @@ body {
 
 .fs-16 {
     font-size: 16px !important;
+}
+
+.fs-20 {
+    font-size: 20px !important;
 }
 
 .fs-22 {
@@ -356,4 +360,37 @@ header {
 
 .contatos-content {
     margin-bottom: 36px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.newsletter {
+    height: 240px;
+    background-color: var(--azul-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 37px;
+    padding-right: 37px;
+}
+
+.news-submit {
+    color: var(--azul-escuro);
+    width: 48px;
+}
+
+.news-submit:hover {
+    color: var(--dourado) !important;
+}
+
+.news-input {
+    background-color: transparent !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+    color: white !important;
+    border-radius: 0;
+    height: 45px;
+}
+
+.news-input::placeholder {
+    color: white;
 }
