@@ -2,6 +2,7 @@ import Head from "next/head";
 import React from "react";
 import Footer from "../src/components/inferior/Footer";
 import BannerInferior from "../src/components/inferior/BannerInferior";
+import SubFooter from "../src/components/inferior/SubFooter";
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
             </Head>
 
             <BannerInferior />
+            <SubFooter />
         </div>
     )
 }

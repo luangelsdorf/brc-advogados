@@ -392,6 +392,12 @@ header {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
+.sub-footer {
+    height: 440px;
+    display: flex;
+    align-items: center;
+    background-color: var(--azul-escuro);
+}
 
 .qualidades {
     margin-top: 30px;
