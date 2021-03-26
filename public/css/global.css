@@ -70,6 +70,12 @@ body {
     line-height: 96px !important;
 }
 
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .text-escuro {
     color: var(--azul-escuro) !important;
 }
@@ -437,4 +443,10 @@ header {
 
 .first-col {
     padding-right: 37px;
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+footer {
+    height: 70px;
 }

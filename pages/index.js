@@ -8,6 +8,7 @@ import FaleConosco from "../src/components/inferior/FaleConosco";
 import NewsLetter from "../src/components/inferior/NewsLetter";
 import ListaAreas from "../src/components/inferior/ListaAreas";
 import Qualidades from "../src/components/inferior/Qualidades";
+import Footer from "../src/components/inferior/Footer";
 
 
 export default function Home() {
@@ -22,11 +23,7 @@ export default function Home() {
                 <script src="https://kit.fontawesome.com/862ff8d067.js" />
             </Head>
 
-            <div className="container d-fle justify-content-center align-items-center bg-escuro">
-                <div className="row">
-                    <Qualidades />
-                </div>
-            </div>
+            <Footer />
         </div>
     )
 }
