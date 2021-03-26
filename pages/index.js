@@ -3,7 +3,8 @@ import FixedHeader from "../src/components/FixedHeader";
 import Banner from "../src/components/Banner";
 import TopHeader from "../src/components/TopHeader";
 import React from "react";
-import SolicitarConsulta from "../src/components/SolicitarConsulta";
+import Form from "../src/components/Form";
+import FaleConosco from "../src/components/FaleConosco";
 
 
 export default function Home() {
@@ -18,9 +19,17 @@ export default function Home() {
                 <script src="https://kit.fontawesome.com/862ff8d067.js" />
             </Head>
 
-            <div className="row">
-                <div className="col-5">
-                    <SolicitarConsulta />
+            <div className="container d-fle justify-content-center align-items-center bg-escuro">
+                <div className="row">
+                    <div className="col-1" />
+                    <div className="col-4" >
+                        <FaleConosco />
+                    </div>
+                    <div className="col-1" />
+                    <div className="col-5" >
+                        <Form />
+                    </div>
+                    <div className="col-1" />
                 </div>
             </div>
         </div>

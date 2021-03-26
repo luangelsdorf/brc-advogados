@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function SolicitarConsulta() {
+export default function Form() {
     return (
         <>
             <div className="consulta-header bg-dourado text-white playfair">
                 <strong className="fs-24">Solicite uma Consulta</strong>
             </div>
-            <div className="consulta-body">
+            <div className="consulta-body bg-white">
                 <form>
                     <div className="form-floating">
                         <input type="text" id="nome-e-sobrenome" placeholder="Nome e Sobrenome" className="form-control border-radius-0" />

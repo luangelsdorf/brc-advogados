@@ -74,6 +74,10 @@ body {
     color: var(--azul-claro) !important;
 }
 
+.text-dourado {
+    color: var(--dourado) !important;
+}
+
 .bg-escuro {
     background-color: var(--azul-escuro) !important;
 }
@@ -323,4 +327,33 @@ header {
     align-items: center;
     padding-left: 24px;
     padding-right: 24px;
+}
+
+.line-title {
+    color: var(--dourado);
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 85px;
+}
+
+.line-title::before {
+    content: "";
+    width: 70px;
+    height: 2px;
+    position: absolute;
+    left: -85px;
+    background-color: var(--dourado);
+}
+
+.contato-text {
+    padding-top: 30px;
+    padding-bottom: 35px;
+    margin-bottom: 35px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.contatos-content {
+    margin-bottom: 36px;
 }
