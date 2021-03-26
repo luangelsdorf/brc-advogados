@@ -1,0 +1,26 @@
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Áreas de Atuação -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.area-card {
+    display: block;
+    padding: 40px 30px 47px;
+    position: relative;
+}
+
+.area-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background-color: var(--dourado);
+
+    opacity: 0;
+    transform: translateY(4px);
+    transition: all 350ms ease;
+}
+
+.area-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}

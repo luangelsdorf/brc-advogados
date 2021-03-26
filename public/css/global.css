@@ -88,6 +88,10 @@ body {
     color: var(--dourado) !important;
 }
 
+.text-normal {
+    color: var(--text) !important;
+}
+
 .bg-escuro {
     background-color: var(--azul-escuro) !important;
 }
