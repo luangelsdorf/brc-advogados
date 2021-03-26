@@ -6,6 +6,7 @@ import React from "react";
 import Form from "../src/components/inferior/Form";
 import FaleConosco from "../src/components/inferior/FaleConosco";
 import NewsLetter from "../src/components/inferior/NewsLetter";
+import ListaAreas from "../src/components/inferior/ListaAreas";
 
 
 export default function Home() {
@@ -22,9 +23,7 @@ export default function Home() {
 
             <div className="container d-fle justify-content-center align-items-center bg-escuro">
                 <div className="row">
-                    <div className="col-4">
-                        <NewsLetter />
-                    </div>
+                    <ListaAreas />
                 </div>
             </div>
         </div>

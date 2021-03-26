@@ -148,6 +148,19 @@ body {
     border-color: var(--dourado);
     color: white;
 }
+a {
+    text-decoration: none;
+    color: white;
+}
+
+li {
+    list-style: none;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
 
 a:hover {
     color: var(--dourado) !important;
@@ -364,6 +377,16 @@ header {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
+.list-areas {
+    /*width: 370px;*/
+}
+
+.list-title {
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
 .newsletter {
     height: 240px;
     background-color: var(--azul-claro);
@@ -393,4 +416,8 @@ header {
 
 .news-input::placeholder {
     color: white;
+}
+
+.first-col {
+    padding-right: 37px;
 }
