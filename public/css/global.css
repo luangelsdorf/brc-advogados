@@ -377,8 +377,25 @@ header {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.list-areas {
-    /*width: 370px;*/
+.qualidades {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: inline-block;
+    color: white;
+}
+
+.social-btn {
+    height: 30px;
+    width: 30px;
+    background-color: var(--azul-claro);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-btn:hover {
+    color: white !important;
+    background-color: var(--dourado);
 }
 
 .list-title {
