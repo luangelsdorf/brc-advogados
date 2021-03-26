@@ -1,14 +1,7 @@
 import Head from "next/head";
-import FixedHeader from "../src/components/superior/FixedHeader";
-import Banner from "../src/components/superior/Banner";
-import TopHeader from "../src/components/superior/TopHeader";
 import React from "react";
-import Form from "../src/components/inferior/Form";
-import FaleConosco from "../src/components/inferior/FaleConosco";
-import NewsLetter from "../src/components/inferior/NewsLetter";
-import ListaAreas from "../src/components/inferior/ListaAreas";
-import Qualidades from "../src/components/inferior/Qualidades";
 import Footer from "../src/components/inferior/Footer";
+import BannerInferior from "../src/components/inferior/BannerInferior";
 
 
 export default function Home() {
@@ -23,7 +16,7 @@ export default function Home() {
                 <script src="https://kit.fontawesome.com/862ff8d067.js" />
             </Head>
 
-            <Footer />
+            <BannerInferior />
         </div>
     )
 }
