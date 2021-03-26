@@ -1,11 +1,11 @@
 import Head from "next/head";
-import FixedHeader from "../src/components/FixedHeader";
-import Banner from "../src/components/Banner";
-import TopHeader from "../src/components/TopHeader";
+import FixedHeader from "../src/components/superior/FixedHeader";
+import Banner from "../src/components/superior/Banner";
+import TopHeader from "../src/components/superior/TopHeader";
 import React from "react";
-import Form from "../src/components/Form";
-import FaleConosco from "../src/components/FaleConosco";
-import NewsLetter from "../src/components/NewsLetter";
+import Form from "../src/components/inferior/Form";
+import FaleConosco from "../src/components/inferior/FaleConosco";
+import NewsLetter from "../src/components/inferior/NewsLetter";
 
 
 export default function Home() {
