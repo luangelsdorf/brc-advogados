@@ -1,4 +1,21 @@
+@media (max-width: 1920px) {
+    .home {
+        margin-top: -85px;
+    }
+}
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Áreas de Atuação -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.fundo-areas {
+    background-image: url("/img/pattern.png");
+    background-color: #f9f9f9;
+    padding-top: 225px;
+    padding-bottom: 225px;
+}
+
+.text-2 {
+    margin-bottom: 131px;
+}
 
 .area-card {
     display: block;
@@ -112,15 +129,33 @@ img {
     width: 100%;
 }
 
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Áreas de Atuação -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.fundo-areas {
-    background-image: url("/img/pattern.png");
-    background-color: #f9f9f9;
-    padding-top: 225px;
-    padding-bottom: 225px;
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.post-card-body {
+    padding-right: 30px;
+    padding-left: 30px;
 }
 
-.text-2 {
-    margin-bottom: 131px;
+.post-card-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-card-overlay:hover img {
+    transform: scale(1.15);
+}
+
+.categoria {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    background-color: var(--dourado);
+    color: white;
+    width: 112px;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
 }
