@@ -9,6 +9,7 @@ import AreaCard from "../src/components/home/AreaCard";
 import SobreNos from "../src/components/home/SobreNos";
 import NossaEquipe from "../src/components/home/NossaEquipe";
 import Parallax from "../src/components/Parallax";
+import Areas from "../src/components/home/Areas";
 
 
 export default function Home() {
@@ -17,9 +18,7 @@ export default function Home() {
             <HeadContent title="BRC Advogados" page="home" />
             <img src="/img/parallax.png" className="parallax" alt=""/>
 
-            <SobreNos />
-            <NossaEquipe />
-            <Parallax />
+            <Areas />
         </div>
     )
 }
