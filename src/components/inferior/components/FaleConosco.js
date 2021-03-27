@@ -4,7 +4,7 @@ export default function FaleConosco() {
     return (
         <div className="d-flex flex-column text-white">
             <span className="line-title w-max-content">CONTATOS</span>
-            <strong className="playfair  fs-44">Fale Conosco</strong>
+            <strong className="playfair fs-44">Fale Conosco</strong>
             <span className=" contato-text">
                 Para entrar em contato com nossos profissionais
                 utilize o formulário. Nossa equipe de atendimento

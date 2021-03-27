@@ -24,3 +24,32 @@
     opacity: 1;
     transform: translateY(0);
 }
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Sobre Nós -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.sobre-nos-text {
+    width: 540px;
+}
+
+.detalhe-lg {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.detalhe-sm {
+    position: absolute;
+    top: 0;
+    right: 45px;
+}
+
+.brc-square {
+    width: 270px;
+    height: 280px;
+    background-color: var(--azul-escuro);
+    position: absolute;
+    top: 285px;
+    left: 300px;
+    border-top: 5px solid white;
+    border-left: 5px solid white;
+}
