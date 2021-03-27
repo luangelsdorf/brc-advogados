@@ -11,6 +11,7 @@ import NossaEquipe from "../src/components/home/NossaEquipe";
 import Parallax from "../src/components/home/Parallax";
 import Areas from "../src/components/home/Areas";
 import PostCard from "../src/components/home/PostCard";
+import Recentes from "../src/components/home/Recentes";
 
 
 export default function Home() {
@@ -19,13 +20,7 @@ export default function Home() {
             <HeadContent title="BRC Advogados" page="home" />
             <img src="/img/parallax.png" className="parallax" alt=""/>
 
-            <div className="container bg-white">
-                <div className="row">
-                    <PostCard img="1" categoria="Direito Trabalhista" data="Fev 10, 2021" />
-                    <PostCard img="2" categoria="Contencioso Cível" data="Fev 14, 2021" />
-                    <PostCard img="3" categoria="Notícia, Previdenciário" data="Fev 17, 2021" />
-                </div>
-            </div>
+            <Recentes />
         </div>
     )
 }
