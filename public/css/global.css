@@ -2,7 +2,7 @@ html {
     --proxima: "Proxima Nova", sans-serif;
     --playfair: "Playfair Display", serif;
 
-    --azul-escuro: rgb(0, 48, 87);
+    --azul-escuro: rgba(0, 48, 87, 1);
     --azul-claro: rgba(0, 70, 128, 1);
     --dourado: rgba(214, 164, 97, 1);
     --text: #9B9B9B;

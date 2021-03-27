@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function NossaEquipe() {
     return (
-        <div className="container-fluid p-0">
+        <div className="container-fluid p-0 bg-white">
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-5">
