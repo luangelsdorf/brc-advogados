@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function SobreNos() {
     return (
-        <div className="container-fluid p-0 bg-white">
+        <div className="container-fluid px-0 flex-center" id="sobre-nos">
             <div className="container">
                 <div className="row w-100 align-items-center">
                     <div className="col-6">

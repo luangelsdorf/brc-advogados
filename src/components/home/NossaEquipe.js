@@ -2,7 +2,8 @@ import React from 'react';
 
 export default function NossaEquipe() {
     return (
-        <div className="container-fluid p-0 bg-white">
+        <div className="container-fluid px-0 flex-center position-relative" id="nossa-equipe">
+            <img src="/img/desenho-balanca.png" className="desenho" alt="Balança"/>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-5">

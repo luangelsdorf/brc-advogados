@@ -3,7 +3,7 @@ import PostCard from "./PostCard";
 
 export default function Recentes() {
     return (
-        <div className="container-fluid px-0">
+        <div className="container-fluid flex-center flex-column px-0" id="recentes">
             <div className="flex-center flex-column recentes-title">
                 <span className="d-block text-dourado mb-3">POSTS RECENTES DO BLOG</span>
                 <strong className="playfair text-escuro fs-44">Notícias e Artigos</strong>

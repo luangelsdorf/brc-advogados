@@ -45,6 +45,11 @@
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Sobre Nós -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
+#sobre-nos {
+    height: 870px;
+    background-color: white;
+}
+
 .sobre-nos-text {
     width: 540px;
 }
@@ -73,6 +78,11 @@
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Nossa Equipe -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#nossa-equipe {
+    height: 850px;
+    background-color: #f9f9f9;
+}
 
 .overlay-bottom {
     width: 100%;
@@ -108,6 +118,12 @@ img {
     background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
     height: 200px;
     z-index: 1;
+}
+
+.desenho {
+    position: absolute;
+    bottom: 0;
+    left: -60px;
 }
 
 .z-index-3 {
@@ -161,6 +177,11 @@ img {
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+#recentes {
+    height: 990px;
+    background-color: white;
+}
 
 .recentes-title {
     position: relative;
