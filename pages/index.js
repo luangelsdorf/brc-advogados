@@ -7,6 +7,7 @@ import BannerSuperior from "../src/components/superior/BannerSuperior";
 import MainLayout from "../src/layouts/MainLayout";
 import AreaCard from "../src/components/home/AreaCard";
 import SobreNos from "../src/components/home/SobreNos";
+import NossaEquipe from "../src/components/home/NossaEquipe";
 
 
 export default function Home() {
@@ -14,7 +15,7 @@ export default function Home() {
         <div className="container-fluid p-0 position-relative">
             <HeadContent title="BRC Advogados" page="home" />
 
-            <SobreNos />
+            <NossaEquipe />
 
         </div>
     )
