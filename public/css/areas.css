@@ -1,0 +1,47 @@
+#areas-de-atuacao {
+    height: 870px;
+}
+
+.area-text {
+    white-space: break-spaces;
+    display: inline-block;
+    max-width: 710px;
+}
+
+.list-group-item {
+    padding: 1rem 1rem !important;
+}
+
+ul {
+    padding-right: 30px !important;
+}
+
+#consultivo-civel, #contencioso-civil, #direito-administrativo, #direito-e-saude, #empresarial-propriedade-intelectual, #lgpd, #trabalhista-previdenciario {
+    color: var(--azul-escuro);
+}
+
+#banner-superior {
+    height: 550px !important;
+}
+
+.top-header {
+    background-size: cover !important;
+}
+
+.estamos-prontos {
+    height: 130px;
+    width: 710px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.prontos-text {
+    width: 235px;
+    margin-right: 40px;
+}
+
+.text-right {
+    text-align: right;
+}

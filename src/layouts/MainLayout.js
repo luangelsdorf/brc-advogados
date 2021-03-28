@@ -11,11 +11,10 @@ export default function MainLayout({ children }) {
         <>
             <TopHeader />
             <FixedHeader />
-            <BannerSuperior />
+            <BannerSuperior title="Áreas de Atuação" subtitle="Realizando a prestação de serviços jurídicos tanto para empresas como pessoas físicas, o BRC Advogados elabora soluções jurídicas eficazes e individualizadas para melhor atender os interesses de seus clientes." btn={false} />
 
-            <div className="container-fluid p-0 position-relative">
+
                 {children}
-            </div>
 
             <BannerInferior />
             <SubFooter />
