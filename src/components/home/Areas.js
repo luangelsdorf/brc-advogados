@@ -2,7 +2,7 @@ import React from 'react';
 import data from '../../../src/data/data.json';
 import AreaCard from "./AreaCard";
 
-export default function Areas() {
+export default function Areas({ areas }) {
 
     return (
         <div className="container-fluid px-0 fundo-areas">
@@ -29,11 +29,10 @@ export default function Areas() {
                     </div>
 
                     {
-                        data.map(card => {
+                        areas.map(area => {
                             return (
-                                <AreaCard key={card.id} title="Consultivo Cível e Contratos" icon="contratos">
-                                    Atuamos na elaboração de consultas e pareceres e contratos para atender as mais
-                                    diversas demandas de nossos clientes.
+                                <AreaCard key={area.id} title={area.titulo} icon={area.icone}>
+                                    { area.descricao.substring(0, 95) + '...' }
                                 </AreaCard>
                             )
                         })

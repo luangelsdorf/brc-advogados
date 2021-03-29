@@ -15,7 +15,8 @@ import Footer from "../src/components/inferior/Footer";
 
 
 
-export default function Home() {
+export default function Home({ areas }) {
+    console.log(areas)
     return (
         <>
             <TopHeader />
@@ -29,7 +30,7 @@ export default function Home() {
                 <SobreNos />
                 <NossaEquipe />
                 <Parallax />
-                <Areas />
+                <Areas areas={areas} />
                 <Recentes />
             </div>
 
@@ -40,3 +41,9 @@ export default function Home() {
     )
 }
 
+export async function getStaticProps(context) {
+    const response = await fetch(`http://localhost:1337/areas`)
+    const areas = await response.json()
+
+    return { props: { areas } }
+}
