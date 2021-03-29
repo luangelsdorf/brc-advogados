@@ -6,15 +6,14 @@ import BannerInferior from "../components/inferior/BannerInferior";
 import SubFooter from "../components/inferior/SubFooter";
 import Footer from "../components/inferior/Footer";
 
-export default function MainLayout({ children }) {
+export default function BlogLayout({ children }) {
     return (
         <>
             <TopHeader />
             <FixedHeader />
-            <BannerSuperior title="Áreas de Atuação" subtitle={<span>Realizando a prestação de serviços jurídicos tanto para empresas como <br/> pessoas físicas, o BRC Advogados elabora soluções jurídicas eficazes e <br/> individualizadas para melhor atender os interesses de seus clientes.</span>} btn={false} />
+            <BannerSuperior  />
 
-
-                {children}
+            {children}
 
             <BannerInferior />
             <SubFooter />

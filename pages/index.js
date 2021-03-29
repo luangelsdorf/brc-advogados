@@ -20,7 +20,7 @@ export default function Home() {
         <>
             <TopHeader />
             <FixedHeader />
-            <BannerSuperior />
+            <BannerSuperior title={<span>Atendimento <br/> Ágil e Eficaz</span>} subtitle={<span>Atendimento individualizado, buscando criar estratégias <br/> que se adequem às necessidades de seus clientes</span>} btn={true} home={true} />
 
             <div className="container-fluid p-0 position-relative home">
                 <HeadContent title="BRC Advogados" page="home" />

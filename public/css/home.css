@@ -187,6 +187,7 @@ img {
     position: relative;
     padding-bottom: 100px;
 }
+
 .recentes-title::after {
     content: "";
     position: absolute;
