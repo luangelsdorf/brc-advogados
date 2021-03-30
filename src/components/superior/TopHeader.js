@@ -6,7 +6,7 @@ export default function TopHeader() {
             <div className="container top-bar d-flex justify-content-between text-white">
                 <div className="bar-section my-2">
                     <span className="divisor position-relative fs-13 pe-4">Email: contato@brcadv.com</span>
-                    <span className="fs-13 ps-4">Phone: +55 11 3192-3891</span>
+                    <span className="fs-13 ps-4">Fone: +55 11 3192-3891</span>
                 </div>
                 <div className="bar-section my-2">
                     <div className="divisor position-relative fs-13 pe-4">
@@ -41,7 +41,7 @@ export default function TopHeader() {
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>
-                    <button className="btn btn-primary bg-claro border-claro text-white d-none d-lg-flex">Fale com um advogado</button>
+                    <button className="btn btn-primary hover-claro d-none d-lg-flex">Fale com um Advogado</button>
                 </div>
             </nav>
         </header>
