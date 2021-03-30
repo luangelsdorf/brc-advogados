@@ -17,7 +17,7 @@ export default function NossaEquipe() {
                         </span>
                             <a href="#" className="text-dourado">Saiba Mais <span className="fas fa-caret-down ps-1" /></a>
                         </div>
-                        <div>
+                        <div className="position-relative" style={{ zIndex: 2 }}>
                             <span className="text-escuro fs-24 playfair d-block">André Consentino</span>
                             <span className="d-block my-2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
