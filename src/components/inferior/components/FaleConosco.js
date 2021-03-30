@@ -23,7 +23,7 @@ export default function FaleConosco() {
                 <span className="d-block text-dourado mb-3">LOCALIZAÇÃO</span>
                 <div className="d-flex align-items-center">
                     <span className="text-dourado mb-4 fas fa-map-marker-alt" />
-                    <span className="ps-3">Av. Paulista, 726 - 17º andar, conjunto 1707, Bela Vista - São Paulo / SP | 01310-100</span>
+                    <span className="ps-3">Av. Paulista, 726 - 17º andar, conjunto 1707, <br /> Bela Vista - São Paulo / SP | 01310-100</span>
                 </div>
             </div>
         </div>
