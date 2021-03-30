@@ -7,33 +7,29 @@ export default function SobreNos() {
                 <div className="row w-100 align-items-center">
                     <div className="col-6">
                         <span className="line-title w-max-content">QUEM SOMOS</span>
-                        <strong className="playfair fs-44 d-block text-escuro mb-3">O Escritório Bueno Rios & Consentino Advogados</strong>
+                        <strong className="playfair fs-44 d-block text-escuro mb-3 lh-60">O Escritório Bueno Rios <br /> & Consentino Advogados</strong>
                         <div className="sobre-nos-text">
                             <p>
-                                Localizado no Coração de São Paulo, na Avenida Paulista, é formado por advogados com
-                                reconhecida e comprovada capacidade jurídica originada de atuação em renomados escritórios
-                                de advocacia ao longo dos anos.
+                                Localizado no Coração de São Paulo, na Avenida Paulista, é formado por {/*<br />*/}
+                                advogados com reconhecida e comprovada capacidade jurídica originada {/*<br />*/}
+                                de atuação em renomados escritórios de advocacia ao longo dos anos.
                             </p>
                             <p>
-                                Utilizando-se de sua sólida formação acadêmica e vasta experiência, criam soluções jurídicas
-                                criativas, eficazes e individualizadas para melhor atender os interesses de seus Clientes.
+                                Utilizando-se de sua sólida formação acadêmica e vasta experiência, {/*<br />*/}
+                                os advogados criam soluções jurídicas criativas, eficazes e individualizadas {/*<br />*/}
+                                para melhor atender os interesses de seus Clientes.
                             </p>
                             <p>
-                                O BRC Advogados possui como sua marca o atendimento individualizado, buscando criar
-                                estratégias que se adequem às necessidades de seus clientes, buscando sempre o atendimento
-                                célere, eficaz e universal.
+                                O BRC Advogados possui como sua marca o atendimento individualizado, {/*<br />*/}
+                                buscando criar estratégias que se adequem às necessidades de seus {/*<br />*/}
+                                clientes, buscando sempre o atendimento célere, eficaz e universal.
                             </p>
                             <a href="/#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
                         </div>
                     </div>
 
                     <div className="col-6 position-relative">
-                        <img src="/img/sobre-nos-img.png" alt="" className="img-fluid" />
-                        <img src="/img/detalhe-lg.png" alt="" className="detalhe-lg" />
-                        <img src="/img/detalhe-sm.png" alt="" className="detalhe-sm" />
-                        <div className="brc-square flex-center">
-                            <img src="/img/brc-vertical.png" alt=""/>
-                        </div>
+                        <img src="/img/mosaico.png" className="img-fluid" alt="Mosaico"/>
                     </div>
                 </div>
             </div>
