@@ -1,6 +1,7 @@
 import '../public/css/global.css'
 import React, { useEffect } from "react";
 import { useRouter } from 'next/router';
+import {homePage} from "../public/js/pages";
 /*import 'bootstrap/dist/css/bootstrap.min.css'*/
 
 export default function MyApp({ Component, pageProps }) {
@@ -13,6 +14,10 @@ export default function MyApp({ Component, pageProps }) {
                 let nome = url.slice(18)
                 document.getElementById(nome).style.color = 'rgba(214, 164, 97, 1)'
                 console.log(document.getElementById(nome))
+            }
+
+            if (url === '/' || url.startsWith('/#')) {
+                homePage()
             }
         }
 

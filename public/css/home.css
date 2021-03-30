@@ -50,7 +50,7 @@
     background-color: white;
 }
 
-.sobre-nos-text {
+.mr-30 {
     margin-right: 30px;
 }
 
@@ -138,6 +138,26 @@ img {
 
 .z-index-3 {
     z-index: 3;
+}
+
+#collapse-andre {
+    height: 72px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#collapse-andre.active {
+    height: auto;
+}
+
+#collapse-lucas {
+    height: 72px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#collapse-lucas.active {
+    height: auto;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Parallax -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

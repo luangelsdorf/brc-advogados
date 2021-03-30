@@ -187,6 +187,10 @@ ul {
     margin: 0;
 }
 
+a[role="button"] {
+    cursor: pointer;
+}
+
 a:hover {
     color: var(--dourado);
 }
