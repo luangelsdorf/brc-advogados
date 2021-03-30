@@ -13,15 +13,14 @@
     padding-bottom: 225px;
 }
 
-.text-2 {
-    margin-bottom: 131px;
+.shadow-col {
+    box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
 }
 
 .area-card {
     display: block;
     padding: 40px 30px 47px;
     position: relative;
-    box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
 }
 
 .area-card::after {
@@ -41,6 +40,40 @@
 .area-card:hover::after {
     opacity: 1;
     transform: translateY(0);
+}
+
+.area-card:hover a {
+    color: var(--azul-claro);
+}
+
+.area-card:hover .flecha {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.my-15-50 {
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+.pres-text {
+    max-width: 372px;
+}
+
+.mr-40 {
+    margin-right: 40px;
+}
+
+.ler-mais {
+    color: var(--dourado);
+    transition: all 400ms ease;
+}
+
+.flecha {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 400ms ease;
 }
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Sobre Nós -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

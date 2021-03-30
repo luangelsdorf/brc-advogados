@@ -76,6 +76,10 @@ body {
     align-items: center;
 }
 
+.cursor-pointer {
+    cursor: pointer;
+}
+
 .text-escuro {
     color: var(--azul-escuro) !important;
 }
