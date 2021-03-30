@@ -8,7 +8,7 @@ export default function Parallax() {
                 Converse com um de nossos advogados e encontraremos a <br />
                 melhor solução possível para seu caso!
             </span>
-            <button className="btn btn-secondary">Faça uma Consulta Gratuita</button>
+            <button className="btn btn-secondary">Fale com Advogado</button>
         </div>
     )
 }

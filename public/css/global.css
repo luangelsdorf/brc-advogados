@@ -133,6 +133,7 @@ body {
 
 .btn {
     border-radius: 0;
+    font-size: 13px;
 }
 
 .btn-primary {

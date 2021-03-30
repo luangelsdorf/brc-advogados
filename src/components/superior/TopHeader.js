@@ -41,7 +41,7 @@ export default function TopHeader() {
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>
-                    <button className="btn btn-primary bg-claro border-claro text-white d-none d-lg-flex">Faça uma Consulta Gratuita</button>
+                    <button className="btn btn-primary bg-claro border-claro text-white d-none d-lg-flex">Fale com um advogado</button>
                 </div>
             </nav>
         </header>

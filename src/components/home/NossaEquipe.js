@@ -3,7 +3,6 @@ import React from 'react';
 export default function NossaEquipe() {
     return (
         <div className="container-fluid px-0 flex-center position-relative" id="nossa-equipe">
-            <img src="/img/desenho-balanca.png" className="desenho" alt="Balança"/>
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-5">
@@ -17,7 +16,7 @@ export default function NossaEquipe() {
                         </span>
                             <a href="#" className="text-dourado">Saiba Mais <span className="fas fa-caret-down ps-1" /></a>
                         </div>
-                        <div className="position-relative" style={{ zIndex: 2 }}>
+                        <div className="position-relative">
                             <span className="text-escuro fs-24 playfair d-block">André Consentino</span>
                             <span className="d-block my-2">
                             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
