@@ -34,7 +34,7 @@ export default function Home({ areas }) {
                 <Recentes />
             </div>
 
-            <BannerInferior />
+            <BannerInferior areas={areas} />
             <SubFooter />
             <Footer />
         </>

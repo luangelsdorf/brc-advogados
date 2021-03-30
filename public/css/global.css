@@ -400,6 +400,18 @@ a:hover {
     margin-bottom: 36px;
 }
 
+#submit-btn img {
+    opacity: 0;
+    transform: translateX(-15px);
+}
+
+#submit-btn:hover img {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .sub-footer {

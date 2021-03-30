@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function Form() {
+export default function Form({ areas }) {
     return (
         <>
             <div className="consulta-header bg-dourado text-white playfair">
@@ -19,17 +19,22 @@ export default function Form() {
                     </div>
 
                     <div>
-                        <select defaultValue="Área" id="atuacao" className="form-select">
-                            <option value="placeholder">Área de Atuação</option>
+                        <select defaultValue="Área" id="atuacao" className="form-select border-radius-0">
+                            <option value="Não informado">Área de Atuação</option>
+                            {
+                                areas.map(area => {
+                                    return <option key={area.id} value={area.titulo}>{area.titulo}</option>
+                                })
+                            }
                         </select>
                     </div>
 
                     <div className="form-floating">
-                        <textarea id="msg" placeholder="Descrição da Demanda" className="form-control" />
+                        <textarea id="msg" placeholder="Descrição da Demanda" className="form-control border-radius-0" />
                         <label className="placeholder-text" htmlFor="msg">Sua Mensagem</label>
                     </div>
 
-                    <button className="btn btn-primary mt-4 msg-btn btn-h-45" type="submit">
+                    <button className="btn btn-primary mt-4 msg-btn btn-h-45" id="submit-btn" type="submit">
                         <span>Enviar Mensagem &nbsp; <img src="/img/seta.svg" alt="Seta" /></span>
                     </button>
                 </form>

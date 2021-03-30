@@ -2,7 +2,7 @@ import React from 'react';
 import FaleConosco from "./components/FaleConosco";
 import Form from "./components/Form";
 
-export default function BannerInferior() {
+export default function BannerInferior({ areas }) {
     return (
         <div id="banner-inferior">
             <div className="container">
@@ -13,7 +13,7 @@ export default function BannerInferior() {
                     </div>
                     <div className="col-1" />
                     <div className="col-5">
-                        <Form />
+                        <Form areas={areas} />
                     </div>
                     <div className="col-1" />
                 </div>
