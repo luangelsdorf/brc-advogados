@@ -25,7 +25,7 @@ export default function TopHeader() {
             <nav className="navbar navbar-expand-lg navbar-light w-100">
                 <div className="container">
                     <a href="/">
-                        <img src="/img/logo.png" alt="Logo" />
+                        <img src="/img/logo-extenso.svg" width="300" height="97" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
                         <span className="navbar-toggler-icon" />
