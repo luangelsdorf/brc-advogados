@@ -146,6 +146,8 @@ body {
 .btn {
     border-radius: 0;
     font-size: 13px;
+    align-items: center;
+    display: inline-flex;
 }
 
 .btn-primary {
@@ -186,7 +188,7 @@ ul {
 }
 
 a:hover {
-    color: var(--dourado) !important;
+    color: var(--dourado);
 }
 
 .navbar {
@@ -205,6 +207,10 @@ a:hover {
 
 .navbar-light .navbar-nav .nav-link {
     color: inherit;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--dourado);
 }
 
 .nav-link {

@@ -84,7 +84,7 @@ export default function AreasLayout({ children }) {
                                     Nós estamos prontos para atender você
                                 </strong>
                             </div>
-                            <button className="btn btn-secondary">Faça uma Consulta Gratuita</button>
+                            <a href="#banner-inferior" className="btn btn-secondary btn-h-50">Fale com um Advogado</a>
                         </div>
                     </div>
 

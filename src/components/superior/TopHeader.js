@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TopHeader() {
     return (
-        <header className="top-header">
+        <header className="top-header" id="top-header">
             <div className="container top-bar d-flex justify-content-between text-white">
                 <div className="bar-section my-2">
                     <span className="divisor position-relative fs-13 pe-4">Email: contato@brcadv.com</span>
@@ -32,16 +32,16 @@ export default function TopHeader() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navBarTop">
                         <div className="nav navbar-nav justify-content-between text-white">
-                            <a href="/#home" className="nav-link d-flex align-items-center">Início</a>
+                            <a href="/#top-header" className="nav-link d-flex align-items-center">Início</a>
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">Sobre Nós</a>
-                            <a href="/areas" className="nav-link d-flex align-items-center">Áreas de Atuação</a>
+                            <a href="/areas-de-atuacao/consultivo-civel" className="nav-link d-flex align-items-center">Áreas de Atuação</a>
                             <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">Nossa Equipe</a>
                             <a href="/blog" className="nav-link d-flex align-items-center">Blog</a>
-                            <a href="/#contato" className="nav-link d-flex align-items-center">Contato</a>
+                            <a href="/#banner-inferior" className="nav-link d-flex align-items-center">Contato</a>
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>
-                    <button className="btn btn-primary hover-claro d-none d-lg-flex">Fale com um Advogado</button>
+                    <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40" href="#banner-inferior">Fale com um Advogado</a>
                 </div>
             </nav>
         </header>

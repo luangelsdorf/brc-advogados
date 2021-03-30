@@ -23,7 +23,7 @@ export default function SobreNos() {
                                 estratégias que se adequem às necessidades de seus clientes, buscando sempre o atendimento
                                 célere, eficaz e universal.
                             </p>
-                            <button className="btn btn-primary mt-4">Conheça Nossa Equipe &darr;</button>
+                            <a href="/#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
                         </div>
                     </div>
 

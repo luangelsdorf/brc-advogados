@@ -29,7 +29,7 @@ export default function Form() {
                         <label className="placeholder-text" htmlFor="msg">Sua Mensagem</label>
                     </div>
 
-                    <button className="btn btn-primary mt-4 msg-btn" type="submit">
+                    <button className="btn btn-primary mt-4 msg-btn btn-h-45" type="submit">
                         <span>Enviar Mensagem &nbsp; <img src="/img/seta.svg" alt="Seta" /></span>
                     </button>
                 </form>

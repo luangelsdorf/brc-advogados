@@ -26,7 +26,7 @@ export default function Blog() {
                             <strong className="playfair fs-44">Notícias e Artigos</strong>
                         </div>
                         <div>
-                            <select className="form-select" id="select-interesse">
+                            <select className="form-select btn-h-50" id="select-interesse">
                                 <option value="Interesse">Selecione o seu Interesse</option>
                             </select>
                         </div>
