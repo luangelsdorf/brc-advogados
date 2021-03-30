@@ -3,7 +3,7 @@ import React from 'react';
 export default function BannerSuperior({ title, subtitle, btn }) {
     let display
     if (btn) {
-        display = 'inline-block'
+        display = 'inline-flex'
     } else {
         display = 'none'
     }
@@ -14,7 +14,7 @@ export default function BannerSuperior({ title, subtitle, btn }) {
                 <div>
                     <strong className="playfair fs-72 lh-96 d-block mb-4"> {title} </strong>
                     <span className="lh-24 d-block mb-4"> {subtitle} </span>
-                    <a href="" className={`btn btn-primary btn-h-50 d-${display}`}>Conheça Nossos Serviços</a>
+                    <a href="/areas-de-atuacao/consultivo-civel" className={`btn btn-primary btn-h-50 d-${display}`}>Conheça Nossos Serviços</a>
                 </div>
             </div>
         </div>
