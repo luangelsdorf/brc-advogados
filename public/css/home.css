@@ -84,6 +84,16 @@
     background-color: #f9f9f9;
 }
 
+#nossa-equipe::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 130px;
+    width: 45%;
+    background-color: var(--dourado);
+}
+
 .overlay-bottom {
     width: 100%;
     position: absolute;
