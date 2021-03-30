@@ -280,16 +280,6 @@ a:hover {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.top-header {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    background-image: url("/img/banner-superior.png");
-    background-repeat: no-repeat;
-    background-color: #003057;
-    z-index: 5;
-}
-
 .fixed-header {
     position: sticky;
     top: 0;
@@ -325,20 +315,7 @@ a:hover {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Superior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-#banner-superior {
-    height: 950px;
-    background-image:
-            url("/img/banner-superior.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position-y: -85px;
-}
 
-@media (min-width: 1920px) {
-    .top-header {
-        background-size: cover;
-    }
-}
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Inferior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 

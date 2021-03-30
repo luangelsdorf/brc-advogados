@@ -72,3 +72,30 @@ img {
     margin-top: 75px;
     margin-bottom: 75px;
 }
+
+#banner-superior {
+    height: 950px;
+    background-image:
+            url("/img/banner-superior.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -85px;
+}
+
+@media (min-width: 1920px) {
+    .top-header {
+        background-size: cover;
+    }
+}
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+.top-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-image: url("/img/banner-superior.png");
+    background-repeat: no-repeat;
+    background-color: #003057;
+    z-index: 5;
+}
