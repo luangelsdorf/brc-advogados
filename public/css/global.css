@@ -497,6 +497,19 @@ a:hover {
     padding-right: 37px;
 }
 
+.area-item:first-child {
+    margin-bottom: 20px;
+}
+
+.area-item:last-child {
+    margin-top: 20px;
+}
+
+.area-item:not(:last-child):not(:first-child) {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Footer -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 footer {
