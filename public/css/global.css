@@ -70,6 +70,10 @@ body {
     line-height: 96px !important;
 }
 
+.z-index-1 {
+    z-index: -1 !important;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;

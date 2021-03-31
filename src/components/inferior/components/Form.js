@@ -21,11 +21,13 @@ export default function Form({ areas }) {
                     <div>
                         <select defaultValue="Área" id="atuacao" className="form-select border-radius-0">
                             <option value="Não informado">Área de Atuação</option>
-                            {
-                                areas.map(area => {
-                                    return <option key={area.id} value={area.titulo}>{area.titulo}</option>
-                                })
-                            }
+                            <option value="Consultivo Cível">Consultivo Cível</option>
+                            <option value="Direito Empresarial">Direito Empresarial</option>
+                            <option value="LGPD">LGPD</option>
+                            <option value="Direito Administrativo">Direito Administrativo</option>
+                            <option value="Contencioso Civil">Contencioso Civil</option>
+                            <option value="Trabalhista/Previdenciário">Trabalhista/Previdenciário</option>
+                            <option value="Direito e Saúde">Direito e Saúde</option>
                         </select>
                     </div>
 

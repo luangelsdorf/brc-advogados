@@ -4,17 +4,18 @@ import Link from "next/link";
 
 export default function AreasLayout({ children }) {
     return (
-        <div className="container-fluid px-0 flex-center" id="areas-de-atuacao">
+        <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">
+            <img className="img-fluid position-absolute z-index-1" src="/img/themis.png" alt="Desenho"/>
             <div className="container">
                 <div className="row">
                     <div className="col-4">
-                        <strong className="d-block text-escuro playfair fs-24 mb-4">Áreas de Atuação</strong>
+                        <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">Áreas de Atuação</strong>
                         <ul className="list-group list-group-flush">
                             <li className="list-group-item">
                                 <Link scroll={false} href="/areas-de-atuacao/consultivo-civel">
                                     <a className=" d-inline-flex justify-content-between w-100" id="consultivo-civel">
                                         <span>Consultivo Cível</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -23,7 +24,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/contencioso-civil">
                                     <a className=" d-inline-flex justify-content-between w-100" id="contencioso-civil">
                                         <span>Contencioso Civil</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -32,7 +33,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/direito-administrativo">
                                     <a className=" d-inline-flex justify-content-between w-100" id="direito-administrativo">
                                         <span>Direito Administrativo</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -41,7 +42,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/direito-e-saude">
                                     <a className=" d-inline-flex justify-content-between w-100" id="direito-e-saude">
                                         <span>Direito e Saúde</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -50,7 +51,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/empresarial-propriedade-intelectual">
                                     <a className=" d-inline-flex justify-content-between w-100" id="empresarial-propriedade-intelectual">
                                         <span>Empresarial/Propriedade Intelectual</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -59,7 +60,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/lgpd">
                                     <a className=" d-inline-flex justify-content-between w-100" id="lgpd">
                                         <span>LGPD</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
@@ -68,7 +69,7 @@ export default function AreasLayout({ children }) {
                                 <Link scroll={false} href="/areas-de-atuacao/trabalhista-previdenciario">
                                     <a className=" d-inline-flex justify-content-between w-100" id="trabalhista-previdenciario">
                                         <span>Trabalhista/Previdenciário</span>
-                                        <span className="fas fa-angle-right"/>
+                                        <span className="fas fa-angle-right text-normal"/>
                                     </a>
                                 </Link>
                             </li>
