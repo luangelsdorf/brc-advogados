@@ -24,14 +24,49 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    font-size: 10px;
+    font-size: 13px;
     background-color: var(--dourado);
     color: white;
-    width: 112px;
     height: 30px;
     position: absolute;
     bottom: 0;
     left: 30px;
+    transition: 250ms ease-in-out;
+}
+
+.categoria:hover {
+    background-color: white;
+    color: var(--dourado);
+}
+
+.post-title-link {
+    color: var(--azul-escuro) !important;
+    transition: all 250ms ease-in-out;
+}
+
+.post-title-link:hover {
+    color: var(--dourado) !important;
+}
+
+.flecha {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 400ms ease;
+}
+
+.ler-mais {
+    color: var(--dourado);
+    transition: all 300ms ease;
+}
+
+.ler-mais:hover .flecha {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ler-mais:hover {
+    color: var(--azul-claro);
 }
 
 #posts-heading {
@@ -56,6 +91,8 @@ img {
     justify-content: center;
     border: 1px solid #DFDFDF;
     color: inherit;
+    margin-right: 5px;
+    margin-left: 5px;
 }
 
 .pag-btn:hover {

@@ -28,6 +28,11 @@ ul {
     background-size: cover !important;
 }
 
+#select-interesse {
+    background-image: url("/img/caret-down.svg") !important;
+    background-size: 5% !important;
+}
+
 .estamos-prontos {
     height: 130px;
     width: 710px;

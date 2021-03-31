@@ -195,6 +195,11 @@ ul {
     margin: 0;
 }
 
+#select-interesse {
+    background-image: url("/img/caret-down.svg") !important;
+    background-size: 5% !important;
+}
+
 a[role="button"] {
     cursor: pointer;
 }
