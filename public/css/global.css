@@ -208,7 +208,12 @@ a:hover {
     color: var(--dourado);
 }
 
-.navbar {
+.navbar-top {
+    padding-top: 30px;
+    padding-bottom: 17.5px;
+}
+
+.navbar-fixed {
     padding-top: 17.5px;
     padding-bottom: 17.5px;
 }

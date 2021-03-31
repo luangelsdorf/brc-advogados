@@ -22,7 +22,7 @@ export default function TopHeader() {
                     </div>
                 </div>
             </div>
-            <nav className="navbar navbar-expand-lg navbar-light w-100">
+            <nav className="navbar navbar-top navbar-expand-lg navbar-light w-100">
                 <div className="container">
                     <a href="/">
                         <img src="/img/logo-extenso.svg" width="300" height="97" alt="Logo" />
@@ -30,7 +30,7 @@ export default function TopHeader() {
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
                         <span className="navbar-toggler-icon" />
                     </button>
-                    <div className="collapse navbar-collapse justify-content-center" id="navBarTop">
+                    <div className="collapse navbar-collapse justify-content-center align-self-start" id="navBarTop">
                         <div className="nav navbar-nav justify-content-between text-white">
                             <a href="/#top-header" className="nav-link d-flex align-items-center">Início</a>
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">Sobre Nós</a>
@@ -41,7 +41,7 @@ export default function TopHeader() {
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>
-                    <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40" href="#banner-inferior">Fale com um Advogado</a>
+                    <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40 align-self-start" href="#banner-inferior">Fale com um Advogado</a>
                 </div>
             </nav>
         </header>

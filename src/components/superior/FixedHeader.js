@@ -3,7 +3,7 @@ import React from 'react';
 export default function FixedHeader() {
     return (
         <header className="fixed-header">
-            <nav className="navbar navbar-expand-lg navbar-light w-100">
+            <nav className="navbar navbar-fixed navbar-expand-lg navbar-light w-100">
                 <div className="container">
                     <a href="/">
                         <img src="/img/logo.png" alt="Logo" />
