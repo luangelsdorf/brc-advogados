@@ -11,9 +11,9 @@ export default function PostCard(props) {
                 <div className="post-card-body flex-center">
                     <div>
                         <span className="d-block text-dourado mt-4">{props.data}</span>
-                        <a href="#" className="d-block playfair post-title-link fs-22 mt-4 mb-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
-                        <span className="d-block mb-3">Lorem ipsum dolor sit amet, consectetur et adipiscing elit, sed do eiusmod quis tempor inunt ut labore et dolore magna aliqua...</span>
-                        <a href="#" className="ler-mais">Ler Mais <span className="flecha">&rarr;</span></a>
+                        <a href={props.href} className="d-block playfair post-title-link fs-22 mt-4 mb-3">{props.title}</a>
+                        <span className="d-block mb-3">{props.body}</span>
+                        <a href={props.href} className="ler-mais">Ler Mais <span className="flecha">&rarr;</span></a>
                     </div>
                 </div>
             </div>

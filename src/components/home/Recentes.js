@@ -1,7 +1,11 @@
 import React from 'react';
 import PostCard from "./PostCard";
 
-export default function Recentes() {
+export default function Recentes({ posts }) {
+
+    let quantity = [0, 1, 2]
+    console.log(posts[1])
+
     return (
         <div className="container-fluid flex-center flex-column px-0" id="recentes">
             <div className="flex-center flex-column recentes-title">
@@ -10,9 +14,22 @@ export default function Recentes() {
             </div>
             <div className="container">
                 <div className="row">
-                    <PostCard img="1" categoria="Direito Trabalhista" data="Fev 10, 2021" />
-                    <PostCard img="2" categoria="Contencioso Cível" data="Fev 14, 2021" />
-                    <PostCard img="3" categoria="Notícia, Previdenciário" data="Fev 17, 2021" />
+                    {
+                        quantity.map(card => {
+                            return (
+                                <PostCard img={card.toString()}
+                                          categoria="Direito Trabalhista"
+                                          data={posts[card].data}
+                                          title={posts[card].titulo_post}
+                                          body={posts[card].texto_post.substring(0, 125) + '...'}
+                                          href={`/blog/${posts[card].id}`}
+
+                                          key={`card-${posts[card].id}`}
+                                          />
+
+                            )
+                        })
+                    }
                 </div>
             </div>
         </div>

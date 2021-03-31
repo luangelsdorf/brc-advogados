@@ -15,13 +15,14 @@ import Footer from "../src/components/inferior/Footer";
 
 
 
-export default function Home({ areas }) {
+export default function Home({ areas, posts }) {
     console.log(areas)
+    console.log(posts)
     return (
         <>
             <TopHeader />
             <FixedHeader />
-            <BannerSuperior title={<span>Atendimento <br/> Ágil e Eficaz</span>} subtitle={<span>Atendimento individualizado, buscando criar estratégias <br/> que se adequem às necessidades de seus clientes</span>} btn={true} home={true} />
+            <BannerSuperior title={<span>Atendimento <br/> Ágil e Eficaz</span>} subtitle={<span>Atendimento individualizado, buscando criar estratégias <br/> que se adequem às necessidades de seus clientes</span>} btn={true} />
 
             <div className="container-fluid p-0 position-relative home">
                 <HeadContent title="BRC Advogados" page="home" />
@@ -31,7 +32,7 @@ export default function Home({ areas }) {
                 <NossaEquipe />
                 <Parallax />
                 <Areas areas={areas} />
-                <Recentes />
+                <Recentes posts={posts} />
             </div>
 
             <BannerInferior areas={areas} />
@@ -41,9 +42,12 @@ export default function Home({ areas }) {
     )
 }
 
-export async function getStaticProps(context) {
-    const response = await fetch(`http://localhost:1337/areas`)
-    const areas = await response.json()
+export async function getStaticProps() {
+    const responseAreas = await fetch(`http://localhost:1337/areas`)
+    const areas = await responseAreas.json()
 
-    return { props: { areas } }
+    const  responsePosts  = await fetch('http://localhost:1337/posts')
+    const posts = await responsePosts.json()
+
+    return { props: { areas, posts } }
 }

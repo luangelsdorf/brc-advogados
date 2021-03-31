@@ -32,7 +32,12 @@ export default function Areas({ areas }) {
                     {
                         areas.map(area => {
                             return (
-                                <AreaCard key={area.id} title={area.titulo} icon={area.icone}>
+                                <AreaCard
+                                    key={area.id}
+                                    title={area.titulo}
+                                    icon={area.icone}
+                                    href={area.slug}
+                                >
                                     { area.descricao.substring(0, 95) + '...    ' }
                                 </AreaCard>
                             )

@@ -1,0 +1,167 @@
+.post-card-body {
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.post-card-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.post-card-overlay:hover img {
+    transform: scale(1.15);
+}
+
+.categoria {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 13px;
+    background-color: var(--dourado);
+    color: white;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+    transition: 250ms ease-in-out;
+}
+
+.categoria:hover {
+    background-color: white;
+    color: var(--dourado);
+}
+
+.post-title-link {
+    color: var(--azul-escuro) !important;
+    transition: all 250ms ease-in-out;
+}
+
+.post-title-link:hover {
+    color: var(--dourado) !important;
+}
+
+.flecha {
+    display: inline-block;
+    opacity: 0;
+    transform: translateX(-10px);
+    transition: all 400ms ease;
+}
+
+.ler-mais {
+    color: var(--dourado);
+    transition: all 300ms ease;
+}
+
+.ler-mais:hover .flecha {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.ler-mais:hover {
+    color: var(--azul-claro);
+}
+
+img {
+    transition: all 400ms ease;
+}
+
+
+#banner-superior {
+    height: 550px;
+    background-image:
+            url("/img/fundo-post.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: -85px;
+}
+
+.top-header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background-image: url("/img/fundo-post.png");
+    background-repeat: no-repeat;
+    background-color: #003057;
+    z-index: 5;
+}
+
+@media (min-width: 1920px) {
+    .top-header {
+        background-size: cover;
+    }
+}
+
+.post-date {
+    padding-right: 10px;
+}
+
+#post-date-row::before {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: var(--dourado);
+    border-radius: 99px;
+}
+
+#post-date-row::after {
+    content: "";
+    width: 50px;
+    height: 2px;
+    background-color: var(--dourado);
+    border-radius: 99px;
+}
+
+.post-container {
+    margin-top: -425px;
+}
+
+.post-img {
+
+}
+
+.post-body {
+    margin-bottom: 70px;
+    white-space: break-spaces;
+}
+
+.img-placeholder {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    width: 970px;
+    height: 450px;
+    background-color: #9B9B9B;
+}
+
+.social-btn-post {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-top: 15px;
+    font-size: 13px !important;
+    color: #fff !important;
+}
+
+.twitter-btn {
+    background-color: #00A2F5 !important;
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+.facebook-btn {
+    background-color: #23599B !important;
+}
+
+.linkedin-btn {
+    background-color: #23599B !important;
+}
+
+hr {
+    margin: 115px 0 !important;
+}
+
+#related {
+    margin-bottom: 100px;
+}
+
+#banner-inferior {
+    margin-top: 150px;
+}

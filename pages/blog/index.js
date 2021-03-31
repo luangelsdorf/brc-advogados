@@ -9,7 +9,7 @@ import HeadContent from "../../src/components/HeadContent";
 import PostCard from "../../src/components/home/PostCard";
 import Pagination from "../../src/components/blog/Pagination";
 
-export default function Blog() {
+export default function Blog({ posts }) {
     return (
         <>
             <HeadContent title="Blog - BRC Advogados" page="blog" />
@@ -32,15 +32,22 @@ export default function Blog() {
                         </div>
                     </div>
                     <div className="row g-5">
-                        <PostCard img="1" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="2" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="3" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="3" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="2" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="1" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="2" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="1" data="Fev 15, 2021" categoria="Contencioso Cível" />
-                        <PostCard img="2" data="Fev 15, 2021" categoria="Contencioso Cível" />
+                        {
+                            posts.map(card => {
+                                return (
+                                    <PostCard img={posts.indexOf(card).toString()}
+                                              categoria="Direito Trabalhista"
+                                              data={card.data}
+                                              title={card.titulo_post}
+                                              body={card.texto_post.substring(0, 125) + '...'}
+                                              href={`/blog/${card.id}`}
+
+                                              key={`card-${card.id}`}
+                                    />
+
+                                )
+                            })
+                        }
                     </div>
                 </div>
             </div>
@@ -52,4 +59,11 @@ export default function Blog() {
             <Footer />
         </>
     )
+}
+
+export async function getStaticProps() {
+    const responsePosts  = await fetch('http://localhost:1337/posts')
+    const posts = await responsePosts.json()
+
+    return { props: { posts } }
 }
