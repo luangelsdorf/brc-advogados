@@ -165,3 +165,21 @@ hr {
 #banner-inferior {
     margin-top: 150px;
 }
+
+blockquote {
+    margin-bottom: 0 !important;
+    position: relative;
+    margin-left: 50px !important;
+    font-size: 24px;
+    font-style: italic;
+}
+
+blockquote::before {
+    content: "";
+    height: 100%;
+    width: 2px;
+    background-color: var(--dourado);
+    border-radius: 99px;
+    position: absolute;
+    left: -25px;
+}

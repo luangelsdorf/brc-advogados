@@ -9,7 +9,6 @@ import Footer from "../../src/components/inferior/Footer";
 import React from "react";
 
 export default function Post({ post, posts }) {
-
     let quantity = [0, 1, 2]
     return (
         <>
@@ -32,11 +31,7 @@ export default function Post({ post, posts }) {
                             <div className="img-placeholder">
                                 <img src="/img/destaque-post.png" alt="Imagem" className="img-fluid post-img" />
                             </div>
-                            <div className="text-escuro fs-20 post-body">
-                                {
-                                    post.texto_post
-                                }
-                            </div>
+                            <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">
                                 <span className="d-block">Gostou do texto?</span>
                                 <span className="d-block">Compartilhe nas Redes Sociais:</span>
