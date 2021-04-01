@@ -9,7 +9,7 @@ import Footer from "../../src/components/inferior/Footer";
 import React from "react";
 
 export default function Post({ post, posts }) {
-    console.log(post)
+
     let quantity = [0, 1, 2]
     return (
         <>
