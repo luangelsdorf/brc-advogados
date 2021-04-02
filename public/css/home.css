@@ -225,47 +225,6 @@ img {
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
-.post-card-body {
-    padding-right: 30px;
-    padding-left: 30px;
-}
-
-.post-card-overlay {
-    position: relative;
-    overflow: hidden;
-}
-
-.post-card-overlay:hover img {
-    transform: scale(1.15);
-}
-
-.categoria {
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 13px;
-    background-color: var(--dourado);
-    color: white;
-    height: 30px;
-    position: absolute;
-    bottom: 0;
-    left: 30px;
-    transition: 250ms ease-in-out;
-}
-
-.categoria:hover {
-    background-color: white;
-    color: var(--dourado);
-}
-
-.post-title-link {
-    color: var(--azul-escuro) !important;
-    transition: all 250ms ease-in-out;
-}
-
-.post-title-link:hover {
-    color: var(--dourado) !important;
-}
 
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Card Post -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */

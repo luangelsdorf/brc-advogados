@@ -5,7 +5,7 @@ export default function PostCard(props) {
         <div className="col-4">
             <div>
                 <div className="post-card-overlay">
-                    <img src={`/img/card-img/${props.img}.png`} className="w-100" alt="Card Img"/>
+                    <img src={`/img/card-img/${props.img}.png`} className="w-100 h-100 object-fit-cover" alt="Card Img"/>
                     <a href="#" className="categoria px-3">{props.categoria}</a>
                 </div>
                 <div className="post-card-body flex-center">

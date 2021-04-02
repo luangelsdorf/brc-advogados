@@ -29,7 +29,7 @@ export default function Post({ post, posts }) {
                         </div>
                         <div>
                             <div className="img-placeholder">
-                                <img src="/img/destaque-post.png" alt="Imagem" className="img-fluid post-img" />
+                                <img src="/img/destaque-post.png" alt="Imagem" className="w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">
@@ -115,5 +115,10 @@ export async function getStaticProps({ params }) {
     const resp = await fetch('http://localhost:1337/posts')
     const posts = await resp.json()
 
-    return { props: { post, posts } }
+    return {
+        props: {
+            post, posts
+        },
+        revalidate: 1
+    }
 }
