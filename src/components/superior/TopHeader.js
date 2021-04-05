@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function TopHeader() {
+export default function TopHeader({ textos }) {
     return (
         <header className="top-header" id="top-header">
             <div className="container top-bar d-flex justify-content-between text-white">
@@ -32,12 +32,12 @@ export default function TopHeader() {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center align-self-start" id="navBarTop">
                         <div className="nav navbar-nav justify-content-between text-white">
-                            <a href="/#top-header" className="nav-link d-flex align-items-center">Início</a>
-                            <a href="/#sobre-nos" className="nav-link d-flex align-items-center">Sobre Nós</a>
-                            <a href="/areas-de-atuacao/consultivo-civel" className="nav-link d-flex align-items-center">Áreas de Atuação</a>
-                            <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">Nossa Equipe</a>
-                            <a href="/blog" className="nav-link d-flex align-items-center">Blog</a>
-                            <a href="/#banner-inferior" className="nav-link d-flex align-items-center">Contato</a>
+                            <a href="/#top-header" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
+                            <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
+                            <a href="/areas-de-atuacao/consultivo-civel" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
+                            <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
+                            <a href="/blog" className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
+                            <a href="/#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>

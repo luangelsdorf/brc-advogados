@@ -1,14 +1,12 @@
 import React from 'react';
 
-export default function FaleConosco() {
+export default function FaleConosco({ textos }) {
     return (
         <div className="d-flex flex-column text-white">
-            <span className="line-title w-max-content">CONTATOS</span>
-            <strong className="playfair fs-44">Fale Conosco</strong>
+            <span className="line-title w-max-content">{ textos.contatos_title_1 }</span>
+            <strong className="playfair fs-44">{ textos.contatos_title_2 }</strong>
             <span className=" contato-text">
-                Para entrar em contato com nossos profissionais
-                utilize o formulário. Nossa equipe de atendimento
-                retornará a sua mensagem o mais breve possível.
+                {textos.contatos_text}
             </span>
             <div className="contatos-content">
                 <span className="d-block text-dourado mb-3">CONTATOS</span>
@@ -23,7 +21,7 @@ export default function FaleConosco() {
                 <span className="d-block text-dourado mb-3">LOCALIZAÇÃO</span>
                 <div className="d-flex align-items-center">
                     <span className="text-dourado mb-4 fas fa-map-marker-alt" />
-                    <span className="ps-3">Av. Paulista, 726 - 17º andar, conjunto 1707, <br /> Bela Vista - São Paulo / SP | 01310-100</span>
+                    <span className="ps-3">{ textos.local }</span>
                 </div>
             </div>
         </div>

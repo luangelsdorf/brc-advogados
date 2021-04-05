@@ -342,6 +342,7 @@ a:hover {
 .post-card-overlay {
     position: relative;
     overflow: hidden;
+    height: 250px;
 }
 
 .post-card-overlay:hover img {
@@ -507,6 +508,7 @@ a:hover {
     padding-bottom: 35px;
     margin-bottom: 35px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
 }
 
 .contatos-content {
@@ -515,12 +517,12 @@ a:hover {
 
 #submit-btn img {
     opacity: 0;
-    transform: translateX(-15px);
+    margin-left: -11px;
 }
 
 #submit-btn:hover img {
     opacity: 1;
-    transform: translateX(0);
+    margin-left: 0;
 }
 
 
@@ -539,6 +541,7 @@ a:hover {
     margin-bottom: 30px;
     display: inline-block;
     color: white;
+    width: 235px;
 }
 
 .social-btn {

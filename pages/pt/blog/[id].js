@@ -1,11 +1,11 @@
-import HeadContent from "../../src/components/HeadContent";
-import TopHeader from "../../src/components/superior/TopHeader";
-import FixedHeader from "../../src/components/superior/FixedHeader";
-import BannerSuperior from "../../src/components/superior/BannerSuperior";
-import PostCard from "../../src/components/home/PostCard";
-import BannerInferior from "../../src/components/inferior/BannerInferior";
-import SubFooter from "../../src/components/inferior/SubFooter";
-import Footer from "../../src/components/inferior/Footer";
+import HeadContent from "../../../src/components/HeadContent";
+import TopHeader from "../../../src/components/superior/TopHeader";
+import FixedHeader from "../../../src/components/superior/FixedHeader";
+import BannerSuperior from "../../../src/components/superior/BannerSuperior";
+import PostCard from "../../../src/components/home/PostCard";
+import BannerInferior from "../../../src/components/inferior/BannerInferior";
+import SubFooter from "../../../src/components/inferior/SubFooter";
+import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
 
 export default function Post({ post, posts }) {

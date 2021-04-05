@@ -1,28 +1,22 @@
 import React from 'react';
 
-export default function SobreNos() {
+export default function SobreNos({ textos }) {
     return (
         <div className="container-fluid px-0 flex-center" id="sobre-nos">
             <div className="container">
                 <div className="row w-100 align-items-center">
                     <div className="col-6">
-                        <span className="line-title w-max-content">QUEM SOMOS</span>
-                        <strong className="playfair fs-44 d-block text-escuro mb-3 lh-60">O Escritório Bueno Rios <br /> & Consentino Advogados</strong>
+                        <span className="line-title w-max-content">{ textos.qs_title_1 }</span>
+                        <strong className="playfair fs-44 d-block text-escuro mb-3 lh-60">{ textos.qs_title_2 }</strong>
                         <div className="sobre-nos-text">
                             <p className="mb-3">
-                                Localizado no Coração de São Paulo, na Avenida Paulista, é formado por {/*<br />*/}
-                                advogados com reconhecida e comprovada capacidade jurídica originada {/*<br />*/}
-                                de atuação em renomados escritórios de advocacia ao longo dos anos.
+                                { textos.qs_title_1 }
                             </p>
                             <p className="mb-3">
-                                Utilizando-se de sua sólida formação acadêmica e vasta experiência, {/*<br />*/}
-                                os advogados criam soluções jurídicas criativas, eficazes e individualizadas {/*<br />*/}
-                                para melhor atender os interesses de seus Clientes.
+                                { textos.qs_title_2 }
                             </p>
                             <p className="mb-3">
-                                O BRC Advogados possui como sua marca o atendimento individualizado, {/*<br />*/}
-                                buscando criar estratégias que se adequem às necessidades de seus {/*<br />*/}
-                                clientes, buscando sempre o atendimento célere, eficaz e universal.
+                                { textos.qs_title_3 }
                             </p>
                             <a href="/#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
                         </div>

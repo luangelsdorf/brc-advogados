@@ -1,15 +1,12 @@
 import React from 'react';
 
-export default function Qualidades() {
+export default function Qualidades({ textos }) {
     return (
         <div className="w-max-content">
             <img src="/img/logo.png" alt="Logo" className="d-block" />
 
             <span className="qualidades">
-                Zelamos pelo atendimento<br />
-                individualizado, buscando criar<br />
-                estratégias que se adequem às<br />
-                necessidades de nossos clientes.
+                { textos.footer_msg }
             </span>
 
             <div className="d-flex">

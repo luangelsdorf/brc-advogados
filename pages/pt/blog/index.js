@@ -1,13 +1,13 @@
 import React from 'react';
-import TopHeader from "../../src/components/superior/TopHeader";
-import FixedHeader from "../../src/components/superior/FixedHeader";
-import BannerSuperior from "../../src/components/superior/BannerSuperior";
-import BannerInferior from "../../src/components/inferior/BannerInferior";
-import SubFooter from "../../src/components/inferior/SubFooter";
-import Footer from "../../src/components/inferior/Footer";
-import HeadContent from "../../src/components/HeadContent";
-import PostCard from "../../src/components/home/PostCard";
-import Pagination from "../../src/components/blog/Pagination";
+import TopHeader from "../../../src/components/superior/TopHeader";
+import FixedHeader from "../../../src/components/superior/FixedHeader";
+import BannerSuperior from "../../../src/components/superior/BannerSuperior";
+import BannerInferior from "../../../src/components/inferior/BannerInferior";
+import SubFooter from "../../../src/components/inferior/SubFooter";
+import Footer from "../../../src/components/inferior/Footer";
+import HeadContent from "../../../src/components/HeadContent";
+import PostCard from "../../../src/components/home/PostCard";
+import Pagination from "../../../src/components/blog/Pagination";
 
 export default function Blog({ posts }) {
     return (

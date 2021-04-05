@@ -2,7 +2,7 @@ import React from 'react';
 import data from '../../../src/data/data.json';
 import AreaCard from "./AreaCard";
 
-export default function Areas({ areas }) {
+export default function Areas({ areas, textos }) {
 
     return (
         <div className="container-fluid px-0 fundo-areas">
@@ -10,20 +10,16 @@ export default function Areas({ areas }) {
                 <div className="row g-4">
                     <div className="col-8">
                         <div className="d-flex flex-column">
-                            <span className="line-title w-max-content">NOSSOS SERVIÇOS</span>
-                            <strong className="playfair fs-44 d-block text-escuro my-15-50">Áreas de Atuação</strong>
+                            <span className="line-title w-max-content">{ textos.areas_title_1 }</span>
+                            <strong className="playfair fs-44 d-block text-escuro my-15-50">{ textos.areas_title_2 }</strong>
 
                             <div className="d-flex">
                                 <span className="d-inline-flex pres-text mr-40">
-                                    Realizando a prestação de serviços jurídicos tanto para empresas como pessoas
-                                    físicas, o BRC Advogados elabora soluções de forma singularizada, estruturando
-                                    operações empresariais de alta
+                                    { textos.areas_text_1 }
                                 </span>
 
                                 <span className="d-inline-flex pres-text">
-                                    complexidade, realizando assessoria jurídica cível, trabalhista e em LGPD, além da
-                                    atuação em processos perante em todas as instâncias e tribunais espalhados pelo
-                                    país.
+                                    { textos.areas_text_2 }
                                 </span>
                             </div>
                         </div>
@@ -38,7 +34,7 @@ export default function Areas({ areas }) {
                                     icon={area.icone}
                                     href={area.slug}
                                 >
-                                    { area.descricao.substring(0, 95) + '...    ' }
+                                    { area.card_text }
                                 </AreaCard>
                             )
                         })

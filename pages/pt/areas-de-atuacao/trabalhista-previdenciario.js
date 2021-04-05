@@ -1,10 +1,10 @@
 import React from 'react';
-import MainLayout from "../../src/layouts/MainLayout";
-import AreasLayout from "../../src/layouts/AreasLayout";
-import HeadContent from "../../src/components/HeadContent";
+import MainLayout from "../../../src/layouts/MainLayout";
+import AreasLayout from "../../../src/layouts/AreasLayout";
+import HeadContent from "../../../src/components/HeadContent";
 
 export default function ConsultivoCivel({ areas }) {
-    const pageData = areas[3]
+    const pageData = areas[5]
     return (
         <MainLayout>
             <AreasLayout>

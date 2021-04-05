@@ -16,7 +16,7 @@ export default function MyApp({ Component, pageProps }) {
                 console.log(document.getElementById(nome))
             }
 
-            if (url === '/' || url.startsWith('/#')) {
+            if (url === '/pt' || url === '/en' || url.startsWith('/pt/#') || url.startsWith('/pt/#')) {
                 homePage()
             }
         }

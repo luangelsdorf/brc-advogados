@@ -1,15 +1,15 @@
 import React from 'react';
-import MainLayout from "../../src/layouts/MainLayout";
-import AreasLayout from "../../src/layouts/AreasLayout";
-import HeadContent from "../../src/components/HeadContent";
+import MainLayout from "../../../src/layouts/MainLayout";
+import AreasLayout from "../../../src/layouts/AreasLayout";
+import HeadContent from "../../../src/components/HeadContent";
 
 export default function ConsultivoCivel({ areas }) {
-    const pageData = areas[0]
+    const pageData = areas[2]
     return (
         <MainLayout>
-            <HeadContent title="BRC Advogados" page="areas" />
             <AreasLayout>
                 <>
+                    <HeadContent title="BRC Advogados" page="areas" />
                     <div className="flex-center flex-column">
                         <div>
                             <strong className="d-block text-escuro playfair fs-44 mb-4">{pageData.titulo}</strong>
