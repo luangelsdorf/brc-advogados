@@ -10,15 +10,15 @@ export default function SobreNos({ textos }) {
                         <strong className="playfair fs-44 d-block text-escuro mb-3 lh-60">{ textos.qs_title_2 }</strong>
                         <div className="sobre-nos-text">
                             <p className="mb-3">
-                                { textos.qs_title_1 }
+                                { textos.qs_text_1 }
                             </p>
                             <p className="mb-3">
-                                { textos.qs_title_2 }
+                                { textos.qs_text_2 }
                             </p>
                             <p className="mb-3">
-                                { textos.qs_title_3 }
+                                { textos.qs_text_3 }
                             </p>
-                            <a href="/#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
+                            <a href="#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
                         </div>
                     </div>
 

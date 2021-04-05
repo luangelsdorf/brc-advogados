@@ -56,6 +56,10 @@ img {
     background-position-y: -85px;
 }
 
+#banner-content {
+    width: 535px;
+}
+
 @media (min-width: 1920px) {
     .top-header {
         background-size: cover;
