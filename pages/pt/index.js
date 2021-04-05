@@ -21,7 +21,7 @@ export default function Home({ areas, posts, textos }) {
         <>
             <TopHeader textos={textos} />
             <FixedHeader textos={textos} />
-            <BannerSuperior textos={textos} btn={true} />
+            <BannerSuperior title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
 
             <div className="container-fluid p-0 position-relative home">
                 <HeadContent title="BRC Advogados" page="home" />

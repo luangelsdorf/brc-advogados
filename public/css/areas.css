@@ -24,6 +24,10 @@ ul {
     height: 550px !important;
 }
 
+#banner-content {
+    width: 570px;
+}
+
 .top-header {
     background-size: cover !important;
 }
