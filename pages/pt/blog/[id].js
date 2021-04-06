@@ -8,14 +8,14 @@ import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
 
-export default function Post({ post, posts }) {
+export default function Post({ post, posts, textos, areas }) {
     let quantity = [0, 1, 2]
     return (
         <>
             <HeadContent post={true} title="Post - BRC Advogados" page="post" />
-            <TopHeader />
-            <FixedHeader />
-            <BannerSuperior  />
+            <TopHeader textos={textos} />
+            <FixedHeader textos={textos} />
+            <BannerSuperior textos={textos}  />
 
             <div className="container post-container position-relative">
                 <div className="row">
@@ -60,8 +60,8 @@ export default function Post({ post, posts }) {
 
                 <div className="d-flex justify-content-between align-items-center" id="related">
                     <div className="d-flex flex-column text-escuro">
-                        <span className="line-title w-max-content">CONFIRA NOSSO CONTEÚDO</span>
-                        <strong className="playfair fs-44">Notícias e Artigos</strong>
+                        <span className="line-title w-max-content">{ textos.recentes_title_1 }</span>
+                        <strong className="playfair fs-44">{ textos.recentes_title_2 }</strong>
                     </div>
                     <div>
                         <a href="/blog" className="btn btn-primary btn-h-50 d-inline-flex">Ver todas as Publicações</a>
@@ -76,7 +76,7 @@ export default function Post({ post, posts }) {
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
-                                          href={`/blog/${posts[card].id}`}
+                                          href={`/pt/blog/${posts[card].id}`}
 
                                           key={`card-${posts[card].id}`}
                                 />
@@ -88,9 +88,9 @@ export default function Post({ post, posts }) {
 
             </div>
 
-            <BannerInferior />
-            <SubFooter />
-            <Footer />
+            <BannerInferior textos={textos} />
+            <SubFooter textos={textos} areas={areas} />
+            <Footer textos={textos} />
         </>
     )
 }
@@ -115,9 +115,15 @@ export async function getStaticProps({ params }) {
     const resp = await fetch('http://localhost:1337/posts')
     const posts = await resp.json()
 
+    const resText = await fetch('http://localhost:1337/pt-textos')
+    const textos = await resText.json()
+
+    const resAreas = await fetch('http://localhost:1337/areas')
+    const areas = await resAreas.json()
+
     return {
         props: {
-            post, posts
+            post, posts, textos, areas
         },
         revalidate: 1
     }
