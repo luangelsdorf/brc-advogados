@@ -32,7 +32,7 @@ export default function Areas({ areas, textos }) {
                                     key={area.id}
                                     title={area.titulo}
                                     icon={area.icone}
-                                    href={area.slug}
+                                    href={`/${textos.lang}/areas-de-atuacao/${area.slug}`}
                                 >
                                     { area.card_text }
                                 </AreaCard>

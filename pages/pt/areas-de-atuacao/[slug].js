@@ -28,7 +28,7 @@ export default function AreaPage({ area, areas, textos }) {
                                     areas.map(area => {
                                         return (
                                             <li className="list-group-item" key={area.slug}>
-                                                <Link scroll={false} href={`/pt/areas/${area.slug}`}>
+                                                <Link scroll={false} href={`/${textos.lang}/areas-de-atuacao/${area.slug}`}>
                                                     <a className=" d-inline-flex justify-content-between w-100" id={`${area.slug}`}>
                                                         <span>{area.titulo}</span>
                                                         <span className="fas fa-angle-right text-normal" />

@@ -16,7 +16,6 @@ import Footer from "../../src/components/inferior/Footer";
 
 
 export default function Home({ areas, posts, textos }) {
-    console.log(textos)
     return (
         <>
             <TopHeader textos={textos} />

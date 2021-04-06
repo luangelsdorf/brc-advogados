@@ -40,7 +40,7 @@ export default function Blog({ posts, textos, areas }) {
                                               data={card.data}
                                               title={card.titulo_post}
                                               body={card.texto_post.substring(0, 125) + '...'}
-                                              href={`/blog/${card.id}`}
+                                              href={`/${textos.lang}/blog/${card.id}`}
 
                                               key={`card-${card.id}`}
                                     />

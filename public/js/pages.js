@@ -7,4 +7,8 @@ function homePage() {
     })
 }
 
-export { homePage }
+function areasPage(active) {
+    document.getElementById(active).style.color = 'rgba(214, 164, 97, 1)'
+}
+
+export { homePage, areasPage }

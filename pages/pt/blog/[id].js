@@ -7,6 +7,7 @@ import BannerInferior from "../../../src/components/inferior/BannerInferior";
 import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
+import Link from 'next/link';
 
 export default function Post({ post, posts, textos, areas }) {
     let quantity = [0, 1, 2]
@@ -64,7 +65,9 @@ export default function Post({ post, posts, textos, areas }) {
                         <strong className="playfair fs-44">{ textos.recentes_title_2 }</strong>
                     </div>
                     <div>
-                        <a href="/blog" className="btn btn-primary btn-h-50 d-inline-flex">{ textos.btn_ver_todas }</a>
+                        <Link href={`/${textos.lang}/blog`}>
+                            <a className="btn btn-primary btn-h-50 d-inline-flex">{ textos.btn_ver_todas }</a>
+                        </Link>
                     </div>
                 </div>
                 <div className="row g-5">
@@ -76,7 +79,7 @@ export default function Post({ post, posts, textos, areas }) {
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
-                                          href={`/pt/blog/${posts[card].id}`}
+                                          href={`/${textos.lang}/blog/${posts[card].id}`}
 
                                           key={`card-${posts[card].id}`}
                                 />

@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function FixedHeader({ textos }) {
+    const lang = textos.lang
     return (
         <header className="fixed-header">
             <nav className="navbar navbar-fixed navbar-expand-lg navbar-light w-100">
@@ -17,7 +18,7 @@ export default function FixedHeader({ textos }) {
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
                             <a href="/#areas-de-atuacao" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
                             <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
-                            <a href="/blog" className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
+                            <a href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>
                         </div>

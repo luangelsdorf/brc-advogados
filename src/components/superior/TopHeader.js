@@ -1,6 +1,7 @@
 import React from 'react';
 
 export default function TopHeader({ textos }) {
+    const lang = textos.lang
     return (
         <header className="top-header" id="home">
             <div className="container top-bar d-flex justify-content-between text-white">
@@ -16,9 +17,9 @@ export default function TopHeader({ textos }) {
                     </div>
                     <div className="fs-13 ps-4">
                         <span className="fas fa-globe pe-2" />
-                        <a href="#" className="bar-link">PT</a>
+                        <a href="/pt/" className="bar-link">PT</a>
                         <span>&nbsp;|&nbsp;</span>
-                        <a href="#" className="bar-link">EN</a>
+                        <a href="/en/" className="bar-link">EN</a>
                     </div>
                 </div>
             </div>
@@ -36,7 +37,7 @@ export default function TopHeader({ textos }) {
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
                             <a href="/#areas-de-atuacao" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
                             <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
-                            <a href="/blog" className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
+                            <a href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
                             <a className="btn btn-primary d-flex d-lg-none w-max-content" href="#banner-inferior">{ textos.btn_fale }</a>
                         </div>

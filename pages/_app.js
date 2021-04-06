@@ -10,10 +10,16 @@ export default function MyApp({ Component, pageProps }) {
 
     useEffect(() => {
         const handleRouteChange = url => {
-            if (url.startsWith('/areas-de-atuacao')) {
-                let nome = url.slice(18)
+            if (url.startsWith('/pt/areas-de-atuacao') || url.startsWith('/en/areas-de-atuacao')) {
+                //retirar estilos de ativo se houver algum
+                let items = document.querySelectorAll('.list-group-item a')
+                items.forEach(item => {
+                    item.style.color = ''
+                })
+
+                //aplicar estilos à opção ativa
+                let nome = url.slice(21)
                 document.getElementById(nome).style.color = 'rgba(214, 164, 97, 1)'
-                console.log(document.getElementById(nome))
             }
 
             if (url === '/pt' || url === '/en' || url.startsWith('/pt/#') || url.startsWith('/pt/#')) {

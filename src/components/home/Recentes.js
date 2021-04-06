@@ -21,7 +21,7 @@ export default function Recentes({ posts, textos }) {
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
-                                          href={`/blog/${posts[card].id}`}
+                                          href={`/${textos.lang}/blog/${posts[card].id}`}
 
                                           key={`card-${posts[card].id}`}
                                           />
