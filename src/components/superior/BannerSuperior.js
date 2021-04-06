@@ -21,7 +21,7 @@ export default function BannerSuperior({ title, subtitle, btn, post }) {
                 <div id="banner-content">
                     <strong className="playfair fs-72 lh-96 d-block mb-4">{ title }</strong>
                     <span className="lh-24 d-block mb-4">{ subtitle }</span>
-                    <a href="/areas-de-atuacao/consultivo-civel" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>Conheça Nossos Serviços</a>
+                    <a href="/#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>Conheça Nossos Serviços</a>
                 </div>
             </div>
         </div>

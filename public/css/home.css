@@ -13,14 +13,11 @@
     padding-bottom: 225px;
 }
 
-.shadow-col {
-    box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
-}
-
 .area-card {
     display: block;
     padding: 40px 30px 47px;
     position: relative;
+    box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
 }
 
 .area-card::after {

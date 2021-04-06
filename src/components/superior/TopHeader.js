@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function TopHeader({ textos }) {
     return (
-        <header className="top-header" id="top-header">
+        <header className="top-header" id="home">
             <div className="container top-bar d-flex justify-content-between text-white">
                 <div className="bar-section my-2">
                     <span className="divisor position-relative fs-13 pe-4">Email: contato@brcadv.com</span>
@@ -24,7 +24,7 @@ export default function TopHeader({ textos }) {
             </div>
             <nav className="navbar navbar-top navbar-expand-lg navbar-light w-100">
                 <div className="container">
-                    <a href="/">
+                    <a href="/#home">
                         <img src="/img/logo-extenso.svg" width="300" height="97" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
@@ -32,12 +32,12 @@ export default function TopHeader({ textos }) {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center align-self-start" id="navBarTop">
                         <div className="nav navbar-nav justify-content-between text-white">
-                            <a href="/#top-header" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
+                            <a href="#home" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
-                            <a href="/areas-de-atuacao/consultivo-civel" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
+                            <a href="/#areas-de-atuacao" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
                             <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a href="/blog" className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
-                            <a href="/#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
+                            <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">Faça uma Consulta Gratuita</button>
                         </div>
                     </div>

@@ -13,9 +13,9 @@ export default function FixedHeader({ textos }) {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navBar">
                         <div className="nav navbar-nav justify-content-between text-claro">
-                            <a href="#top-header" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
+                            <a href="#home" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
                             <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
-                            <a href="/areas-de-atuacao/consultivo-civel" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
+                            <a href="/#areas-de-atuacao" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
                             <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a href="/blog" className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
