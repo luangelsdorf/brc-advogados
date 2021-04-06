@@ -22,12 +22,12 @@ export default function Blog({ posts, textos, areas }) {
                 <div className="container">
                     <div className="d-flex justify-content-between align-items-center" id="posts-heading">
                         <div className="d-flex flex-column text-escuro">
-                            <span className="line-title w-max-content">CONFIRA NOSSO CONTEÚDO</span>
-                            <strong className="playfair fs-44">Notícias e Artigos</strong>
+                            <span className="line-title w-max-content">{ textos.blog_title_1 }</span>
+                            <strong className="playfair fs-44">{ textos.blog_title_2 }</strong>
                         </div>
                         <div>
                             <select className="form-select btn-h-50 border-radius-0" id="select-interesse">
-                                <option value="Interesse">Selecione o seu Interesse</option>
+                                <option value="Interesse">{ textos.btn_interesse }</option>
                             </select>
                         </div>
                     </div>

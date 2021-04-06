@@ -18,7 +18,7 @@ export default function SobreNos({ textos }) {
                             <p className="mb-3">
                                 { textos.qs_text_3 }
                             </p>
-                            <a href="#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">Conheça Nossa Equipe &darr;</a>
+                            <a href="#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">{ textos.btn_equipe } &darr;</a>
                         </div>
                     </div>
 

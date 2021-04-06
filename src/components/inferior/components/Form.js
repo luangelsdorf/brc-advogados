@@ -37,7 +37,7 @@ export default function Form({ areas, textos }) {
                     </div>
 
                     <button className="btn btn-primary mt-4 msg-btn btn-h-45" id="submit-btn" type="submit">
-                        <span className="d-inline-block">Enviar Mensagem<img src="/img/seta.svg" alt="Seta" /></span>
+                        <span className="d-inline-block">{ textos.btn_enviar }<img src="/img/seta.svg" alt="Seta" /></span>
                     </button>
                 </form>
             </div>

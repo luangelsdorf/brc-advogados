@@ -53,10 +53,10 @@ export default function AreaPage({ area, areas, textos }) {
                             <div className="bg-dourado estamos-prontos">
                                 <div className="prontos-text">
                                     <strong className="text-right d-block fs-24 text-white playfair">
-                                        Nós estamos prontos para atender você
+                                        { textos.areas_msg }
                                     </strong>
                                 </div>
-                                <a href="#banner-inferior" className="btn btn-secondary btn-h-50">Fale com um Advogado</a>
+                                <a href="#banner-inferior" className="btn btn-secondary btn-h-50">{ textos.btn_fale }</a>
                             </div>
                         </div>
 

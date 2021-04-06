@@ -64,7 +64,7 @@ export default function Post({ post, posts, textos, areas }) {
                         <strong className="playfair fs-44">{ textos.recentes_title_2 }</strong>
                     </div>
                     <div>
-                        <a href="/blog" className="btn btn-primary btn-h-50 d-inline-flex">Ver todas as Publicações</a>
+                        <a href="/blog" className="btn btn-primary btn-h-50 d-inline-flex">{ textos.btn_ver_todas }</a>
                     </div>
                 </div>
                 <div className="row g-5">
