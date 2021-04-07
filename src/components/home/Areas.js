@@ -33,6 +33,7 @@ export default function Areas({ areas, textos }) {
                                     title={area.titulo}
                                     icon={area.icone}
                                     href={`/${textos.lang}/areas-de-atuacao/${area.slug}`}
+                                    lerMais={textos.ler_mais}
                                 >
                                     { area.card_text }
                                 </AreaCard>

@@ -35,13 +35,13 @@ export default function Blog({ posts, textos, areas }) {
                         {
                             posts.map(card => {
                                 return (
-                                    <PostCard img={posts.indexOf(card).toString()}
+                                    <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
                                               categoria="Direito Trabalhista"
                                               data={card.data}
                                               title={card.titulo_post}
                                               body={card.texto_post.substring(0, 125) + '...'}
                                               href={`/${textos.lang}/blog/${card.id}`}
-
+                                              lerMais={textos.ler_mais}
                                               key={`card-${card.id}`}
                                     />
 

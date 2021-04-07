@@ -30,7 +30,7 @@ export default function Post({ post, posts, textos, areas }) {
                         </div>
                         <div>
                             <div className="img-placeholder">
-                                <img src="/img/destaque-post.png" alt="Imagem" className="w-100 h-100 object-fit-cover" />
+                                <img src={`http://localhost:1337${post.cover[0].url}`} alt="Imagem" className="w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">
@@ -74,12 +74,13 @@ export default function Post({ post, posts, textos, areas }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={card.toString()}
+                                <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
                                           categoria="Direito Trabalhista"
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
                                           href={`/${textos.lang}/blog/${posts[card].id}`}
+                                          lerMais={textos.ler_mais}
 
                                           key={`card-${posts[card].id}`}
                                 />

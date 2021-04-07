@@ -9,7 +9,7 @@ export default function AreaCard(props) {
                 <div className="text-escuro playfair fs-22">{props.title}</div>
                 <div className="py-4 text-normal">{props.children}</div>
                 <Link href={props.href}>
-                    <a className="ler-mais">Ler Mais <span className="flecha">&rarr;</span></a>
+                    <a className="ler-mais">{props.lerMais} <span className="flecha">&rarr;</span></a>
                 </Link>
             </div>
         </div>

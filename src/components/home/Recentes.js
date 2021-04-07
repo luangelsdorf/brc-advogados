@@ -16,12 +16,13 @@ export default function Recentes({ posts, textos }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={card.toString()}
+                                <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
                                           categoria="Direito Trabalhista"
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
                                           href={`/${textos.lang}/blog/${posts[card].id}`}
+                                          lerMais={textos.ler_mais}
 
                                           key={`card-${posts[card].id}`}
                                           />
