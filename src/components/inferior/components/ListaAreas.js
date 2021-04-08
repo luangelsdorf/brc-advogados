@@ -3,7 +3,7 @@ import React from 'react';
 export default function ListaAreas({ textos, areas }) {
     return (
         <div className="w-max-content text-white">
-            <span className="list-title d-block playfair fs-20">Áreas de Atuação</span>
+            <span className="list-title d-block playfair fs-20">{ textos.areas_title_2 }</span>
             <div className="d-flex">
                 <ul className="first-col">
                     <li className="area-item"><a href={`/${textos.lang}/areas-de-atuacao/consultivo-civil`}>{ areas[0].titulo }</a></li>
