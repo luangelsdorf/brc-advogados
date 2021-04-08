@@ -122,3 +122,17 @@ blockquote::before {
     position: absolute;
     left: -25px;
 }
+
+#ver-todas {
+    width: 194px;
+}
+
+#ver-todas img {
+    opacity: 0;
+    margin-left: -11px;
+}
+
+#ver-todas:hover img {
+    opacity: 1;
+    margin-left: 11px;
+}

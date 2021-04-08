@@ -66,7 +66,7 @@ export default function Post({ post, posts, textos, areas }) {
                     </div>
                     <div>
                         <Link href={`/${textos.lang}/blog`}>
-                            <a className="btn btn-primary btn-h-50 d-inline-flex">{ textos.btn_ver_todas }</a>
+                            <a className="btn btn-primary btn-h-50 d-inline-flex justify-content-center" id="ver-todas">{ textos.btn_ver_todas }<img src="/img/seta.svg" alt="Seta" /></a>
                         </Link>
                     </div>
                 </div>
