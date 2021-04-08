@@ -6,7 +6,7 @@ export default function FixedHeader({ textos }) {
         <header className="fixed-header">
             <nav className="navbar navbar-fixed navbar-expand-lg navbar-light w-100">
                 <div className="container">
-                    <a href="/">
+                    <a href={`/${lang}#home`}>
                         <img src="/img/logo.png" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
@@ -15,9 +15,9 @@ export default function FixedHeader({ textos }) {
                     <div className="collapse navbar-collapse justify-content-center" id="navBar">
                         <div className="nav navbar-nav justify-content-between text-claro">
                             <a href="#home" className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
-                            <a href="/#sobre-nos" className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
-                            <a href="/#areas-de-atuacao" className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
-                            <a href="/#nossa-equipe" className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
+                            <a href={`/${lang}#sobre-nos`} className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
+                            <a href={`/${lang}#areas-de-atuacao`} className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
+                            <a href={`/${lang}#nossa-equipe`} className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
                             <button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>

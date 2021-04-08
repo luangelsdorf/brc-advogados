@@ -35,7 +35,7 @@ export default function Blog({ posts, textos, areas }) {
                         {
                             posts.map(card => {
                                 return (
-                                    <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
+                                    <PostCard img={`http://localhost:1337${card.cover[0].url}`}
                                               categoria="Direito Trabalhista"
                                               data={card.data}
                                               title={card.titulo_post}
