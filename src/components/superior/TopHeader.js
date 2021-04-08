@@ -5,7 +5,15 @@ export default function TopHeader({ textos }) {
     const lang = textos.lang
     let router = useRouter()
     let path = router.asPath.slice(3)
-    console.log(router)
+
+    let ptClass, enClass
+    if (router.asPath.startsWith('/pt')) {
+        ptClass = 'active'
+        enClass = ''
+    } else {
+        ptClass = ''
+        enClass = 'active'
+    }
     return (
         <header className="top-header" id="home">
             <div className="container top-bar d-flex justify-content-between text-white">
@@ -21,9 +29,9 @@ export default function TopHeader({ textos }) {
                     </div>
                     <div className="fs-13 ps-4">
                         <span className="fas fa-globe pe-2" />
-                        <a href={`/pt${path}`} className="bar-link">PT</a>
+                        <a href={`/pt${path}`} className={`bar-link ${ptClass}`}>PT</a>
                         <span>&nbsp;|&nbsp;</span>
-                        <a href={`/en${path}`} className="bar-link">EN</a>
+                        <a href={`/en${path}`} className={`bar-link ${enClass}`}>EN</a>
                     </div>
                 </div>
             </div>

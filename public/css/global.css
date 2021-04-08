@@ -525,6 +525,9 @@ a:hover {
     margin-left: 11px;
 }
 
+.bar-link.active {
+    color: var(--dourado) !important;
+}
 
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
