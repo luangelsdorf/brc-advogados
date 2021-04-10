@@ -9,12 +9,12 @@ import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
 import Link from 'next/link';
 
-export default function Post({ post, posts, textos, areas }) {
+export default function Post({ post, posts, textos, areas, redes }) {
     let quantity = [0, 1, 2]
     return (
         <>
             <HeadContent post={true} title="Post - BRC Advogados" page="post" />
-            <TopHeader textos={textos} />
+            <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior textos={textos}  />
 
@@ -93,7 +93,7 @@ export default function Post({ post, posts, textos, areas }) {
             </div>
 
             <BannerInferior textos={textos} />
-            <SubFooter textos={textos} areas={areas} />
+            <SubFooter textos={textos} areas={areas} redes={redes} />
             <Footer textos={textos} />
         </>
     )
@@ -125,9 +125,12 @@ export async function getStaticProps({ params }) {
     const resAreas = await fetch('http://localhost:1337/en-areas')
     const areas = await resAreas.json()
 
+    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const redes = await resRedes.json()
+
     return {
         props: {
-            post, posts, textos, areas
+            post, posts, textos, areas, redes
         },
         revalidate: 1
     }

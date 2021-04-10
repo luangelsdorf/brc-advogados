@@ -9,12 +9,12 @@ import HeadContent from "../../../src/components/HeadContent";
 import PostCard from "../../../src/components/home/PostCard";
 import Pagination from "../../../src/components/blog/Pagination";
 
-export default function Blog({ posts, textos, areas }) {
+export default function Blog({ posts, textos, areas, redes }) {
     return (
         <>
             <HeadContent title="Blog - BRC Advogados" page="blog" />
 
-            <TopHeader textos={textos} />
+            <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior title={textos.blog_banner_text_1} subtitle={textos.blog_banner_text_2} btn={false} />
 
@@ -55,7 +55,7 @@ export default function Blog({ posts, textos, areas }) {
             <Pagination />
 
             <BannerInferior textos={textos} />
-            <SubFooter textos={textos} areas={areas} />
+            <SubFooter textos={textos} areas={areas} redes={redes} />
             <Footer textos={textos} />
         </>
     )
@@ -71,9 +71,12 @@ export async function getStaticProps() {
     const resAreas = await fetch('http://localhost:1337/areas')
     const areas = await resAreas.json()
 
+    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const redes = await resRedes.json()
+
     return {
         props: {
-            posts, textos, areas
+            posts, textos, areas, redes
         },
         revalidate: 1
     }

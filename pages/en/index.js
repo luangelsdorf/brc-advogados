@@ -15,10 +15,10 @@ import Footer from "../../src/components/inferior/Footer";
 
 
 
-export default function Home({ areas, posts, textos }) {
+export default function Home({ areas, posts, textos, redes }) {
     return (
         <>
-            <TopHeader textos={textos} />
+            <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior btn_text={textos.btn_servicos} title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
 
@@ -34,7 +34,7 @@ export default function Home({ areas, posts, textos }) {
             </div>
 
             <BannerInferior textos={textos} areas={areas} />
-            <SubFooter areas={areas} textos={textos} />
+            <SubFooter areas={areas} textos={textos} redes={redes} />
             <Footer textos={textos} />
         </>
     )
@@ -50,9 +50,12 @@ export async function getStaticProps() {
     const  responseTextos  = await fetch('http://localhost:1337/en-textos')
     const textos = await responseTextos.json()
 
+    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const redes = await resRedes.json()
+
     return {
         props: {
-            areas, posts, textos
+            areas, posts, textos, redes
         },
         revalidate: 1
     }

@@ -1,7 +1,7 @@
 import React from 'react';
 import {useRouter} from "next/router";
 
-export default function TopHeader({ textos }) {
+export default function TopHeader({ textos, redes }) {
     const lang = textos.lang
     let router = useRouter()
     let path = router.asPath.slice(3)
@@ -30,9 +30,9 @@ export default function TopHeader({ textos }) {
                 </div>
                 <div className="bar-section my-2">
                     <div className="divisor position-relative fs-13 pe-4">
-                        <a href="https://facebook.com" className="bar-link fab fa-facebook-f" />
-                        <a href="https://linkedin.com" className="bar-link fab fa-linkedin-in px-3" />
-                        <a href="https://instagram.com" className="bar-link fab fa-instagram" />
+                        <a href={redes.facebook} className="bar-link fab fa-facebook-f" />
+                        <a href={redes.linkedin} className="bar-link fab fa-linkedin-in px-3" />
+                        <a href={redes.instagram} className="bar-link fab fa-instagram" />
                     </div>
                     <div className="fs-13 ps-4">
                         <span className="fas fa-globe pe-2" />

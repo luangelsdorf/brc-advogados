@@ -8,10 +8,10 @@ import BannerInferior from "../../../src/components/inferior/BannerInferior";
 import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 
-export default function AreaPage({ area, areas, textos }) {
+export default function AreaPage({ area, areas, textos, redes }) {
     return (
         <>
-            <TopHeader textos={textos} />
+            <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior title={textos.areas_banner_text_1} subtitle={textos.areas_banner_text_2} btn={false} />
 
@@ -65,7 +65,7 @@ export default function AreaPage({ area, areas, textos }) {
             </div>
 
             <BannerInferior textos={textos} areas={areas} />
-            <SubFooter areas={areas} textos={textos} />
+            <SubFooter areas={areas} textos={textos} redes={redes} />
             <Footer textos={textos} />
         </>
     )
@@ -91,9 +91,12 @@ export async function getStaticProps({ params }) {
     const resText = await fetch('http://localhost:1337/pt-textos')
     const textos = await resText.json()
 
+    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const redes = await resRedes.json()
+
     return {
         props: {
-            area, areas, textos
+            area, areas, textos, redes
         },
         revalidate: 1
     }
