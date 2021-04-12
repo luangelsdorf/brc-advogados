@@ -8,12 +8,14 @@ import Footer from "../../../src/components/inferior/Footer";
 import HeadContent from "../../../src/components/HeadContent";
 import PostCard from "../../../src/components/home/PostCard";
 import Pagination from "../../../src/components/blog/Pagination";
+import FixedWhats from "../../../src/components/FixedWhats";
 
 export default function Blog({ posts, textos, areas, redes }) {
     return (
         <>
             <HeadContent title="Blog - BRC Advogados" page="blog" />
 
+            <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior title={textos.blog_banner_text_1} subtitle={textos.blog_banner_text_2} btn={false} />

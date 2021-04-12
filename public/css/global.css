@@ -144,6 +144,22 @@ p {
     border-radius: 0 !important;
 }
 
+.break-spaces {
+    white-space: break-spaces !important;
+}
+
+.icon {
+    fill: #ffffff;
+}
+
+.icon-normal {
+    color: #9b9b9b;
+}
+
+.icon-hover:hover {
+    fill: #D6A461;
+}
+
 .btn-h-40 {
     height: 40px;
 }
@@ -154,6 +170,23 @@ p {
 
 .btn-h-50 {
     height: 50px;
+}
+
+.whats-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    height: 60px;
+    width: 60px;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .15s ease-in-out;
+}
+
+.me-30 {
+    margin-right: 30px;
 }
 
 

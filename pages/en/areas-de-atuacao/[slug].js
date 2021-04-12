@@ -7,10 +7,12 @@ import BannerSuperior from "../../../src/components/superior/BannerSuperior";
 import BannerInferior from "../../../src/components/inferior/BannerInferior";
 import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
+import FixedWhats from "../../../src/components/FixedWhats";
 
 export default function AreaPage({ area, areas, textos, redes }) {
     return (
         <>
+            <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior title={textos.areas_banner_text_1} subtitle={textos.areas_banner_text_2} btn={false} />
@@ -29,9 +31,11 @@ export default function AreaPage({ area, areas, textos, redes }) {
                                         return (
                                             <li className="list-group-item" key={area.slug}>
                                                 <Link scroll={false} href={`/${textos.lang}/areas-de-atuacao/${area.slug}`}>
-                                                    <a className=" d-inline-flex justify-content-between w-100" id={`${area.slug}`}>
+                                                    <a className=" d-inline-flex justify-content-between align-items-center w-100" id={`${area.slug}`}>
                                                         <span>{area.titulo}</span>
-                                                        <span className="fas fa-angle-right text-normal" />
+                                                        <div>
+                                                            <svg height="12" width="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="angle-right" className="svg-inline--fa fa-angle-right fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="currentColor" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+                                                        </div>
                                                     </a>
                                                 </Link>
                                             </li>

@@ -8,12 +8,14 @@ import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
 import Link from 'next/link';
+import FixedWhats from "../../../src/components/FixedWhats";
 
 export default function Post({ post, posts, textos, areas, redes }) {
     let quantity = [0, 1, 2]
     return (
         <>
             <HeadContent post={true} title="Post - BRC Advogados" page="post" />
+            <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior textos={textos}  />
@@ -25,7 +27,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                     <div className="col-10">
                         <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{width: 530 + 'px'}}>{ post.titulo_post }</strong>
                         <div className="flex-center" id="post-date-row">
-                            <span className="fas fa-calendar-alt fs-13 text-white px-2" />
+                            <svg width="12" height="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" className="fs-13 text-white mb-1 mx-2 svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
                             <span className="post-date fs-13 text-white">{ post.data }</span>
                         </div>
                         <div>

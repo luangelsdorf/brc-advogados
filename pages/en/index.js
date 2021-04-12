@@ -12,12 +12,14 @@ import BannerSuperior from "../../src/components/superior/BannerSuperior";
 import BannerInferior from "../../src/components/inferior/BannerInferior";
 import SubFooter from "../../src/components/inferior/SubFooter";
 import Footer from "../../src/components/inferior/Footer";
+import FixedWhats from "../../src/components/FixedWhats";
 
 
 
 export default function Home({ areas, posts, textos, redes }) {
     return (
         <>
+            <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior btn_text={textos.btn_servicos} title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
