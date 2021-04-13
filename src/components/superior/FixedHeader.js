@@ -13,7 +13,7 @@ export default function FixedHeader({ textos }) {
                         <span className="navbar-toggler-icon" />
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navBar">
-                        <div className="nav navbar-nav justify-content-between text-claro">
+                        <div className="nav navbar-nav justify-content-between">
                             <a href={`/${lang}#home`} className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
                             <a href={`/${lang}#sobre-nos`} className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
                             <a href={`/${lang}#areas-de-atuacao`} className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>

@@ -48,7 +48,7 @@ export default function TopHeader({ textos, redes }) {
                     </div>
                 </div>
             </div>
-            <nav className="navbar navbar-top navbar-expand-lg navbar-light w-100">
+            <nav className="navbar navbar-top navbar-expand-xl navbar-light w-100">
                 <div className="container">
                     <a href={`/${lang}#home`}>
                         <img src="/img/logo-extenso.svg" width="300" height="97" alt="Logo" />
@@ -64,10 +64,10 @@ export default function TopHeader({ textos, redes }) {
                             <a href={`/${lang}#nossa-equipe`} className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
-                            <a className="btn btn-primary d-flex d-lg-none w-max-content" href="#banner-inferior">{ textos.btn_fale }</a>
+                            <a className="btn btn-primary d-flex d-xl-none w-max-content" href="#banner-inferior">{ textos.btn_fale }</a>
                         </div>
                     </div>
-                    <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40 align-self-start" href="#banner-inferior">{ textos.btn_fale }</a>
+                    <a className="btn btn-primary hover-claro d-none d-xl-inline-flex px-3 btn-h-40 align-self-start" href="#banner-inferior">{ textos.btn_fale }</a>
                 </div>
             </nav>
         </header>

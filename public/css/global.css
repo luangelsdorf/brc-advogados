@@ -307,6 +307,10 @@ a:hover {
     transform: translateY(0);
 }
 
+.fixed-header .navbar-nav {
+    color: var(--azul-claro);
+}
+
 .form-control {
     background-color: #f9f9f9 !important;
     border-color: #eee !important;
@@ -677,6 +681,10 @@ footer {
         font-size: 22px !important;
     }
 
+    .top-bar {
+        display: none !important;
+    }
+
 
     #sobre-nos {
         padding-top: 75px;
@@ -709,7 +717,20 @@ footer {
     }
 }
 
+@media (max-width: 992px) {
+    .fixed-header {
+        background-color: var(--azul-escuro) !important;
+    }
+    .fixed-header .nav-link {
+        color: white !important;
+    }
+}
+
 @media (max-width: 1200px) {
+    .nav-link::after {
+        display: none;
+    }
+
     .line-title {
         margin-left: 0;
     }
