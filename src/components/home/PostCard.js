@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function PostCard(props) {
     return (
-        <div className="col-4">
+        <div className="col-10 col-md-6 col-xl-4">
             <div>
                 <div className="post-card-overlay">
                     <img src={props.img} className="w-100 h-100 object-fit-cover" alt="Card Img"/>

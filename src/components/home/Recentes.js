@@ -12,7 +12,7 @@ export default function Recentes({ posts, textos }) {
                 <strong className="playfair text-escuro fs-44">{ textos.recentes_title_2 }</strong>
             </div>
             <div className="container">
-                <div className="row">
+                <div className="row gy-5 justify-content-center justify-content-md-start">
                     {
                         quantity.map(card => {
                             return (

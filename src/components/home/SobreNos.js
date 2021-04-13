@@ -4,10 +4,11 @@ export default function SobreNos({ textos }) {
     return (
         <div className="container-fluid px-0 flex-center" id="sobre-nos">
             <div className="container">
-                <div className="row w-100 align-items-center">
-                    <div className="col-6">
+                <div className="row align-items-center">
+                    <div className="col-12 col-xl-6 text-center text-xl-start">
                         <span className="line-title w-max-content">{ textos.qs_title_1 }</span>
-                        <strong className="playfair fs-44 d-block text-escuro mb-3 lh-60 break-spaces">{ textos.qs_title_2 }</strong>
+                        <strong className="playfair fs-44 d-block text-escuro mb-3 break-spaces">{ textos.qs_title_2 }</strong>
+                        <img src="/img/mosaico.png" className="img-fluid d-block d-xl-none sobre-nos-img" alt="Mosaico"/>
                         <div className="sobre-nos-text">
                             <p className="mb-3 me-30">
                                 { textos.qs_text_1 }
@@ -24,8 +25,8 @@ export default function SobreNos({ textos }) {
                         </div>
                     </div>
 
-                    <div className="col-6 position-relative">
-                        <img src="/img/mosaico.png" className="img-fluid" alt="Mosaico"/>
+                    <div className="col-12 col-xl-6 position-relative">
+                        <img src="/img/mosaico.png" className="img-fluid d-none d-xl-block" alt="Mosaico"/>
                     </div>
                 </div>
             </div>

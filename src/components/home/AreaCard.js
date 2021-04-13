@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function AreaCard(props) {
     return (
-        <div className="col-4">
+        <div className="col-8 col-md-6 col-lg-4">
             <div className="area-card cursor-pointer bg-white">
                 <img className="d-block pb-3" src={`/img/area-cards/${props.icon}.svg`} alt={props.icon} />
                 <div className="text-escuro playfair fs-22">{props.title}</div>

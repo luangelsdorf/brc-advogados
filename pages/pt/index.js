@@ -19,15 +19,14 @@ import FixedWhats from "../../src/components/FixedWhats";
 export default function Home({ areas, posts, textos, redes }) {
     return (
         <>
+            <HeadContent title="BRC Advogados" page="home" />
             <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
             <BannerSuperior btn_text={textos.btn_servicos} title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
 
             <div className="container-fluid p-0 position-relative home">
-                <HeadContent title="BRC Advogados" page="home" />
                 <img src="/img/parallax.png" className="parallax" alt=""/>
-
                 <SobreNos textos={textos} />
                 <NossaEquipe textos={textos} />
                 <Parallax textos={textos} />
@@ -35,9 +34,9 @@ export default function Home({ areas, posts, textos, redes }) {
                 <Recentes textos={textos} posts={posts} />
             </div>
 
-            <BannerInferior textos={textos} areas={areas} />
+            {/*<BannerInferior textos={textos} areas={areas} />
             <SubFooter areas={areas} textos={textos} redes={redes} />
-            <Footer textos={textos} />
+            <Footer textos={textos} />*/}
         </>
     )
 }

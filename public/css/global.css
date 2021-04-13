@@ -11,6 +11,7 @@ html {
 body {
     font-family: var(--proxima);
     color: var(--text);
+    font-size: medium;
 }
 
 p {
@@ -652,4 +653,93 @@ a:hover {
 
 footer {
     height: 70px;
+}
+
+
+/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Mobile -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
+
+
+/* breakpoint md */
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+    .fs-72 {
+        font-size: 44px !important;
+    }
+    .fs-44 {
+        font-size: 27px !important;
+    }
+    .fs-32 {
+        font-size: 22px !important;
+    }
+    .fs-24 {
+        font-size: 22px !important;
+    }
+
+
+    #sobre-nos {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+    #nossa-equipe {
+        padding-top: 80px;
+        padding-bottom: 75px;
+    }
+    .nossa-equipe-text {
+        width: 354px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .socio-img {
+        width: 354px;
+        height: 300px;
+        margin: 30px auto;
+    }
+
+    #areas-de-atuacao {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+
+
+    #recentes {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .line-title {
+        margin-left: 0;
+    }
+    .line-title::after {
+        content: "";
+        width: 70px;
+        height: 2px;
+        position: absolute;
+        right: -85px;
+        background-color: var(--dourado);
+    }
+
+
+    #nossa-equipe::before {
+        display: none;
+    }
+    #collapse-lucas, #collapse-andre {
+        height: 65px;
+    }
+    .mr-30 {
+        margin-right: 0;
+    }
+    .socio-img {
+        width: max-content;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
+    .pres-text {
+        margin-bottom: 40px;
+    }
 }
