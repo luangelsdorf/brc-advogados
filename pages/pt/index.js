@@ -34,9 +34,9 @@ export default function Home({ areas, posts, textos, redes }) {
                 <Recentes textos={textos} posts={posts} />
             </div>
 
-            {/*<BannerInferior textos={textos} areas={areas} />
+            <BannerInferior textos={textos} areas={areas} />
             <SubFooter areas={areas} textos={textos} redes={redes} />
-            <Footer textos={textos} />*/}
+            <Footer textos={textos} />
         </>
     )
 }

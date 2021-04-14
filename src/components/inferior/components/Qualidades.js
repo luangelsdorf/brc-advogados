@@ -2,14 +2,14 @@ import React from 'react';
 
 export default function Qualidades({ textos, redes }) {
     return (
-        <div className="w-max-content">
-            <img src="/img/logo.png" alt="Logo" className="d-block" />
+        <div className="text-center text-lg-start">
+            <img src="/img/logo.png" alt="Logo" className="d-block mx-auto mx-lg-0" />
 
             <span className="qualidades">
                 { textos.footer_msg }
             </span>
 
-            <div className="d-flex">
+            <div className="d-flex justify-content-center justify-content-lg-start">
                 <a href={redes.facebook} className="social-btn">
                     <svg height="14" width="14" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" className="svg-inline--fa fa-facebook-f fa-w-10" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path className="icon" fill="currentColor" d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"></path></svg>
                 </a>

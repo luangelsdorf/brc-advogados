@@ -481,7 +481,8 @@ a:hover {
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Banner Inferior -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 #banner-inferior {
-    height: 750px;
+    padding-top: 110px;
+    padding-bottom: 110px;
     background-image: url("/img/banner-inferior.png");
     background-repeat: no-repeat;
     background-size: cover;
@@ -571,7 +572,8 @@ a:hover {
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .sub-footer {
-    height: 440px;
+    padding-top: 100px;
+    padding-bottom: 100px;
     display: flex;
     align-items: center;
     background-color: var(--azul-escuro);
@@ -582,7 +584,7 @@ a:hover {
     margin-bottom: 30px;
     display: inline-block;
     color: white;
-    width: 235px;
+    max-width: 235px;
 }
 
 .social-btn {
@@ -663,6 +665,9 @@ footer {
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Mobile -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 
+/* breakpoint sm */
+
+
 /* breakpoint md */
 @media (max-width: 768px) {
     body {
@@ -686,6 +691,13 @@ footer {
     }
 
 
+    .line-title::after, .line-title::before {
+        display: none;
+    }
+
+    #banner-superior {
+        height: 580px;
+    }
     #sobre-nos {
         padding-top: 75px;
         padding-bottom: 75px;
@@ -695,28 +707,41 @@ footer {
         padding-bottom: 75px;
     }
     .nossa-equipe-text {
-        width: 354px;
+        max-width: 354px;
         margin-left: auto;
         margin-right: auto;
     }
     .socio-img {
-        width: 354px;
+        max-width: 354px;
         height: 300px;
         margin: 30px auto;
     }
-
     #areas-de-atuacao {
         padding-top: 75px;
         padding-bottom: 75px;
     }
-
-
     #recentes {
         padding-top: 75px;
         padding-bottom: 75px;
     }
+    #banner-inferior {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    .sub-footer {
+        padding-top: 75px;
+        padding-bottom: 75px;
+    }
 }
-
+@media (max-width: 576px) {
+    .fs-72 {
+        font-size: 24px !important;
+    }
+    .fs-22 {
+        font-size: 18px !important;
+    }
+}
+/* breakpoint lg */
 @media (max-width: 992px) {
     .fixed-header {
         background-color: var(--azul-escuro) !important;
@@ -726,6 +751,7 @@ footer {
     }
 }
 
+/* breakpoint xl */
 @media (max-width: 1200px) {
     .nav-link::after {
         display: none;
@@ -750,11 +776,14 @@ footer {
     #collapse-lucas, #collapse-andre {
         height: 65px;
     }
+    .me-30 {
+        margin-right: 0;
+    }
     .mr-30 {
         margin-right: 0;
     }
     .socio-img {
-        width: max-content;
+        max-width: max-content;
         margin-right: auto;
         margin-left: auto;
     }

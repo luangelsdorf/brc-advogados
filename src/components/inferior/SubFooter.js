@@ -7,10 +7,16 @@ export default function SubFooter({ textos, areas, redes }) {
     return (
         <div className="sub-footer">
             <div className="container">
-                <div className="row align-items-center justify-content-between">
-                    <Qualidades textos={textos} redes={redes} />
-                    <ListaAreas areas={areas} textos={textos} />
-                    <NewsLetter textos={textos} />
+                <div className="row gy-5">
+                    <div className="col-12 col-lg-6 col-xl-3">
+                        <Qualidades textos={textos} redes={redes} />
+                    </div>
+                    <div className="col-12 col-lg-6 col-xl-5">
+                        <ListaAreas areas={areas} textos={textos} />
+                    </div>
+                    <div className="col-12 col-xl-4">
+                        <NewsLetter textos={textos} />
+                    </div>
                 </div>
             </div>
         </div>

@@ -51,7 +51,7 @@ export default function TopHeader({ textos, redes }) {
             <nav className="navbar navbar-top navbar-expand-xl navbar-light w-100">
                 <div className="container">
                     <a href={`/${lang}#home`}>
-                        <img src="/img/logo-extenso.svg" width="300" height="97" alt="Logo" />
+                        <img src="/img/logo-ext.png" className="img-fluid" alt="Logo" />
                     </a>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBarTop">
                         <span className="navbar-toggler-icon" />
