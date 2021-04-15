@@ -734,9 +734,6 @@ footer {
     }
 }
 @media (max-width: 576px) {
-    .fs-72 {
-        font-size: 24px !important;
-    }
     .fs-22 {
         font-size: 18px !important;
     }

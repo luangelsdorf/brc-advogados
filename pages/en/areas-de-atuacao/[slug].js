@@ -92,7 +92,7 @@ export async function getStaticProps({ params }) {
     const resAll = await fetch('http://localhost:1337/en-areas')
     const areas = await resAll.json()
 
-    const resText = await fetch('http://localhost:1337/en-textos')
+    const resText = await fetch('http://localhost:1337/pt-textos')
     const textos = await resText.json()
 
     const resRedes = await fetch('http://localhost:1337/redes-sociais')

@@ -22,18 +22,20 @@ export default function Blog({ posts, textos, areas, redes }) {
 
             <div className="container-fluid px-0">
                 <div className="container">
-                    <div className="d-flex justify-content-between align-items-center" id="posts-heading">
-                        <div className="d-flex flex-column text-escuro">
+                    <div className="row gy-4 text-center align-items-center" id="posts-heading">
+                        <div className="col-12 col-lg-6 text-center text-lg-start">
                             <span className="line-title w-max-content">{ textos.blog_title_1 }</span>
-                            <strong className="playfair fs-44">{ textos.blog_title_2 }</strong>
+                            <div className="d-flex flex-column text-escuro">
+                                <strong className="playfair fs-44">{ textos.blog_title_2 }</strong>
+                            </div>
                         </div>
-                        <div>
-                            <select className="form-select btn-h-50 border-radius-0" id="select-interesse">
+                        <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
+                            <select className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
                                 <option value="Interesse">{ textos.btn_interesse }</option>
                             </select>
                         </div>
                     </div>
-                    <div className="row g-5">
+                    <div className="row justify-content-center w-100 m-0 g-5">
                         {
                             posts.map(card => {
                                 return (

@@ -1,9 +1,8 @@
+
+
 #banner-superior {
     height: 550px !important;
-}
-
-.top-header {
-    background-size: cover !important;
+    background-size: cover;
 }
 
 #posts-heading {
@@ -52,7 +51,6 @@ img {
     background-image:
             url("/img/banner-superior.png");
     background-repeat: no-repeat;
-    background-size: cover;
     background-position-y: -85px;
 }
 
@@ -60,11 +58,6 @@ img {
     width: 535px;
 }
 
-@media (min-width: 1920px) {
-    .top-header {
-        background-size: cover;
-    }
-}
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
@@ -76,4 +69,14 @@ img {
     background-repeat: no-repeat;
     background-color: #003057;
     z-index: 5;
+    background-size: cover;
+}
+
+@media (max-width: 1110px) {
+    #banner-superior {
+        background-size: auto;
+    }
+    .top-header {
+        background-size: auto;
+    }
 }

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ListaAreas({ textos, areas }) {
     return (
-        <div className="text-white">
+        <div className="text-white px-3">
             <span className="list-title d-block playfair fs-20 text-center text-lg-start">{ textos.areas_title_2 }</span>
             <div className="d-flex justify-content-center justify-content-lg-start">
                 <ul className="first-col">
