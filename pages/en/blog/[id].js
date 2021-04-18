@@ -32,7 +32,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                         </div>
                         <div>
                             <div className="img-placeholder">
-                                <img src={`http://localhost:1337${post.cover[0].url}`} alt="Imagem" className="w-100 h-100 object-fit-cover" />
+                                <img src={`https://brcadv.com/api${post.cover[0].url}`} alt="Imagem" className="w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">
@@ -78,7 +78,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
+                                <PostCard img={`https://brcadv.com/api${posts[card].cover[0].url}`}
                                           categoria="Direito Trabalhista"
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
@@ -98,14 +98,14 @@ export default function Post({ post, posts, textos, areas, redes }) {
 
             <BannerInferior textos={textos} />
             <SubFooter textos={textos} areas={areas} redes={redes} />
-            <Footer textos={textos} />
+            <Footer redes={redes} textos={textos} />
         </>
     )
 }
 
 
 export async function getStaticPaths() {
-    const response = await fetch('http://localhost:1337/en-posts')
+    const response = await fetch('https://brcadv.com/api/en-posts')
     const posts = await response.json()
     console.log(posts)
 
@@ -117,19 +117,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`http://localhost:1337/en-posts/${params.id}`)
+    const res = await fetch(`https://brcadv.com/api/en-posts/${params.id}`)
     const post = await res.json()
 
-    const resp = await fetch('http://localhost:1337/en-posts')
+    const resp = await fetch('https://brcadv.com/api/en-posts')
     const posts = await resp.json()
 
-    const resText = await fetch('http://localhost:1337/en-textos')
+    const resText = await fetch('https://brcadv.com/api/en-textos')
     const textos = await resText.json()
 
-    const resAreas = await fetch('http://localhost:1337/en-areas')
+    const resAreas = await fetch('https://brcadv.com/api/en-areas')
     const areas = await resAreas.json()
 
-    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
     return {

@@ -16,7 +16,7 @@ export default function Recentes({ posts, textos }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={`http://localhost:1337${posts[card].cover[0].url}`}
+                                <PostCard img={`https://brcadv.com${posts[card].cover[0].url}`}
                                           categoria="Direito Trabalhista"
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}

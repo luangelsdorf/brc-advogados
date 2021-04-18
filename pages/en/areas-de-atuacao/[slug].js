@@ -70,13 +70,13 @@ export default function AreaPage({ area, areas, textos, redes }) {
 
             <BannerInferior textos={textos} areas={areas} />
             <SubFooter areas={areas} textos={textos} redes={redes} />
-            <Footer textos={textos} />
+            <Footer redes={redes} textos={textos} />
         </>
     )
 }
 
 export async function getStaticPaths() {
-    const res = await fetch('http://localhost:1337/en-areas')
+    const res = await fetch('https://brcadv.com/api/en-areas')
     const resAreas = await res.json()
     const paths = resAreas.map((area) => ({
         params: { slug: area.slug },
@@ -86,16 +86,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`http://localhost:1337/en-areas?slug=${params.slug}`)
+    const res = await fetch(`https://brcadv.com/api/en-areas?slug=${params.slug}`)
     const area = await res.json()
 
-    const resAll = await fetch('http://localhost:1337/en-areas')
+    const resAll = await fetch('https://brcadv.com/api/en-areas')
     const areas = await resAll.json()
 
-    const resText = await fetch('http://localhost:1337/pt-textos')
+    const resText = await fetch('https://brcadv.com/api/pt-textos')
     const textos = await resText.json()
 
-    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
     return {

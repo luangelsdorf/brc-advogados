@@ -42,16 +42,16 @@ export default function Home({ areas, posts, textos, redes }) {
 }
 
 export async function getStaticProps() {
-    const responseAreas = await fetch(`http://localhost:1337/areas`)
+    const responseAreas = await fetch(`https://brcadv.com/api/areas`)
     const areas = await responseAreas.json()
 
-    const  responsePosts  = await fetch('http://localhost:1337/posts')
+    const  responsePosts  = await fetch('https://brcadv.com/api/posts')
     const posts = await responsePosts.json()
 
-    const  responseTextos  = await fetch('http://localhost:1337/pt-textos')
+    const  responseTextos  = await fetch('https://brcadv.com/api/pt-textos')
     const textos = await responseTextos.json()
 
-    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
     return {

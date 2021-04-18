@@ -39,7 +39,7 @@ export default function Blog({ posts, textos, areas, redes }) {
                         {
                             posts.map(card => {
                                 return (
-                                    <PostCard img={`http://localhost:1337${card.cover[0].url}`}
+                                    <PostCard img={`https://brcadv.com/api${card.cover[0].url}`}
                                               categoria="Direito Trabalhista"
                                               data={card.data}
                                               title={card.titulo_post}
@@ -60,22 +60,22 @@ export default function Blog({ posts, textos, areas, redes }) {
 
             <BannerInferior textos={textos} />
             <SubFooter textos={textos} areas={areas} redes={redes} />
-            <Footer textos={textos} />
+            <Footer redes={redes} textos={textos} />
         </>
     )
 }
 
 export async function getStaticProps() {
-    const responsePosts  = await fetch('http://localhost:1337/posts')
+    const responsePosts  = await fetch('https://brcadv.com/api/posts')
     const posts = await responsePosts.json()
 
-    const resText = await fetch('http://localhost:1337/pt-textos')
+    const resText = await fetch('https://brcadv.com/api/pt-textos')
     const textos = await resText.json()
 
-    const resAreas = await fetch('http://localhost:1337/areas')
+    const resAreas = await fetch('https://brcadv.com/api/areas')
     const areas = await resAreas.json()
 
-    const resRedes = await fetch('http://localhost:1337/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
     return {
