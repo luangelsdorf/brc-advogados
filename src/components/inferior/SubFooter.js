@@ -8,10 +8,10 @@ export default function SubFooter({ textos, areas, redes }) {
         <div className="sub-footer">
             <div className="container">
                 <div className="row gy-5">
-                    <div className="col-12 col-lg-6 col-xl-3">
+                    <div className="col-12 col-lg-6 col-xl-3 d-none d-md-block">
                         <Qualidades textos={textos} redes={redes} />
                     </div>
-                    <div className="col-12 col-lg-6 col-xl-5">
+                    <div className="col-12 col-lg-6 col-xl-5 d-none d-md-block">
                         <ListaAreas areas={areas} textos={textos} />
                     </div>
                     <div className="col-12 col-xl-4">

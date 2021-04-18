@@ -659,6 +659,7 @@ a:hover {
 
 footer {
     height: 70px;
+    background-color: var(--azul-claro);
 }
 
 
@@ -666,7 +667,11 @@ footer {
 
 
 /* breakpoint sm */
-
+@media (max-width: 576px) {
+    .line-title::after, .line-title::before {
+        display: none;
+    }
+}
 
 /* breakpoint md */
 @media (max-width: 768px) {
@@ -691,9 +696,6 @@ footer {
     }
 
 
-    .line-title::after, .line-title::before {
-        display: none;
-    }
 
     #banner-superior {
         height: 580px;
@@ -731,8 +733,27 @@ footer {
     .sub-footer {
         padding-top: 75px;
         padding-bottom: 75px;
+        background-color: var(--azul-claro);
+    }
+    .newsletter {
+        background-color: var(--azul-escuro);
+        height: max-content;
+        padding-top: 25px;
+        padding-bottom: 30px;
+    }
+    .news-input {
+        margin-top: 15px;
+    }
+    .news-submit {
+        margin-top: 15px;
+    }
+    footer {
+        padding-left: 35px;
+        padding-right: 35px;
+        background-color: var(--azul-escuro) !important;
     }
 }
+
 @media (max-width: 576px) {
     .fs-22 {
         font-size: 18px !important;

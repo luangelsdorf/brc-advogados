@@ -19,7 +19,7 @@ export default function BannerSuperior({ title, subtitle, btn_text, btn, post })
         <div className="container-fluid p-0 position-relative d-flex justify-content-center" id="banner-superior">
             <div className={`container text-white h-100 position-absolute d-${displayContainer} align-items-center top-0`}>
                 <div id="banner-content">
-                    <strong className="playfair fs-72 d-block mb-4">{ title }</strong>
+                    <strong className="playfair fs-72 d-block mb-4 break-spaces">{ title }</strong>
                     <span className="lh-24 d-block mb-4">{ subtitle }</span>
                     <a href="/#areas-de-atuacao" className={`btn btn-primary btn-h-50 d-${displayBtn}`}>{ btn_text }</a>
                 </div>

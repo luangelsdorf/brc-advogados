@@ -26,7 +26,7 @@ export default function Home({ areas, posts, textos, redes }) {
             <BannerSuperior btn_text={textos.btn_servicos} title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
 
             <div className="container-fluid p-0 position-relative home">
-                <img src="/img/parallax.png" className="parallax" alt=""/>
+                <img src="/img/parallax.png" className="parallax" loading="lazy" alt=""/>
                 <SobreNos textos={textos} />
                 <NossaEquipe textos={textos} />
                 <Parallax textos={textos} />
@@ -36,7 +36,7 @@ export default function Home({ areas, posts, textos, redes }) {
 
             <BannerInferior textos={textos} areas={areas} />
             <SubFooter areas={areas} textos={textos} redes={redes} />
-            <Footer textos={textos} />
+            <Footer redes={redes} textos={textos} />
         </>
     )
 }
