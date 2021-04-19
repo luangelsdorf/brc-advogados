@@ -1,13 +1,15 @@
 
 
-#banner-superior {
-    height: 550px !important;
-    background-size: cover;
-}
-
 #posts-heading {
     padding-top: 100px;
     padding-bottom: 100px;
+}
+
+#banner-superior {
+    height: 550px;
+    background-size: cover;
+    background-position-y: -85px;
+    background-image: url("/img/banner-superior.png");
 }
 
 #select-interesse {
@@ -46,20 +48,9 @@ img {
     margin-bottom: 75px;
 }
 
-#banner-superior {
-    height: 950px;
-    background-image:
-            url("/img/banner-superior.png");
-    background-repeat: no-repeat;
-    background-position-y: -85px;
-}
-
 #banner-content {
-    width: 535px;
+    max-width: 535px;
 }
-
-
-/* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- FixedHeader -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .top-header {
     position: absolute;
@@ -72,11 +63,26 @@ img {
     background-size: cover;
 }
 
+@media (max-width: 768px) {
+    #banner-superior {
+        height: 425px !important;
+    }
+}
+
+@media (max-width: 992px) {
+    .top-header {
+        display: none;
+    }
+}
+
 @media (max-width: 1110px) {
     #banner-superior {
-        background-size: auto;
+        background-size: auto 100%;
+        background-position-x: 75%;
+        background-position-y: initial;
     }
     .top-header {
-        background-size: auto;
+        background-image: none !important;
+        background-color: var(--azul-escuro) !important;
     }
 }

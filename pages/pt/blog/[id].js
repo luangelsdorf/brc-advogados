@@ -32,7 +32,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                         </div>
                         <div>
                             <div className="img-placeholder">
-                                <img src={`https://brcadv.com/api${post.cover[0].url}`} alt="Imagem" className="w-100 h-100 object-fit-cover" />
+                                <img src={`https://brcadv.com/api${post.cover[0].url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">

@@ -17,7 +17,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
             <FixedHeader textos={textos} />
             <BannerSuperior title={textos.areas_banner_text_1} subtitle={textos.areas_banner_text_2} btn={false} />
 
-            <HeadContent page="areas" title="áreas de atuação" />
+            <HeadContent page="areas" title={`${area[0].titulo} - BRC`} />
             <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">
                 <img className="img-fluid position-absolute z-index-1" src="/img/themis.png" alt="Desenho"/>
                 <div className="container">

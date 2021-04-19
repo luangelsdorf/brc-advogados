@@ -1,7 +1,6 @@
 import React from 'react';
 
 export default function PostCard(props) {
-    console.log(props.img)
     return (
         <div className="col-10 col-md-6 col-xl-4">
             <div>
