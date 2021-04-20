@@ -1,5 +1,6 @@
 import React from 'react';
 import PostCard from "./PostCard";
+import { formatCategories } from "../../../public/js/modules";
 
 export default function Recentes({ posts, textos }) {
 
@@ -17,7 +18,7 @@ export default function Recentes({ posts, textos }) {
                         quantity.map(card => {
                             return (
                                 <PostCard img={`https://brcadv.com/api${posts[card].cover[0].url}`}
-                                          categoria="Direito Trabalhista"
+                                          categoria={formatCategories(posts[card].categorias)}
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}

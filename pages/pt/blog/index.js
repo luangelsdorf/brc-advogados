@@ -9,8 +9,14 @@ import HeadContent from "../../../src/components/HeadContent";
 import PostCard from "../../../src/components/home/PostCard";
 import Pagination from "../../../src/components/blog/Pagination";
 import FixedWhats from "../../../src/components/FixedWhats";
+import { formatCategories, filterPosts } from "../../../public/js/modules";
 
-export default function Blog({ posts, textos, areas, redes }) {
+export default function Blog({ posts, textos, areas, redes, cat }) {
+
+    function changed(e) {
+        console.dir(e.target.value)
+    }
+
     return (
         <>
             <HeadContent title="Blog - BRC Advogados" page="blog" />
@@ -30,17 +36,24 @@ export default function Blog({ posts, textos, areas, redes }) {
                             </div>
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
-                            <select className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
-                                <option value="Interesse">{ textos.btn_interesse }</option>
+                            <select onChange={ filterPosts } className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
+                                <option value="" disabled="disabled" selected="selected">{ textos.btn_interesse }</option>
+                                {
+                                    cat.map(category => {
+                                        return (
+                                            <option key={category.id} value={category.nome}>{ category.nome }</option>
+                                        )
+                                    })
+                                }
                             </select>
                         </div>
                     </div>
-                    <div className="row justify-content-center w-100 m-0 g-5">
+                    <div className="row justify-content-center justify-content-md-start w-100 m-0 g-5">
                         {
                             posts.map(card => {
                                 return (
                                     <PostCard img={`https://brcadv.com/api${card.cover[0].url}`}
-                                              categoria="Direito Trabalhista"
+                                              categoria={formatCategories(card.categorias)}
                                               data={card.data}
                                               title={card.titulo_post}
                                               body={card.texto_post.substring(0, 125) + '...'}
@@ -78,9 +91,12 @@ export async function getStaticProps() {
     const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
+    const resCat = await fetch('https://brcadv.com/api/categorias')
+    const cat = await resCat.json()
+
     return {
         props: {
-            posts, textos, areas, redes
+            posts, textos, areas, redes, cat
         },
         revalidate: 1
     }

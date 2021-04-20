@@ -9,6 +9,7 @@ import Footer from "../../../src/components/inferior/Footer";
 import React from "react";
 import Link from 'next/link';
 import FixedWhats from "../../../src/components/FixedWhats";
+import {formatCategories} from "../../../public/js/modules";
 
 export default function Post({ post, posts, textos, areas, redes }) {
     let quantity = [0, 1, 2]
@@ -79,7 +80,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                         quantity.map(card => {
                             return (
                                 <PostCard img={`https://brcadv.com/api${posts[card].cover[0].url}`}
-                                          categoria="Direito Trabalhista"
+                                          categoria={formatCategories(posts[card].categorias)}
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
                                           body={posts[card].texto_post.substring(0, 125) + '...'}
