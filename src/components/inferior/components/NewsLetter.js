@@ -61,7 +61,7 @@ export default function NewsLetter({ textos }) {
 
                     <div className="flex-center w-max-content mt-2 mt-sm-0" id="subscribing">
                         <div className="spinner-border text-dourado" role="status" />
-                        <span className="d-inline-block ms-2">Enviando...</span>
+                        <span className="d-inline-block text-white ms-2">Enviando...</span>
                     </div>
                 </form>
             </div>

@@ -12,6 +12,12 @@ export default function HeadContent(props) {
             <script src="https://kit.fontawesome.com/862ff8d067.js" />
             <script src="/js/pages.js" type="module" />
             <script src="/js/main.js" type="module" />
+            {/* OG Meta tags */}
+            <meta property="og:url"           content={`https://brcadv.com${props.url}`} />
+            <meta property="og:type"          content="website" />
+            <meta property="og:title"         content={props.title} />
+            <meta property="og:description"   content={props.desc.substring(3, 125) + '...'} />
+            <meta property="og:image"         content={props.img} />
         </Head>
     )
 }
