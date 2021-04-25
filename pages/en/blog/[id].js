@@ -16,7 +16,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
     let quantity = [0, 1, 2]
     let router = useRouter()
     let url = router.asPath
-    let img = `https://brcadv.com/api${post.cover[0].url}`
+    let img = `https://brcadv.com/strapi${post.cover[0].url}`
     let desc = post.texto_post
     let ogTags = {
         url: url,
@@ -79,7 +79,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                         </div>
                         <div>
                             <div className="img-placeholder">
-                                <img src={`https://brcadv.com/api${post.cover[0].url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                                <img src={`https://brcadv.com/strapi${post.cover[0].url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />
                             <div className="fs-20 text-escuro">
@@ -125,7 +125,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={`https://brcadv.com/api${posts[card].cover[0].url}`}
+                                <PostCard img={`https://brcadv.com/strapi${posts[card].cover[0].url}`}
                                           categoria={formatCategories(posts[card].categorias)}
                                           data={posts[card].data}
                                           title={posts[card].titulo_post}
@@ -152,7 +152,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
 
 
 export async function getStaticPaths() {
-    const response = await fetch('https://brcadv.com/api/en-posts')
+    const response = await fetch('https://brcadv.com/strapi/en-posts')
     const posts = await response.json()
     console.log(posts)
 
@@ -164,19 +164,19 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://brcadv.com/api/en-posts/${params.id}`)
+    const res = await fetch(`https://brcadv.com/strapi/en-posts/${params.id}`)
     const post = await res.json()
 
-    const resp = await fetch('https://brcadv.com/api/en-posts')
+    const resp = await fetch('https://brcadv.com/strapi/en-posts')
     const posts = await resp.json()
 
-    const resText = await fetch('https://brcadv.com/api/en-textos')
+    const resText = await fetch('https://brcadv.com/strapi/en-textos')
     const textos = await resText.json()
 
-    const resAreas = await fetch('https://brcadv.com/api/en-areas')
+    const resAreas = await fetch('https://brcadv.com/strapi/en-areas')
     const areas = await resAreas.json()
 
-    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/strapi/redes-sociais')
     const redes = await resRedes.json()
 
     return {

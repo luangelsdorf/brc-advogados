@@ -108,7 +108,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch('https://brcadv.com/api/en-areas')
+    const res = await fetch('https://brcadv.com/strapi/en-areas')
     const resAreas = await res.json()
     const paths = resAreas.map((area) => ({
         params: { slug: area.slug },
@@ -118,16 +118,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://brcadv.com/api/en-areas?slug=${params.slug}`)
+    const res = await fetch(`https://brcadv.com/strapi/en-areas?slug=${params.slug}`)
     const area = await res.json()
 
-    const resAll = await fetch('https://brcadv.com/api/en-areas')
+    const resAll = await fetch('https://brcadv.com/strapi/en-areas')
     const areas = await resAll.json()
 
-    const resText = await fetch('https://brcadv.com/api/en-textos')
+    const resText = await fetch('https://brcadv.com/strapi/en-textos')
     const textos = await resText.json()
 
-    const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
+    const resRedes = await fetch('https://brcadv.com/strapi/redes-sociais')
     const redes = await resRedes.json()
 
     return {
