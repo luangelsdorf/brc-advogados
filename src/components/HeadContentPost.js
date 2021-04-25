@@ -1,6 +1,6 @@
-import Head from 'next/head';
+import Head from "next/head";
 
-export default function HeadContent(props) {
+export default function HeadContentPost(props) {
     return (
         <Head>
             <title>{props.title}</title>
@@ -10,6 +10,11 @@ export default function HeadContent(props) {
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" />
             <script src="/js/pages.js" type="module" />
             <script src="/js/main.js" type="module" />
+            <meta property="og:url"           content={`https://brcadv.com${props.tags.url}`} />
+            <meta property="og:type"          content="article" />
+            <meta property="og:title"         content={props.title} />
+            <meta property="og:description"   content={props.tags.desc.substring(3, 125) + '...'} />
+            <meta property="og:image"         content={props.tags.img} />
         </Head>
     )
 }

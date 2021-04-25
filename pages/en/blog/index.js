@@ -13,6 +13,9 @@ import { formatCategories, filterPosts } from "../../../public/js/modules";
 
 export default function Blog({ posts, textos, areas, redes, cat }) {
 
+    function changed(e) {
+        console.dir(e.target.value)
+    }
 
     return (
         <>

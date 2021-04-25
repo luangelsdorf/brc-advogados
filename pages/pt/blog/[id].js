@@ -1,4 +1,4 @@
-import HeadContent from "../../../src/components/HeadContent";
+import HeadContentPost from "../../../src/components/HeadContentPost";
 import TopHeader from "../../../src/components/superior/TopHeader";
 import FixedHeader from "../../../src/components/superior/FixedHeader";
 import BannerSuperior from "../../../src/components/superior/BannerSuperior";
@@ -18,6 +18,11 @@ export default function Post({ post, posts, textos, areas, redes }) {
     let url = router.asPath
     let img = `https://brcadv.com/api${post.cover[0].url}`
     let desc = post.texto_post
+    let ogTags = {
+        url: url,
+        img: img,
+        desc: desc,
+    }
 
     function handleClick(e) {
         let target
@@ -56,7 +61,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
             <div id="fb-root" />
             <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0&appId=223759669479290&autoLogAppEvents=1" nonce="f8cnNIhN" />
 
-            <HeadContent url={url} desc={desc} img={img} post={true} title="Post - BRC Advogados" page="post" />
+            <HeadContentPost tags={ogTags} post={true} title={`${post.titulo_post} - BRC Advogados`} page="post" />
             <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />

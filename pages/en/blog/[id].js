@@ -1,4 +1,4 @@
-import HeadContent from "../../../src/components/HeadContent";
+import HeadContentPost from "../../../src/components/HeadContentPost";
 import TopHeader from "../../../src/components/superior/TopHeader";
 import FixedHeader from "../../../src/components/superior/FixedHeader";
 import BannerSuperior from "../../../src/components/superior/BannerSuperior";
@@ -10,12 +10,58 @@ import React from "react";
 import Link from 'next/link';
 import FixedWhats from "../../../src/components/FixedWhats";
 import {formatCategories} from "../../../public/js/modules";
+import { useRouter } from "next/router";
 
 export default function Post({ post, posts, textos, areas, redes }) {
     let quantity = [0, 1, 2]
+    let router = useRouter()
+    let url = router.asPath
+    let img = `https://brcadv.com/api${post.cover[0].url}`
+    let desc = post.texto_post
+    let ogTags = {
+        url: url,
+        img: img,
+        desc: desc,
+    }
+
+    function handleClick(e) {
+        let target
+        if (e.target.localName !== 'button'){
+            target = e.target.parentElement.id
+        } else {
+            target = e.target.id
+        }
+
+        if (target === 'facebook') {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=https://brcadv.com${window.location.pathname}`,
+                'facebook-share-dialog',
+                'width=800,height=600'
+            );
+        }
+
+        if (target === 'twitter') {
+            window.open(`https://twitter.com/intent/tweet?text=https://brcadv.com${window.location.pathname}`,
+                    'twitter-share',
+                'width=800,height=600'
+            );
+        }
+
+        if (target === 'linkedin') {
+            window.open(`https://www.linkedin.com/cws/share?url=https://brcadv.com${window.location.pathname}`,
+                'linkedin-share',
+                'width=800,height=600'
+            );
+        }
+    }
+
+
     return (
         <>
-            <HeadContent post={true} title="Post - BRC Advogados" page="post" />
+            {/*Load Facebook SDK for JavaScript*/}
+            <div id="fb-root" />
+            <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0&appId=223759669479290&autoLogAppEvents=1" nonce="f8cnNIhN" />
+
+            <HeadContentPost tags={ogTags} post={true} title={`${post.titulo_post} - BRC Advogados`} page="post" />
             <FixedWhats />
             <TopHeader textos={textos} redes={redes} />
             <FixedHeader textos={textos} />
@@ -39,16 +85,16 @@ export default function Post({ post, posts, textos, areas, redes }) {
                             <div className="fs-20 text-escuro">
                                 <span className="d-block">Gostou do texto?</span>
                                 <span className="d-block">Compartilhe nas Redes Sociais:</span>
-                                <button className="btn social-btn-post facebook-btn btn-h-45">
-                                    <span className="fab fa-facebook-square pe-2" />
+                                <button id="facebook" role="link" className="btn social-btn-post facebook-btn btn-h-45" onClick={ handleClick }>
+                                    <img height="16" width="16" className="mb-1 me-2" src="/img/icons/facebook-f.svg" alt="Logo Facebook"/>
                                     <strong>FACEBOOK</strong>
                                 </button>
-                                <button className="btn social-btn-post twitter-btn btn-h-45">
-                                    <span className="fab fa-twitter pe-2" />
+                                <button id="twitter" role="link" className="btn social-btn-post twitter-btn btn-h-45" onClick={ handleClick }>
+                                    <img height="16" width="16" className="me-2" src="/img/icons/twitter.svg" alt="Logo Twitter"/>
                                     <strong>TWITTER</strong>
                                 </button>
-                                <button className="btn social-btn-post linkedin-btn btn-h-45">
-                                    <span className="fab fa-linkedin pe-2" />
+                                <button id="linkedin" role="link" className="btn social-btn-post linkedin-btn btn-h-45" onClick={ handleClick }>
+                                    <img height="16" width="16" className="mb-1 me-2" src="/img/icons/linkedin.svg" alt="Logo Linkedin"/>
                                     <strong>LINKEDIN</strong>
                                 </button>
                             </div>
