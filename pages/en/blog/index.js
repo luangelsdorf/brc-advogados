@@ -13,9 +13,6 @@ import { formatCategories, filterPosts } from "../../../public/js/modules";
 
 export default function Blog({ posts, textos, areas, redes, cat }) {
 
-    function changed(e) {
-        console.dir(e.target.value)
-    }
 
     return (
         <>
@@ -91,7 +88,7 @@ export async function getStaticProps() {
     const resRedes = await fetch('https://brcadv.com/api/redes-sociais')
     const redes = await resRedes.json()
 
-    const resCat = await fetch('https://brcadv.com/api/categorias')
+    const resCat = await fetch('https://brcadv.com/api/en-categorias')
     const cat = await resCat.json()
 
     return {

@@ -1,25 +1,73 @@
 import React from 'react';
+import { useState } from 'react';
 
 export default function Form({ areas, textos }) {
+
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [area, setArea] = useState('')
+    const [message, setMessage] = useState('')
+    const [submitted, setSubmitted] = useState(false)
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        e.target.reset()
+        if (submitted) {
+            return;
+        }
+        let sent = document.getElementById('sent')
+        let sending = document.getElementById('sending')
+        console.log('Sending')
+        sending.style.display = 'flex'
+
+        let data = {
+            name,
+            email,
+            area,
+            message
+        }
+
+        fetch('/api/contact', {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(data)
+        }).then((res) => {
+            console.log('Response received')
+            if (res.status === 200) {
+                sending.style.display = 'none'
+                sent.style.display = 'flex'
+                console.log('Response succeeded!')
+                setSubmitted(true)
+                setName('')
+                setEmail('')
+                setMessage('')
+                setArea('')
+            }
+        })
+    }
+
     return (
         <>
             <div className="consulta-header bg-dourado text-white playfair">
                 <strong className="fs-24">{ textos.form_title }</strong>
             </div>
             <div className="consulta-body bg-white">
-                <form>
+                <form onSubmit={ handleSubmit }>
                     <div className="form-floating">
-                        <input type="text" id="nome-e-sobrenome" placeholder="Nome e Sobrenome" className="form-control border-radius-0" />
+                        <input required="required" type="text" id="nome-e-sobrenome" placeholder="Nome e Sobrenome" className="form-control border-radius-0" onChange={ (e) => { setName(e.target.value) } } />
                         <label className="placeholder-text" htmlFor="nome-e-sobrenome">{ textos.campo_1 }</label>
                     </div>
 
                     <div className="form-floating">
-                        <input type="email" id="mail" placeholder="Seu E-mail" className="form-control border-radius-0" />
+                        <input required="required" type="email" id="mail" placeholder="Seu E-mail" className="form-control border-radius-0" onChange={ (e) => { setEmail(e.target.value) } } />
                         <label className="placeholder-text" htmlFor="mail">{ textos.campo_2 }</label>
                     </div>
 
                     <div>
-                        <select defaultValue="Área" id="atuacao" className="form-select border-radius-0">
+                        <select required="required" defaultValue="Área" id="atuacao" className="form-select border-radius-0" onChange={(e) => { setArea(e.target.value) }}>
                             <option value="Não informado">{ textos.campo_3 }</option>
                             <option value="Consultivo Cível">Consultivo Cível</option>
                             <option value="Direito Empresarial">Direito Empresarial</option>
@@ -31,14 +79,26 @@ export default function Form({ areas, textos }) {
                         </select>
                     </div>
 
-                    <div className="form-floating">
-                        <textarea id="msg" placeholder="Descrição da Demanda" className="form-control border-radius-0" />
+                    <div className="form-floating mb-4">
+                        <textarea required="required" id="msg" placeholder="Descrição da Demanda" className="form-control border-radius-0" onChange={ (e) => { setMessage(e.target.value) } } />
                         <label className="placeholder-text" htmlFor="msg">{ textos.campo_4 }</label>
                     </div>
 
-                    <button className="btn btn-primary mt-4 msg-btn btn-h-45" id="submit-btn" type="submit">
-                        <span className="d-inline-block">{ textos.btn_enviar }<img src="/img/seta.svg" alt="Seta" /></span>
-                    </button>
+                    <div className="d-flex flex-wrap justify-content-between">
+                        <button className="btn btn-primary msg-btn btn-h-45 w-max-content" id="submit-btn" type="submit">
+                            <span className="d-inline-block">{ textos.btn_enviar }<img src="/img/seta.svg" alt="Seta" /></span>
+                        </button>
+
+                        <div className="flex-center w-max-content mt-2 mt-sm-0" id="sent">
+                            <span className="d-inline-block checked-icon text-success">✓</span>
+                            <span className="d-inline-block ms-2 fs-13">Enviada com sucesso!</span>
+                        </div>
+
+                        <div className="flex-center w-max-content mt-2 mt-sm-0" id="sending">
+                            <div className="spinner-border text-dourado" role="status" />
+                            <span className="d-inline-block ms-2">Enviando...</span>
+                        </div>
+                    </div>
                 </form>
             </div>
         </>

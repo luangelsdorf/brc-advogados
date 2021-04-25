@@ -118,13 +118,13 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://brcadv.com/api/areas?slug=${params.slug}`)
+    const res = await fetch(`https://brcadv.com/api/en-areas?slug=${params.slug}`)
     const area = await res.json()
 
     const resAll = await fetch('https://brcadv.com/api/en-areas')
     const areas = await resAll.json()
 
-    const resText = await fetch('https://brcadv.com/api/en-pt-textos')
+    const resText = await fetch('https://brcadv.com/api/en-textos')
     const textos = await resText.json()
 
     const resRedes = await fetch('https://brcadv.com/api/redes-sociais')

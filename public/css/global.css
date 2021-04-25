@@ -193,6 +193,8 @@ p {
 
 /* Bootstrap Overrides */
 
+
+
 .btn {
     border-radius: 0;
     font-size: 13px;
@@ -568,6 +570,27 @@ a:hover {
     color: var(--dourado) !important;
 }
 
+.sent-text {
+    font-size: 12px;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+#sent, #sending, #subscribed, #subscribing {
+    display: none;
+}
+
+.email-send {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner-border {
+    width: 18px;
+    height: 18px;
+}
+
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- SubFooter -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
@@ -810,4 +833,8 @@ footer {
     .pres-text {
         margin-bottom: 40px;
     }
+}
+
+*:focus {
+    box-shadow: none !important;
 }
