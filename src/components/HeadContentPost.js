@@ -10,6 +10,8 @@ export default function HeadContentPost(props) {
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" />
             <script src="/js/pages.js" type="module" />
             <script src="/js/main.js" type="module" />
+            <script src="/js/pixel.js" />
+            <script src="/js/tagmanager.js" />
             <meta property="og:url"           content={`https://brcadv.com${props.tags.url}`} />
             <meta property="og:type"          content="article" />
             <meta property="og:title"         content={props.title} />
