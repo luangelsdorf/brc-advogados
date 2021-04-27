@@ -9,6 +9,11 @@ function homePage() {
 
 function areasPage(active) {
     document.getElementById(active).style.color = 'rgba(214, 164, 97, 1)'
+    document.querySelectorAll('.navbar-toggler').forEach(btn => {
+        btn.addEventListener('click', e => {
+            e.currentTarget.classList.toggle('active')
+        })
+    })
 }
 
 export { homePage, areasPage }

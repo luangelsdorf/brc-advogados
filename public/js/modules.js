@@ -19,3 +19,8 @@ export function filterPosts(e) {
         }
     })
 }
+
+export function hideNavigation(element) {
+    let bsCollapse = new bootstrap.Collapse(element)
+    bsCollapse.hide()
+}

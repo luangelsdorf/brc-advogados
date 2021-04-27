@@ -8,8 +8,14 @@ import BannerInferior from "../../../src/components/inferior/BannerInferior";
 import SubFooter from "../../../src/components/inferior/SubFooter";
 import Footer from "../../../src/components/inferior/Footer";
 import FixedWhats from "../../../src/components/FixedWhats";
+import {hideNavigation} from "../../../public/js/modules";
 
 export default function AreaPage({ area, areas, textos, redes }) {
+
+    function handleNavClick() {
+        hideNavigation(document.getElementById('navbarNav'))
+    }
+
     return (
         <>
             <FixedWhats />
@@ -49,17 +55,19 @@ export default function AreaPage({ area, areas, textos, redes }) {
                             <div className="flex-center flex-column">
                                 <div>
                                     <nav className="navbar navbar-light mb-4 d-block d-md-none">
-                                        <div className="container-fluid">
-                                            <span className="fs-24 text-dourado playfair">Selecione uma Área de Atuação</span>
-                                            <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                                                <span className="navbar-toggler-icon"></span>
-                                            </button>
+                                        <div className="container-fluid p-0">
+                                            <div className="mb-3 w-100 d-flex align-items-center justify-content-between">
+                                                <span className="fs-24 text-dourado playfair area-nav-title">Selecione uma Área de Atuação</span>
+                                                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
+                                                    <span className="navbar-toggler-icon" />
+                                                </button>
+                                            </div>
                                             <div className="collapse navbar-collapse" id="navbarNav">
                                                 <ul className="navbar-nav">
                                                     {
                                                         areas.map(area => {
                                                             return (
-                                                                <li className="nav-item my-3" key={area.slug}>
+                                                                <li className="nav-item my-3" key={area.slug} onClick={ handleNavClick }>
                                                                     <Link scroll={false} href={`/${textos.lang}/areas-de-atuacao/${area.slug}`}>
                                                                         <a className=" d-inline-flex justify-content-between align-items-center w-100" id={`${area.slug}`}>
                                                                             <span>{area.titulo}</span>
