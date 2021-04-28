@@ -53,8 +53,8 @@
     opacity: 1;
 }
 
-.ler-mais:hover {
-    color: var(--azul-claro);
+.area-card:hover .ler-mais {
+    color: var(--azul-claro) !important;
 }
 
 .my-15-50 {
