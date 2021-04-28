@@ -26,7 +26,7 @@ export default function FixedHeader({ textos }) {
                             <a onClick={ handleNavClick } href={`/${lang}#nossa-equipe`} className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a onClick={ handleNavClick } href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a onClick={ handleNavClick } href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
-                            <button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>
+                            {/*<button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>*/}
                         </div>
                     </div>
                     <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40" href="#banner-inferior">{ textos.btn_fale }</a>

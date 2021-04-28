@@ -70,7 +70,7 @@ export default function TopHeader({ textos, redes }) {
                             <a onClick={ handleNavClick } href={`/${lang}#nossa-equipe`} className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
                             <a onClick={ handleNavClick } href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
                             <a onClick={ handleNavClick } href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
-                            <a className="btn btn-primary d-flex d-xl-none w-max-content" href="#banner-inferior">{ textos.btn_fale }</a>
+                            {/*<a className="btn btn-primary d-flex d-xl-none w-max-content" href="#banner-inferior">{ textos.btn_fale }</a>*/}
                         </div>
                     </div>
                     <a className="btn btn-primary hover-claro d-none d-xl-inline-flex px-3 btn-h-40 align-self-start" href="#banner-inferior">{ textos.btn_fale }</a>
