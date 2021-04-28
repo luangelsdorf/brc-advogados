@@ -726,10 +726,12 @@ footer {
     #sobre-nos {
         padding-top: 75px;
         padding-bottom: 75px;
+        scroll-margin-top: 235px;
     }
     #nossa-equipe {
         padding-top: 80px;
         padding-bottom: 75px;
+        scroll-margin-top: 245px;
     }
     .nossa-equipe-text {
         max-width: 354px;
@@ -744,14 +746,17 @@ footer {
     #areas-de-atuacao {
         padding-top: 75px;
         padding-bottom: 75px;
+        scroll-margin-top: 235px;
     }
     #recentes {
         padding-top: 75px;
         padding-bottom: 75px;
+        scroll-margin-top: 235px;
     }
     #banner-inferior {
         padding-top: 25px;
         padding-bottom: 25px;
+        scroll-margin-top: 235px;
     }
     .sub-footer {
         padding-top: 75px;
