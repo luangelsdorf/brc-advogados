@@ -3,7 +3,7 @@ import React from 'react';
 export default function SobreNos({ textos }) {
     return (
         <div className="container-fluid px-0 flex-center" id="sobre-nos">
-            <div className="container">
+            <div className="container px-4 px-sm-0">
                 <div className="row align-items-center">
                     <div className="col-12 col-xl-6 text-center text-xl-start">
                         <span className="line-title w-max-content">{ textos.qs_title_1 }</span>

@@ -3,7 +3,7 @@ import React from 'react';
 export default function NossaEquipe({ textos }) {
     return (
         <div className="container-fluid px-0 flex-center position-relative" id="nossa-equipe">
-            <div className="container">
+            <div className="container px-5 px-sm-0">
                 <div className="row align-items-center">
                     <div className="col-12 col-xl-5 text-center text-xl-start">
                         <span className="line-title w-max-content">{ textos.ne_title_1 }</span>

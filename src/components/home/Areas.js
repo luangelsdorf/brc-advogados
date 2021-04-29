@@ -22,7 +22,7 @@ export default function Areas({ areas, textos }) {
                                 </span>
                             </div>
 
-                            <div className="d-flex d-xl-none justify-content-center">
+                            <div className="d-flex d-xl-none px-4 px-sm-0 justify-content-center">
                                 <span className="d-inline-flex pres-text">
                                     { textos.areas_text_1 }
                                     { textos.areas_text_2 }
