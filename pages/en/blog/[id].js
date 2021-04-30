@@ -78,7 +78,7 @@ export default function Post({ post, posts, textos, areas, redes }) {
                             <span className="post-date fs-13 text-white">{ post.data }</span>
                         </div>
                         <div>
-                            <div className="img-placeholder">
+                            <div className="img-placeholder mx-auto">
                                 <img src={`https://brcadv.com/strapi${post.cover[0].url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.texto_post}} />

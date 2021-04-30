@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from "next/link";
 
 export default function PostCard(props) {
     return (
@@ -11,9 +12,13 @@ export default function PostCard(props) {
                 <div className="post-card-body flex-center">
                     <div>
                         <span className="d-block text-dourado mt-4">{props.data}</span>
-                        <a href={props.href} className="d-block playfair post-title-link fs-22 mt-4 mb-3">{props.title}</a>
+                        <Link href={props.href}>
+                            <a className="d-block playfair post-title-link fs-22 mt-4 mb-3">{props.title}</a>
+                        </Link>
                         <div className="mb-3" dangerouslySetInnerHTML={{__html: props.body}} />
-                        <a href={props.href} className="ler-mais">{ props.lerMais }<span className="flecha">&rarr;</span></a>
+                        <Link href={props.href}>
+                            <a className="ler-mais">{ props.lerMais }<span className="flecha">&rarr;</span></a>
+                        </Link>
                     </div>
                 </div>
             </div>
