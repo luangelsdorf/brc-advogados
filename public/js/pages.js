@@ -1,9 +1,11 @@
 function homePage() {
     document.getElementById('expand-andre').addEventListener('click', () => {
         document.getElementById('collapse-andre').classList.toggle('active')
+        document.querySelector('#expand-andre svg').classList.toggle('active')
     })
     document.getElementById('expand-lucas').addEventListener('click', () => {
         document.getElementById('collapse-lucas').classList.toggle('active')
+        document.querySelector('#expand-lucas svg').classList.toggle('active')
     })
 }
 

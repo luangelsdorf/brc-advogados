@@ -205,6 +205,14 @@ img {
     height: auto;
 }
 
+#expand-andre svg, #expand-lucas svg {
+    transition: all 450ms ease;
+}
+
+#expand-andre svg.active, #expand-lucas svg.active {
+    transform: rotate(180deg);
+}
+
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Parallax -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
 .parallax-container {

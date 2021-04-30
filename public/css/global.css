@@ -146,7 +146,7 @@ p {
 }
 
 .break-spaces {
-    white-space: break-spaces !important;
+    white-space: break-spaces;
 }
 
 .icon {
@@ -700,6 +700,9 @@ footer {
     }
     blockquote {
         font-size: 20px;
+    }
+    .break-spaces {
+        white-space: normal;
     }
 }
 

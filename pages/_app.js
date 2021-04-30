@@ -20,6 +20,13 @@ export default function MyApp({ Component, pageProps }) {
                 //aplicar estilos à opção ativa
                 let nome = url.slice(21)
                 document.getElementById(nome).style.color = 'rgba(214, 164, 97, 1)'
+
+                //adicionar event listener para rodar o ícone de seta
+                document.querySelectorAll('.navbar-toggler').forEach(btn => {
+                    btn.addEventListener('click', e => {
+                        e.currentTarget.classList.toggle('active')
+                    })
+                })
             }
 
             if (url === '/pt' || url === '/en' || url.startsWith('/pt/#') || url.startsWith('/pt/#')) {
