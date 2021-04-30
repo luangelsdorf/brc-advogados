@@ -26,7 +26,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
             <HeadContent page="areas" title={`${area[0].titulo} - BRC Advogados`} />
             <div className="container-fluid px-0 flex-center position-relative" id="areas-de-atuacao">
                 <img className="img-fluid position-absolute z-index-1" src="/img/themis.png" alt="Desenho"/>
-                <div className="container">
+                <div className="container px-5 px-sm-0">
                     <div className="row">
                         <div className="col-4 d-none d-md-block">
                             <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">Áreas de Atuação</strong>

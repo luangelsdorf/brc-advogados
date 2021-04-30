@@ -694,6 +694,13 @@ footer {
     .line-title::after, .line-title::before {
         display: none;
     }
+
+    .fs-20 {
+        font-size: 16px !important;
+    }
+    blockquote {
+        font-size: 20px;
+    }
 }
 
 /* breakpoint md */

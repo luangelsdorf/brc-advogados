@@ -36,8 +36,8 @@ export default function Blog({ posts, textos, areas, redes, cat }) {
                             </div>
                         </div>
                         <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
-                            <select onChange={ filterPosts } className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
-                                <option value="" disabled="disabled" selected="selected">{ textos.btn_interesse }</option>
+                            <select onChange={ filterPosts } defaultValue="" className="form-select btn-h-50 border-radius-0 w-max-content" id="select-interesse">
+                                <option value="" disabled="disabled">{ textos.btn_interesse }</option>
                                 {
                                     cat.map(category => {
                                         return (
@@ -48,7 +48,7 @@ export default function Blog({ posts, textos, areas, redes, cat }) {
                             </select>
                         </div>
                     </div>
-                    <div className="row justify-content-center justify-content-md-start w-100 m-0 g-5">
+                    <div className="row justify-content-center justify-content-md-start gy-5">
                         {
                             posts.map(card => {
                                 return (

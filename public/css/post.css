@@ -124,7 +124,7 @@ blockquote::before {
 }
 
 #ver-todas {
-    width: 194px;
+    min-width: 200px;
 }
 
 #ver-todas img {
