@@ -1,5 +1,6 @@
 import React from 'react';
-import {hideNavigation} from "../../../public/js/modules";
+import { hideNavigation } from "../../../public/js/modules";
+import Link from "next/link";
 
 export default function FixedHeader({ textos }) {
     const lang = textos.lang
@@ -20,16 +21,30 @@ export default function FixedHeader({ textos }) {
                     </button>
                     <div className="collapse navbar-collapse justify-content-center" id="navBar">
                         <div className="nav navbar-nav justify-content-between">
-                            <a onClick={ handleNavClick } href={`/${lang}#home`} className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
-                            <a onClick={ handleNavClick } href={`/${lang}#sobre-nos`} className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
-                            <a onClick={ handleNavClick } href={`/${lang}#areas-de-atuacao`} className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
-                            <a onClick={ handleNavClick } href={`/${lang}#nossa-equipe`} className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
-                            <a onClick={ handleNavClick } href={`/${lang}/blog`} className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
-                            <a onClick={ handleNavClick } href="#banner-inferior" className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
+                            <Link href={`/${lang}#home`}>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_1 }</a>
+                            </Link>
+                            <Link href={`/${lang}#sobre-nos`}>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_2 }</a>
+                            </Link>
+                            <Link href={`/${lang}#areas-de-atuacao`}>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_3 }</a>
+                            </Link>
+                            <Link href={`/${lang}#nossa-equipe`}>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_4 }</a>
+                            </Link>
+                            <Link href={`/${lang}/blog`}>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_5 }</a>
+                            </Link>
+                            <Link href="#banner-inferior">
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center">{ textos.nb_item_6 }</a>
+                            </Link>
                             {/*<button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>*/}
                         </div>
                     </div>
-                    <a className="btn btn-primary hover-claro d-none d-lg-inline-flex px-3 btn-h-40" href="#banner-inferior">{ textos.btn_fale }</a>
+                    <Link href="#banner-inferior">
+                        <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">{ textos.btn_fale }</a>
+                    </Link>
                 </div>
             </nav>
         </header>
