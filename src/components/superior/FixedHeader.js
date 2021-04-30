@@ -13,9 +13,11 @@ export default function FixedHeader({ textos }) {
         <header className="fixed-header">
             <nav className="navbar navbar-fixed navbar-expand-lg navbar-light w-100">
                 <div className="container">
-                    <a href={`/${lang}#home`}>
-                        <img src="/img/logo.png" alt="Logo" />
-                    </a>
+                    <Link href={`/${lang}#home`}>
+                        <a>
+                            <img src="/img/logo.png" alt="Logo" />
+                        </a>
+                    </Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navBar">
                         <span className="navbar-toggler-icon" />
                     </button>
