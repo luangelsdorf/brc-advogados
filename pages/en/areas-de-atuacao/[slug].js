@@ -29,7 +29,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
                 <div className="container px-5 px-sm-0">
                     <div className="row">
                         <div className="col-4 d-none d-md-block">
-                            <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">Áreas de Atuação</strong>
+                            <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">{ textos.areas_title_2 }</strong>
                             <ul className="list-group list-group-flush">
 
                                 {
@@ -57,7 +57,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
                                     <nav className="navbar navbar-light mb-4 d-block d-md-none">
                                         <div className="container-fluid p-0">
                                             <div className="mb-3 w-100 d-flex align-items-center justify-content-between">
-                                                <span className="fs-24 text-dourado playfair area-nav-title">Selecione uma Área de Atuação</span>
+                                                <span className="fs-24 text-dourado playfair area-nav-title">Select an Area of Expertise</span>
                                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
                                                     <span className="navbar-toggler-icon" />
                                                 </button>

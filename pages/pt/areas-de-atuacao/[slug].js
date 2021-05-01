@@ -29,7 +29,7 @@ export default function AreaPage({ area, areas, textos, redes }) {
                 <div className="container px-5 px-sm-0">
                     <div className="row">
                         <div className="col-4 d-none d-md-block">
-                            <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">Áreas de Atuação</strong>
+                            <strong className="d-block text-escuro playfair ps-3 fs-24 mb-4">{ textos.areas_title_2 }</strong>
                             <ul className="list-group list-group-flush">
 
                                 {

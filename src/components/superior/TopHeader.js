@@ -33,7 +33,7 @@ export default function TopHeader({ textos, redes }) {
             <div className="container top-bar d-flex justify-content-between text-white">
                 <div className="bar-section my-2">
                     <span className="divisor position-relative fs-13 pe-4">Email: { textos.email }</span>
-                    <span className="fs-13 ps-4">{ tel }: { textos.phone }</span>
+                    <a href={ `tel:${textos.phone}` } className="fs-13 ps-4">{ tel }: { textos.phone }</a>
                 </div>
                 <div className="bar-section my-2">
                     <div className="divisor position-relative fs-13 pe-4">
