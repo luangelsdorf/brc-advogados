@@ -286,9 +286,6 @@ a:hover {
     justify-content: center;
 }
 
-.nav-link:focus {
-    color: white !important;
-}
 
 .nav-link::after {
     content: "";
@@ -449,6 +446,14 @@ a:hover {
     background-image: none;
     background-color: white;
     box-shadow: 0 0 75px rgba(0, 0, 0, 0.05);
+}
+
+.fixed-header .nav-link:focus {
+    color: var(--azul-escuro) !important;
+}
+
+.fixed-header .bar-link {
+    color: white;
 }
 
 .bar-section {
@@ -804,6 +809,9 @@ footer {
     }
     .fixed-header .nav-link {
         color: white !important;
+    }
+    .fixed-header .nav-link:focus {
+        color: var(--dourado) !important;
     }
 }
 

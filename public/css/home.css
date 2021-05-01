@@ -294,3 +294,7 @@ img {
     background-color: #003057;
     z-index: 5;
 }
+
+.top-header .nav-link:focus {
+    color: var(--dourado) !important;
+}
