@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 
-export default function Form({ areas, textos }) {
+export default function Form({ areas, contact }) {
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
@@ -52,23 +52,23 @@ export default function Form({ areas, textos }) {
     return (
         <>
             <div className="consulta-header bg-dourado text-white playfair">
-                <strong className="fs-24">{ textos.form_title }</strong>
+                <strong className="fs-24">Solicite uma Consulta</strong>
             </div>
             <div className="consulta-body bg-white">
                 <form onSubmit={ handleSubmit }>
                     <div className="form-floating">
                         <input required="required" type="text" id="nome-e-sobrenome" placeholder="Nome e Sobrenome" className="form-control border-radius-0" onChange={ (e) => { setName(e.target.value) } } />
-                        <label className="placeholder-text" htmlFor="nome-e-sobrenome">{ textos.campo_1 }</label>
+                        <label className="placeholder-text" htmlFor="nome-e-sobrenome">Nome e Sobrenome</label>
                     </div>
 
                     <div className="form-floating">
                         <input required="required" type="email" id="mail" placeholder="Seu E-mail" className="form-control border-radius-0" onChange={ (e) => { setEmail(e.target.value) } } />
-                        <label className="placeholder-text" htmlFor="mail">{ textos.campo_2 }</label>
+                        <label className="placeholder-text" htmlFor="mail">Seu E-Mail</label>
                     </div>
 
                     <div>
                         <select required="required" defaultValue="Área" id="atuacao" className="form-select border-radius-0" onChange={(e) => { setArea(e.target.value) }}>
-                            <option value="Não informado">{ textos.campo_3 }</option>
+                            <option value="Não informado">Área de Atuação</option>
                             <option value="Consultivo Cível">Consultivo Cível</option>
                             <option value="Direito Empresarial">Direito Empresarial</option>
                             <option value="LGPD">LGPD</option>
@@ -81,12 +81,12 @@ export default function Form({ areas, textos }) {
 
                     <div className="form-floating mb-4">
                         <textarea required="required" id="msg" placeholder="Descrição da Demanda" className="form-control border-radius-0" onChange={ (e) => { setMessage(e.target.value) } } />
-                        <label className="placeholder-text" htmlFor="msg">{ textos.campo_4 }</label>
+                        <label className="placeholder-text" htmlFor="msg">Sua Mensagem</label>
                     </div>
 
                     <div className="d-flex flex-wrap justify-content-between">
                         <button className="btn btn-primary msg-btn btn-h-45 w-max-content" id="submit-btn" type="submit">
-                            <span className="d-inline-block">{ textos.btn_enviar }<img src="/img/seta.svg" alt="Seta" /></span>
+                            <span className="d-inline-block">Enviar Mensagem<img src="/img/seta.svg" alt="Seta" /></span>
                         </button>
 
                         <div className="flex-center w-max-content mt-2 mt-sm-0" id="sent">

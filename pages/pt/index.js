@@ -16,14 +16,14 @@ import FixedWhats from "../../src/components/FixedWhats";
 
 
 
-export default function Home({ areas, posts, textos, redes }) {
+export default function Home({ areas, posts, textos, contact }) {
     return (
         <>
             <HeadContent title="BRC Advogados" page="home" />
             <FixedWhats />
-            <TopHeader textos={textos} redes={redes} />
-            <FixedHeader textos={textos} />
-            <BannerSuperior btn_text={textos.btn_servicos} title={textos.main_banner_text_1} subtitle={textos.main_banner_text_2} btn={true} />
+            <TopHeader contact={contact} />
+            <FixedHeader contact={contact} />
+            <BannerSuperior title={textos.bannerTitle} subtitle={textos.bannerSubtitle} btn={true} />
 
             <div className="container-fluid p-0 position-relative home">
                 <img src="/img/parallax.png" className="parallax" loading="lazy" alt=""/>
@@ -34,29 +34,29 @@ export default function Home({ areas, posts, textos, redes }) {
                 <Recentes textos={textos} posts={posts} />
             </div>
 
-            <BannerInferior textos={textos} areas={areas} />
-            <SubFooter areas={areas} textos={textos} redes={redes} />
-            <Footer redes={redes} textos={textos} />
+            <BannerInferior contact={contact} areas={areas} />
+            <SubFooter areas={areas} textos={textos} contact={contact} />
+            <Footer contact={contact} textos={textos} />
         </>
     )
 }
 
 export async function getStaticProps() {
-    const responseAreas = await fetch(`https://brcadv.com/strapi/areas`)
+    const responseAreas = await fetch(`https://brcadv.com/strapi/servicos`)
     const areas = await responseAreas.json()
 
     const  responsePosts  = await fetch('https://brcadv.com/strapi/posts')
     const posts = await responsePosts.json()
 
-    const  responseTextos  = await fetch('https://brcadv.com/strapi/pt-textos')
+    const  responseTextos  = await fetch('https://brcadv.com/strapi/inicio')
     const textos = await responseTextos.json()
 
-    const resRedes = await fetch('https://brcadv.com/strapi/redes-sociais')
-    const redes = await resRedes.json()
+    const responseContact = await fetch('https://brcadv.com/strapi/contatos')
+    const contact = await responseContact.json()
 
     return {
         props: {
-            areas, posts, textos, redes
+            areas, posts, textos, contact
         },
         revalidate: 1
     }

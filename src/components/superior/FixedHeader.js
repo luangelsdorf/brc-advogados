@@ -3,8 +3,8 @@ import { hideNavigation } from "../../../public/js/modules";
 import Link from "next/link";
 import {useRouter} from "next/router";
 
-export default function FixedHeader({ textos }) {
-    const lang = textos.lang
+export default function FixedHeader({ contact }) {
+    const lang = contact.locale.substring(0, 2)
     let router = useRouter()
     let path = router.asPath.slice(3)
 
@@ -46,28 +46,28 @@ export default function FixedHeader({ textos }) {
                                 </Link>
                             </div>
                             <Link href={`/${lang}#home`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_1 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Início</a>
                             </Link>
                             <Link href={`/${lang}#sobre-nos`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_2 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Sobre Nós</a>
                             </Link>
                             <Link href={`/${lang}#areas-de-atuacao`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_3 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Áreas de Atuação</a>
                             </Link>
                             <Link href={`/${lang}#nossa-equipe`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_4 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Nossa Equipe</a>
                             </Link>
                             <Link href={`/${lang}/blog`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_5 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Blog</a>
                             </Link>
                             <Link href="#banner-inferior">
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ textos.nb_item_6 }</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Contato</a>
                             </Link>
                             {/*<button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>*/}
                         </div>
                     </div>
                     <Link href="#banner-inferior">
-                        <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">{ textos.btn_fale }</a>
+                        <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">Fale com um Advogado</a>
                     </Link>
                 </div>
             </nav>
