@@ -130,7 +130,7 @@ export default function Post({ post, posts, areas, contact }) {
                                           data={posts[card].date}
                                           title={posts[card].title}
                                           body={posts[card].body.substring(0, 125) + '...'}
-                                          href={`/${contact.locale.substring(0, 2)}/blog/${posts[card].id}`}
+                                          href={`/${contact.locale.substring(0, 2)}/blog/${posts[card].slug}`}
 
                                           key={`card-${posts[card].id}`}
                                 />

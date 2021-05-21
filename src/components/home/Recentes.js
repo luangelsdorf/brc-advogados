@@ -34,7 +34,7 @@ export default function Recentes({ posts, textos }) {
                                           dataTest={formatDate(posts[card].date, posts[card].locale)}
                                           title={posts[card].title}
                                           body={posts[card].body.substring(0, 125) + '...'}
-                                          href={`/${textos.locale.substring(0, 2)}/blog/${posts[card].id}`}
+                                          href={`/${textos.locale.substring(0, 2)}/blog/${posts[card].slug}`}
                                           lang={textos.locale.substring(0, 2)}
 
                                           key={`card-${posts[card].id}`}
