@@ -102,7 +102,7 @@ export default function Form({ areas, contact }) {
                             {
                                 areas.map(area => {
                                     return (
-                                        <option value={area.title}>{area.title}</option>
+                                        <option key={`area-option-${area.title}`} value={area.title}>{area.title}</option>
                                     )
                                 })
                             }
