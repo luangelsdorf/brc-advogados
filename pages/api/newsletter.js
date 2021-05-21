@@ -43,15 +43,15 @@ export default function (req, res) {
             port: 465,
             host: "smtp.gmail.com",
             auth: {
-                user: 'edpereira6161@gmail.com',
-                pass: 'ed-pereira-61',
+                user: process.env.email,
+                pass: process.env.password,
             },
             secure: true,
         });
 
         const mailData = {
             from: 'edpereira6161@gmail.com',
-            to: 'luanferreira2136.@gmail.com',
+            to: 'luanferreira2136@gmail.com',
             subject: `Nova Inscrição | Newsletter Site BRC`,
             text: `Nova inscrição para ${req.body.email}`,
             html: `
