@@ -37,8 +37,9 @@ export default function Areas({ areas, textos }) {
                                 <AreaCard
                                     key={area.id}
                                     title={area.title}
-                                    icon={area.slug}
+                                    icon={area.icon}
                                     href={`/${textos.locale.substring(0, 2)}/areas-de-atuacao/${area.slug}`}
+                                    lang={textos.locale.substring(0, 2)}
                                 >
                                     { area.preview }
                                 </AreaCard>

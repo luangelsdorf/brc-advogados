@@ -1,6 +1,16 @@
 import React from 'react';
 
 export default function SobreNos({ textos }) {
+
+    let btnText
+    let lang = textos.locale.substring(0, 2)
+    if (lang === 'pt') {
+        btnText = 'Conheça Nossa Equipe'
+    }
+    else {
+        btnText = 'Meet out Team'
+    }
+
     return (
         <div className="container-fluid px-0 flex-center" id="sobre-nos">
             <div className="container px-4 px-sm-0">
@@ -11,7 +21,7 @@ export default function SobreNos({ textos }) {
                         <img src="/img/mosaico.png" className="img-fluid d-block d-xl-none sobre-nos-img" alt="Mosaico"/>
                         <div className="sobre-nos-text" dangerouslySetInnerHTML={{__html: textos.aboutUsText}} />
                         <a href="#nossa-equipe" className="btn btn-primary btn-h-50 mt-4">
-                            Conheça Nossa Equipe <img src="/img/icons/long-arrow-alt-down-solid.svg" className="ms-2" width="12" height="12" alt="Flecha"/>
+                            { btnText } <img src="/img/icons/long-arrow-alt-down-solid.svg" className="ms-2" width="12" height="12" alt="Flecha"/>
                         </a>
                     </div>
 

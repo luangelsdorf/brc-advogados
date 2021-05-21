@@ -57,7 +57,7 @@ export default function AreaPage({ area, areas, textos, contact }) {
                                     <nav className="navbar navbar-light mb-4 d-block d-md-none">
                                         <div className="container-fluid p-0">
                                             <div className="mb-3 w-100 d-flex align-items-center justify-content-between">
-                                                <span className="fs-24 text-dourado playfair area-nav-title">Selecione uma Área de Atuação</span>
+                                                <span className="fs-24 text-dourado playfair area-nav-title">Selecione uma <br/> Área de Atuação</span>
                                                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-expanded="false">
                                                     <span className="navbar-toggler-icon" />
                                                 </button>

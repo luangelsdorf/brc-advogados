@@ -3,6 +3,15 @@ import Link from "next/link";
 
 export default function PostCard(props) {
     console.log(props.dataTest)
+
+    let lerMais
+    if (props.lang === 'pt') {
+        lerMais = 'Ler Mais'
+    }
+    else {
+        lerMais = 'Read More'
+    }
+
     return (
         <div className="col-10 col-md-6 col-xl-4 post-card">
             <div>
@@ -18,7 +27,7 @@ export default function PostCard(props) {
                         </Link>
                         <div className="mb-3" dangerouslySetInnerHTML={{__html: props.body}} />
                         <Link href={props.href}>
-                            <a className="ler-mais">Ler Mais<span className="flecha">&rarr;</span></a>
+                            <a className="ler-mais">{ lerMais }<span className="flecha">&rarr;</span></a>
                         </Link>
                     </div>
                 </div>

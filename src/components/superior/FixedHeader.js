@@ -9,12 +9,36 @@ export default function FixedHeader({ contact }) {
     let path = router.asPath.slice(3)
 
     let ptClass, enClass
+    let inicio
+    let sobreNos
+    let areas
+    let nossaEquipe
+    let blog
+    let contato
+    let btnText
+
     if (router.asPath.startsWith('/pt')) {
         ptClass = 'active'
         enClass = ''
+
+        inicio = 'Início'
+        sobreNos = 'Sobre Nós'
+        areas = 'Áreas de Atuação'
+        nossaEquipe = 'Nossa Equipe'
+        blog = 'Blog'
+        contato = 'Contato'
+        btnText = 'Fale com um Advogado'
     } else {
         ptClass = ''
         enClass = 'active'
+
+        inicio = 'Home'
+        sobreNos = 'About Us'
+        areas = 'Areas of Expertise'
+        nossaEquipe = 'Our Team'
+        blog = 'Blog'
+        contato = 'Contact'
+        btnText = 'Speak with an Attorney'
     }
 
     function handleNavClick() {
@@ -46,28 +70,28 @@ export default function FixedHeader({ contact }) {
                                 </Link>
                             </div>
                             <Link href={`/${lang}#home`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Início</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ inicio }</a>
                             </Link>
                             <Link href={`/${lang}#sobre-nos`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Sobre Nós</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ sobreNos }</a>
                             </Link>
                             <Link href={`/${lang}#areas-de-atuacao`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Áreas de Atuação</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ areas }</a>
                             </Link>
                             <Link href={`/${lang}#nossa-equipe`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Nossa Equipe</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ nossaEquipe }</a>
                             </Link>
                             <Link href={`/${lang}/blog`}>
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Blog</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ blog }</a>
                             </Link>
                             <Link href="#banner-inferior">
-                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">Contato</a>
+                                <a onClick={ handleNavClick } className="nav-link d-flex align-items-center my-2">{ contato }</a>
                             </Link>
                             {/*<button className="btn btn-primary d-flex d-lg-none w-max-content">{ textos.btn_fale }</button>*/}
                         </div>
                     </div>
                     <Link href="#banner-inferior">
-                        <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">Fale com um Advogado</a>
+                        <a className="btn btn-primary d-none d-lg-inline-flex px-3 btn-h-40">{ btnText }</a>
                     </Link>
                 </div>
             </nav>
