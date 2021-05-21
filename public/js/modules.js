@@ -6,7 +6,7 @@ export function formatCategories(categorias) {
     return categories.join(', ')
 }
 
-export function formatDate(date, locale) {
+export function formatDate(date, locale, isShort) {
     let day = date.substring(8, 10)
     let month = date.substring(5, 7)
     let year = date.substring(0, 4)
@@ -50,7 +50,12 @@ export function formatDate(date, locale) {
                 month = 'Dezembro'
                 break;
         }
-        return `dia: ${day}, mes: ${month}, ano: ${year}`
+        if (isShort) {
+            return `${month.substring(0, 3)} ${day}, ${year}`
+        }
+        else {
+            return `${day} de ${month} de ${year}`
+        }
     }
     else {
         switch (month) {
@@ -91,7 +96,12 @@ export function formatDate(date, locale) {
                 month = 'December'
                 break;
         }
-        return `day: ${day}, month: ${month}, year: ${year}`
+        if (isShort) {
+            return `${month.substring(0, 3)} ${day}, ${year}`
+        }
+        else {
+            return `${month} ${day} ${year}`
+        }
     }
 }
 

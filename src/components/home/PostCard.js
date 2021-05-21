@@ -2,7 +2,6 @@ import React from 'react';
 import Link from "next/link";
 
 export default function PostCard(props) {
-    console.log(props.dataTest)
 
     let lerMais
     if (props.lang === 'pt') {
@@ -21,7 +20,7 @@ export default function PostCard(props) {
                 </div>
                 <div className="post-card-body flex-center">
                     <div>
-                        <span className="d-block text-dourado mt-4">{props.data}</span>
+                        <span className="d-block text-dourado mt-4">{props.date}</span>
                         <Link href={props.href}>
                             <a className="d-block playfair post-title-link fs-22 mt-4 mb-3">{props.title}</a>
                         </Link>

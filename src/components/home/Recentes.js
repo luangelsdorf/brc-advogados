@@ -30,8 +30,7 @@ export default function Recentes({ posts, textos }) {
                             return (
                                 <PostCard img={`https://brcadv.com/strapi${posts[card].cover.url}`}
                                           categoria={formatCategories(posts[card].categorias)}
-                                          data={posts[card].date}
-                                          dataTest={formatDate(posts[card].date, posts[card].locale)}
+                                          date={formatDate(posts[card].date, posts[card].locale, true)}
                                           title={posts[card].title}
                                           body={posts[card].body.substring(0, 125) + '...'}
                                           href={`/${textos.locale.substring(0, 2)}/blog/${posts[card].slug}`}

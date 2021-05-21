@@ -29,7 +29,7 @@ export default function MyApp({ Component, pageProps }) {
                 })
             }
 
-            if (url === '/pt' || url === '/en' || url.startsWith('/pt/#') || url.startsWith('/pt/#')) {
+            if (url === '/pt' || url === '/en' || url.startsWith('/pt/#') || url.startsWith('/en/#') || url.startsWith('/pt#') || url.startsWith('/en#')) {
                 homePage()
             }
         }

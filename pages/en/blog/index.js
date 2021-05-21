@@ -9,7 +9,7 @@ import HeadContent from "../../../src/components/HeadContent";
 import PostCard from "../../../src/components/home/PostCard";
 import Pagination from "../../../src/components/blog/Pagination";
 import FixedWhats from "../../../src/components/FixedWhats";
-import { formatCategories, filterPosts } from "../../../public/js/modules";
+import {formatCategories, filterPosts, formatDate} from "../../../public/js/modules";
 
 export default function Blog({ posts, textos, areas, contact, cat }) {
 
@@ -50,7 +50,7 @@ export default function Blog({ posts, textos, areas, contact, cat }) {
                                 return (
                                     <PostCard img={`https://brcadv.com/strapi${card.cover.url}`}
                                               categoria={formatCategories(card.categorias)}
-                                              data={card.data}
+                                              date={formatDate(card.date, card.locale, true)}
                                               title={card.title}
                                               body={card.body.substring(0, 125) + '...'}
                                               href={`/${textos.locale.substring(0, 2)}/blog/${card.slug}`}
