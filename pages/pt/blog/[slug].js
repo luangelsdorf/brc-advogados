@@ -16,8 +16,8 @@ export default function Post({ post, posts, areas, contact }) {
     let quantity = [0, 1, 2]
     let router = useRouter()
     let url = router.asPath
-    let img = `https://brcadv.com/strapi${post.cover.url}`
-    let desc = post.body
+    let img = `https://brcadv.com/strapi${post[0].cover.url}`
+    let desc = post[0].body
     let ogTags = {
         url: url,
         img: img,
@@ -61,7 +61,7 @@ export default function Post({ post, posts, areas, contact }) {
             <div id="fb-root" />
             <script async defer crossOrigin="anonymous" src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v10.0&appId=223759669479290&autoLogAppEvents=1" nonce="f8cnNIhN" />
 
-            <HeadContentPost tags={ogTags} post={true} title={`${post.title} - BRC Advogados`} page="post" />
+            <HeadContentPost tags={ogTags} post={true} title={`${post[0].title} - BRC Advogados`} page="post" />
             <FixedWhats />
             <TopHeader contact={contact} />
             <FixedHeader contact={contact} />
@@ -72,16 +72,16 @@ export default function Post({ post, posts, areas, contact }) {
                     <div className="col-1" />
 
                     <div className="col-10">
-                        <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{maxWidth: 530 + 'px'}}>{ post.title }</strong>
+                        <strong className="d-block text-center text-white playfair fs-44 mx-auto mb-4" style={{maxWidth: 530 + 'px'}}>{ post[0].title }</strong>
                         <div className="flex-center" id="post-date-row">
                             <svg width="12" height="12" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="calendar-alt" className="fs-13 text-white mb-1 mx-2 svg-inline--fa fa-calendar-alt fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M0 464c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V192H0v272zm320-196c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM192 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12h-40c-6.6 0-12-5.4-12-12v-40zM64 268c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zm0 128c0-6.6 5.4-12 12-12h40c6.6 0 12 5.4 12 12v40c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12v-40zM400 64h-48V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H160V16c0-8.8-7.2-16-16-16h-32c-8.8 0-16 7.2-16 16v48H48C21.5 64 0 85.5 0 112v48h448v-48c0-26.5-21.5-48-48-48z"></path></svg>
-                            <span className="post-date fs-13 text-white">{ post.date }</span>
+                            <span className="post-date fs-13 text-white">{ post[0].date }</span>
                         </div>
                         <div>
                             <div className="img-placeholder mx-auto">
-                                <img src={`https://brcadv.com/strapi${post.cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                                <img src={`https://brcadv.com/strapi${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
                             </div>
-                            <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post.body}} />
+                            <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post[0].body}} />
                             <div className="fs-20 text-escuro">
                                 <span className="d-block">Gostou do texto?</span>
                                 <span className="d-block">Compartilhe nas Redes Sociais:</span>
@@ -110,14 +110,14 @@ export default function Post({ post, posts, areas, contact }) {
 
                 <div className="row gy-4 text-center align-items-center" id="related">
                     <div className="col-12 col-lg-6 text-center text-lg-start">
-                        <span className="line-title w-max-content">RECENT BLOG POSTS</span>
+                        <span className="line-title w-max-content">POSTS RECENTES DO BLOG</span>
                         <div className="d-flex flex-column text-escuro">
-                            <strong className="playfair fs-44">News and Articles</strong>
+                            <strong className="playfair fs-44">Notícias e Artigos</strong>
                         </div>
                     </div>
                     <div className="col-12 col-lg-6 d-flex justify-content-lg-end justify-content-center">
                         <Link href={`/${contact.locale.substring(0, 2)}/blog`}>
-                            <a className="btn btn-primary btn-h-50 d-inline-flex justify-content-center" id="ver-todas">View All Posts<img src="/img/seta.svg" alt="Seta" /></a>
+                            <a className="btn btn-primary btn-h-50 d-inline-flex justify-content-center" id="ver-todas">Ver Todas as Publicações<img src="/img/seta.svg" alt="Seta" /></a>
                         </Link>
                     </div>
                 </div>
@@ -155,14 +155,14 @@ export async function getStaticPaths() {
     const posts = await response.json()
 
     const paths = posts.map((post) => ({
-        params: { id: post.id.toString() },
+        params: { slug: post.slug },
     }))
 
     return { paths, fallback: false }
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://brcadv.com/strapi/posts/${params.id}`)
+    const res = await fetch(`https://brcadv.com/strapi/posts?slug=${params.slug}`)
     const post = await res.json()
 
     const resp = await fetch('https://brcadv.com/strapi/posts')
