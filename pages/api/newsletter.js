@@ -50,7 +50,7 @@ export default function (req, res) {
         });
 
         const mailData = {
-            from: 'edpereira6161@gmail.com',
+            from: process.env.email,
             to: 'luanferreira2136@gmail.com',
             subject: `Nova Inscrição | Newsletter Site BRC`,
             text: `Nova inscrição para ${req.body.email}`,
