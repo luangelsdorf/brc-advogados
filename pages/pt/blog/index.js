@@ -14,13 +14,6 @@ import {useRouter} from "next/router";
 
 export default function Blog({ posts, textos, areas, contact, cat }) {
 
-    let router = useRouter();
-    if (Object.keys(router.query).length) {
-        console.log(true)
-    } else {
-        console.log(false)
-    }
-
     return (
         <>
             <HeadContent title="Blog - BRC Advogados" page="blog" />
