@@ -3,7 +3,13 @@ import React from 'react';
 export default function Footer({ textos, contact }) {
     return (
         <footer className="flex-center justify-content-between justify-content-md-center w-100">
-            <span className="text-white fs-13 text-center d-md-inline-block d-none">Copyright © 2021 – Bueno Rios & Consentino Advogados</span>
+            <div className="container-md align-items-center justify-content-center d-md-flex d-none">
+              <span className="text-white fs-13 text-center d-md-inline-block d-none ms-auto">Copyright © 2021 – Bueno Rios & Consentino Advogados</span>
+              <a rel="noreferrer" target="_blank" href="https://www.behance.net/kel4dros" className="ms-auto" id="logo-newMoon">
+                <svg className="ms-auto" height="30" width="30" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 27.21 27.21"><g id="Camada_2" data-name="Camada 2"><g id="Marca"><path fill="currentColor" className="cls-1" d="M24.18,0H3A3,3,0,0,0,0,3V24.18a3,3,0,0,0,3,3H24.18a3,3,0,0,0,3-3V3A3,3,0,0,0,24.18,0ZM19.33,17.37A6.71,6.71,0,0,1,9.84,7.88l1.39,1.39A4.74,4.74,0,0,1,17.94,16Z"/></g></g></svg>
+              </a>
+            </div>
+
             <span className="text-white fs-10 text-center d-inline-block d-md-none">Copyright © 2021 – BRC Advogados</span>
 
             <div className="d-flex d-flex d-md-none">

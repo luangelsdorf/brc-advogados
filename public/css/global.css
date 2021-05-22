@@ -690,6 +690,15 @@ footer {
     background-color: var(--azul-claro);
 }
 
+#logo-newMoon {
+    color: #003057 !important;
+    transition: all 250ms ease;
+}
+
+#logo-newMoon:hover {
+    color: #fff !important;
+}
+
 
 /* -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- Mobile -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=- */
 
