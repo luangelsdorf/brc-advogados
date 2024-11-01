@@ -16,7 +16,7 @@ export default function Post({ post, posts, areas, contact }) {
     let quantity = [0, 1, 2]
     let router = useRouter()
     let url = router.asPath
-    let img = `https://brcadv.com/strapi${post[0].cover.url}`
+    let img = `${process.env.api_url}${post[0].cover.url}`
     let desc = post[0].body
     let ogTags = {
         url: url,
@@ -79,7 +79,7 @@ export default function Post({ post, posts, areas, contact }) {
                         </div>
                         <div>
                             <div className="img-placeholder mx-auto">
-                                <img src={`https://brcadv.com/strapi${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
+                                <img src={`${process.env.api_url}${post[0].cover.url}`} alt="Imagem" className="mx-auto w-100 h-100 object-fit-cover" />
                             </div>
                             <div className="text-escuro fs-20 post-body" id="texto-post" dangerouslySetInnerHTML={{__html: post[0].body}} />
                             <div className="fs-20 text-escuro">
@@ -125,7 +125,7 @@ export default function Post({ post, posts, areas, contact }) {
                     {
                         quantity.map(card => {
                             return (
-                                <PostCard img={`https://brcadv.com/strapi${posts[card].cover.url}`}
+                                <PostCard img={`${process.env.api_url}${posts[card].cover.url}`}
                                           categoria={formatCategories(posts[card].categorias)}
                                           date={formatDate(posts[card].date, posts[card].locale, true)}
                                           title={posts[card].title}
@@ -151,7 +151,7 @@ export default function Post({ post, posts, areas, contact }) {
 
 
 export async function getStaticPaths() {
-    const response = await fetch('https://brcadv.com/strapi/posts?_locale=en')
+    const response = await fetch('http://localhost:1337/posts?_locale=en')
     const posts = await response.json()
 
     const paths = posts.map((post) => ({
@@ -162,17 +162,17 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    /*const res = await fetch(`https://brcadv.com/strapi/posts?slug=${params.slug}`)
+    /*const res = await fetch(`${process.env.api_url}/posts?slug=${params.slug}`)
     const post = await res.json()*/
 
-    const resp = await fetch('https://brcadv.com/strapi/posts?_locale=en')
+    const resp = await fetch('http://localhost:1337/posts?_locale=en')
     const posts = await resp.json()
     const post = posts.filter(post => post.slug === params.slug)
 
-    const resAreas = await fetch('https://brcadv.com/strapi/servicos?_locale=en')
+    const resAreas = await fetch('http://localhost:1337/servicos?_locale=en')
     const areas = await resAreas.json()
 
-    const resRedes = await fetch('https://brcadv.com/strapi/contatos?_locale=en')
+    const resRedes = await fetch('http://localhost:1337/contatos?_locale=en')
     const contact = await resRedes.json()
 
     return {

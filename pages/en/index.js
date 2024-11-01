@@ -42,16 +42,16 @@ export default function Home({ areas, posts, textos, contact }) {
 }
 
 export async function getStaticProps() {
-    const responseAreas = await fetch(`https://brcadv.com/strapi/servicos?_locale=en`)
+    const responseAreas = await fetch(`${process.env.api_url}/servicos?_locale=en`)
     const areas = await responseAreas.json()
 
-    const  responsePosts  = await fetch('https://brcadv.com/strapi/posts?_locale=en')
+    const  responsePosts  = await fetch('http://localhost:1337/posts?_locale=en')
     const posts = await responsePosts.json()
 
-    const  responseTextos  = await fetch('https://brcadv.com/strapi/inicio?_locale=en')
+    const  responseTextos  = await fetch('http://localhost:1337/inicio?_locale=en')
     const textos = await responseTextos.json()
 
-    const responseContact = await fetch('https://brcadv.com/strapi/contatos?_locale=en')
+    const responseContact = await fetch('http://localhost:1337/contatos?_locale=en')
     const contact = await responseContact.json()
 
     return {

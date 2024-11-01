@@ -116,7 +116,7 @@ export default function AreaPage({ area, areas, textos, contact }) {
 }
 
 export async function getStaticPaths() {
-    const res = await fetch('https://brcadv.com/strapi/servicos')
+    const res = await fetch('http://localhost:1337/servicos')
     const resAreas = await res.json()
     const paths = resAreas.map((area) => ({
         params: { slug: area.slug },
@@ -126,16 +126,16 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const res = await fetch(`https://brcadv.com/strapi/servicos?slug=${params.slug}`)
+    const res = await fetch(`${process.env.api_url}/servicos?slug=${params.slug}`)
     const area = await res.json()
 
-    const resAll = await fetch('https://brcadv.com/strapi/servicos')
+    const resAll = await fetch('http://localhost:1337/servicos')
     const areas = await resAll.json()
 
-    const resText = await fetch('https://brcadv.com/strapi/areas-de-atuacao')
+    const resText = await fetch('http://localhost:1337/areas-de-atuacao')
     const textos = await resText.json()
 
-    const resRedes = await fetch('https://brcadv.com/strapi/contatos')
+    const resRedes = await fetch('http://localhost:1337/contatos')
     const contact = await resRedes.json()
 
     return {

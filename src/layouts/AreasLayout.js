@@ -108,7 +108,7 @@ export async function getStaticPaths() {
 }
 
 export async function getStaticProps({ params }) {
-    const response = await fetch(`http://localhost:1337/areas`)
+    const response = await fetch(`${process.env.api_url}/areas`)
     const areas = await response.json()
 
     return { props: { areas, params } }
