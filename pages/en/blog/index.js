@@ -92,6 +92,6 @@ export async function getStaticProps() {
         props: {
             posts, textos, areas, contact, cat
         },
-        revalidate: 1
+        revalidate: 30
     }
 }

@@ -142,6 +142,6 @@ export async function getStaticProps({ params }) {
         props: {
             area, areas, textos, contact
         },
-        revalidate: 1
+        revalidate: 30
     }
 }

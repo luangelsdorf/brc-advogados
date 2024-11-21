@@ -58,6 +58,6 @@ export async function getStaticProps() {
         props: {
             areas, posts, textos, contact
         },
-        revalidate: 1
+        revalidate: 30
     }
 }

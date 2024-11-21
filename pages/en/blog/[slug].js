@@ -179,6 +179,6 @@ export async function getStaticProps({ params }) {
         props: {
             post, posts, areas, contact
         },
-        revalidate: 1
+        revalidate: 30
     }
 }
